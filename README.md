@@ -16,6 +16,8 @@ When using this project
   ```
 
 ### Technologies Used
+Reactjs + Vite
+Tailwind css
 
 ### Project Structure
 
