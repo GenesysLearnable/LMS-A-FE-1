@@ -4,9 +4,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom"
+import SignupPage from "./Pages/SignUpPage"
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<h1>Hello World</h1>} />)
+  createRoutesFromElements(<Route path="/" element={<SignupPage/>} />)
 )
 
 const App = () => {
