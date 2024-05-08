@@ -4,9 +4,10 @@ import {
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom"
+import Homepage from "./Pages/Homepage"
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<h1>Hello World</h1>} />)
+  createRoutesFromElements(<Route path="/" element={<Homepage/>} />)
 )
 
 const App = () => {
