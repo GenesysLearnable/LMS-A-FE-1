@@ -1,5 +1,5 @@
-import HTextArticle from "./HTextArticle"
-import HTwinCard from "./HTwinCard"
+import LP_TextArticle from "./LP_TextArticle"
+import LP_TwinCard from "./LP_TwinCard"
 
 const Hero = () => {
   const details = {
@@ -22,9 +22,9 @@ const Hero = () => {
         className="absolute top-20 left-[74.2%] h-[531px]"
         src="/src/Images/Vector 11.png"
       />
-      <HTwinCard>
+      <LP_TwinCard>
         <article>
-          <HTextArticle
+          <LP_TextArticle
             heading={details.heading}
             text={details.text}
             size={details.size}
@@ -45,7 +45,7 @@ const Hero = () => {
           src={"/src/Images/businessman-working-laptop 1@2x.png"}
           alt="man-on-laptop"
         />
-      </HTwinCard>
+      </LP_TwinCard>
     </section>
   )
 }

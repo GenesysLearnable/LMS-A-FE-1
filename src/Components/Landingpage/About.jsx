@@ -1,5 +1,5 @@
-import HTextArticle from "./HTextArticle"
-import HTwinCard from "./HTwinCard"
+import LP_TextArticle from "./LP_TextArticle"
+import LP_TwinCard from "./LP_TwinCard"
 
 const About = () => {
   const details = {
@@ -18,14 +18,14 @@ const About = () => {
         src={"/src/Images/Vector 11.1.png"}
         alt="vector"
       />
-      <HTwinCard>
+      <LP_TwinCard>
         <img
           className="w-[599px] h-[620px]"
           src={"/src/Images/businessman-working-laptop 1.png"}
           alt=""
         />
         <article>
-          <HTextArticle
+          <LP_TextArticle
             heading={details.heading}
             text={details.text}
             size={details.size}
@@ -34,7 +34,7 @@ const About = () => {
             textStyle={details.textStyle}
           />
         </article>
-      </HTwinCard>
+      </LP_TwinCard>
     </section>
   )
 }
