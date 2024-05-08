@@ -1,31 +1,43 @@
-import Button from "./Button"
+import HTextArticle from "./HTextArticle"
+import HTwinCard from "./HTwinCard"
 
 const Hero = () => {
+  const details = {
+    heading: " Empowering You with Essential Skills Exactly When You Need Them",
+    text: "Welcome to SkillHub, your ultimate destination for unlocking your full potential! At SkillHub, we're dedicated to providing you with the essential skills precisely when you need them to succeed and excel in your journey of learning and skill development.",
+    size: "40",
+    btn: "Get Started",
+    title: "text-[48px] text-white",
+    textStyle: "text-[#b8b8b8]",
+  }
+
   return (
     <section className="flex items-center justify-center bg-[#041d31] font-['Open Sans']">
-        <img className="absolute top-20 left-[41%] h-[531px]" src="/src/Images/Vector 10.png" alt="vector1" />
-        <img className="absolute top-20 left-[74.2%] h-[531px]" src="/src/Images/Vector 11.png"/>
-      <section className="w-[88%] z-10 flex items-center gap-16 justify-between mt-[82px] mb-[57.8px] border-black">
-        <article className="">
-          <article className="mt-[61px] flex flex-col justify-between gap-7">
-            <h1 className="text-[40px]  w-[526px] text-white font-bold leading-[46px]">
-              Empowering You with Essential Skills Exactly When You Need Them
-            </h1>
-            <p className="w-[546px] text-stone-300 text-base font-normal leading-normal">
-              Welcome to SkillHub, your ultimate destination for unlocking your
-              full potential! At SkillHub, we're dedicated to providing you with
-              the essential skills precisely when you need them to succeed and
-              excel in your journey of learning and skill development.
-            </p>
-
-            <Button title={"Get Started"} bg={"bg-[#cc7342]"} />
-          </article>
+      <img
+        className="absolute top-20 left-[41%] h-[531px]"
+        src="/src/Images/Vector 10.png"
+        alt="vector1"
+      />
+      <img
+        className="absolute top-20 left-[74.2%] h-[531px]"
+        src="/src/Images/Vector 11.png"
+      />
+      <HTwinCard>
+        <article>
+          <HTextArticle
+            heading={details.heading}
+            text={details.text}
+            size={details.size}
+            btn={details.btn}
+            title={details.title}
+            textStyle={details.textStyle}
+          />
           <article className="flex mt-[160px] items-center justify-between">
-            <Article text={"Expert tutors"} num={"500"}/>
+            <Article text={"Expert tutors"} num={"500"} />
             <div className="h-8 w-[1px] bg-[#303168]  flex items-center" />
-            <Article text={"Online Students"} num={"1000"}/>
+            <Article text={"Online Students"} num={"1000"} />
             <div className="h-8 w-[1px] bg-[#303168] flex items-center" />
-            <Article text={"Expert courses"} num={"2000"}/>
+            <Article text={"Expert courses"} num={"2000"} />
           </article>
         </article>
         <img
@@ -33,7 +45,7 @@ const Hero = () => {
           src={"/src/Images/businessman-working-laptop 1@2x.png"}
           alt="man-on-laptop"
         />
-      </section>
+      </HTwinCard>
     </section>
   )
 }
