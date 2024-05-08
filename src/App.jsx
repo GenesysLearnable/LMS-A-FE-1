@@ -7,7 +7,12 @@ import {
 import Homepage from "./Pages/Homepage"
 
 const router = createBrowserRouter(
-  createRoutesFromElements(<Route path="/" element={<Homepage/>} />)
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Homepage />} />
+      <Route path="/other" element={<h1>Hello World</h1>} />
+    </>
+  )
 )
 
 const App = () => {
