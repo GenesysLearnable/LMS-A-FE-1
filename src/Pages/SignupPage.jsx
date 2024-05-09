@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import Id_Button from "../Components/Signup and Login/Id_Button"
 
 const SignupPage = () => {
