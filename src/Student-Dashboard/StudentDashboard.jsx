@@ -8,7 +8,7 @@ function StudentDashboard() {
       </div>
       <div className="userSection">
         <i className="fa fa-bell"></i>
-        <img className="studentPhoto" src="student_photo.jpg" alt="Student" />
+        <img className="studentPhoto" src="src/Images/LandingPage/businessman-working-laptop 1@2x.png" alt="Student" />
         <div className="userInfo">
           <div className="userName">Oghenemarho</div>
           <div className="userType">Student</div>
