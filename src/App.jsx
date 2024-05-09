@@ -6,14 +6,21 @@ import {
 } from "react-router-dom"
 import Landingpage from "./Pages/Landingpage"
 import About from "./Components/Landingpage/About"
+import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout"
+import CoursePage from "./Pages/CoursePage"
+import Testimonials from "./Components/Landingpage/Testimonials"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/" element={<Landingpage />} >
-        <Route path="/about" element={<About/>} />
+      <Route path="/" element={<LandingPageLayout />}>
+        <Route index element={<Landingpage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/course" element={<CoursePage />} />
       </Route>
-      <Route path="/other" element={<h1>Hello World</h1>} />
+      
+      <Route path="*" element={<h1>404 Error or something like that</h1>} />
     </>
   )
 )

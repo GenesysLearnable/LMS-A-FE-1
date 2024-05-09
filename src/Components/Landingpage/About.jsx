@@ -3,7 +3,7 @@ import LP_TwinCard from "./LP_TwinCard"
 
 const About = () => {
   return (
-    <section id="about" className="flex items-center justify-center relative bg-white font-['Open Sans']">
+    <section id="about" className="flex items-center justify-center relative bg-[#f5f6fa] font-['Open Sans']">
       <img
         className="absolute top-[320px] left-0 h-[571px] w-[414px]"
         src={"/src/Images/LandingPage/Vector 11.1.png"}

@@ -1,30 +1,32 @@
-import { Link, NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import Button from "./Button"
 
 const Navbar = () => {
-  const textStyles =
-    "text-white cursor-pointer hover:text-[#ffffffab] duration-200 text-base font-normal font-['Open Sans'] leading-normal"
+  const linkCLass = ({ isActive }) =>
+    isActive
+      ? "text-[#d87139] hover:text-[#cc7242b9] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
+      : "hover:text-[#cc7242b9] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal"
 
   return (
     <nav className="w-full h-20 pl-[102px] py-[16] bg-[#041d31] ">
       <section className="h-full w-full flex justify-between">
         <div className="h-full flex items-center">
-          <Link to={"/"}>
-          <img src={"/src/Logos/Logo.png"} alt="logo" />
-          </Link>
+          <NavLink to={"/"}>
+            <img src={"/src/Logos/Logo.png"} alt="logo" />
+          </NavLink>
           <div className="flex pl-36 gap-6">
-            <Link to={"/"}>
-              <p className={textStyles}>Home</p>
-            </Link>
-            <NavLink to={"/about"}>
-              <p className={textStyles}>About</p>
+            <NavLink to={"/"} className={linkCLass}>
+              Home
             </NavLink>
-            <Link to={"/other"}>
-              <p className={textStyles}>Courses</p>
-            </Link>
-            <Link to={"/other"}>
-              <p className={textStyles}>Testimonial</p>
-            </Link>
+            <NavLink to={"/about"} className={linkCLass}>
+              About
+            </NavLink>
+            <NavLink to={"/course"} className={linkCLass}>
+              <p >Courses</p>
+            </NavLink>
+            <NavLink to={"/testimonials"} className={linkCLass}>
+              <p>Testimonial</p>
+            </NavLink>
           </div>
         </div>
         <div className="h-full flex justify-center gap-4 mr-6 items-center">
