@@ -12,7 +12,6 @@
   padding: 10px;
   width: 80%;
   margin-left: 90px;
-  
 }
 
 .searchBox {
@@ -166,10 +165,17 @@
   justify-content: space-between;
   width: 100px;
   margin: 20px;
+  width: 294px;
+  height: 149px;
+  top: 445px;
+  left: 1045px;
+  gap: 0px;
+  border-radius: 12px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #f2f2f2;
 }
 
 .paymentHistory {
-  background-color: #f2f2f2;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 10px;
@@ -180,10 +186,7 @@
 
 .paymentTitle {
   font-weight: bold;
-}
-
-.seeAll {
-  cursor: pointer;
+  justify-content: space-around;
 }
 
 .productDesign {
@@ -202,6 +205,6 @@
   font-weight: bold;
 }
 
-.productPrice {
+.product {
   font-style: italic;
 }

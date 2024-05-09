@@ -22,6 +22,7 @@ function StudentDashboard() {
         </div>
       </div>
 
+
       <div className="bluebox">
         <div className="blueboxcontent">
           <div className="naMe">
@@ -29,7 +30,7 @@ function StudentDashboard() {
           </div>
           <div className="learn">Let’s learn something new today!</div>
           <div className="course">
-            You have completed 0% of your course Please check your course.
+            You have completed 0% of your course 
           </div>
           <div className="course">Please check your course.</div>
 
@@ -56,18 +57,20 @@ function StudentDashboard() {
         <div className="side">
           <div className="paymentHistory">
             <div className="paymentTitle">
-              Payment History <span className="seeAll">See All</span>
-            </div>
-          </div>
+              Payment History 
+            <span className="product">See all</span> </div>
+          
           <div className="productDesign">
             <div className="productInfo">
               <div className="productName">Product Design</div>
-              <div className="productPrice">₦10,000 </div>
+              <div className="product">₦10,000 </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
+    </div>
+    </div>
+    </div>
+
   );
 }
 
