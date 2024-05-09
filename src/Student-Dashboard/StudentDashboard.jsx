@@ -1,14 +1,18 @@
 import "./StudentDashBoard.css";
+import { FaSearch } from "react-icons/fa";
+import { FaRegBell } from "react-icons/fa6";
+import { MdOutlineExpandMore } from "react-icons/md";
 
 function StudentDashboard() {
   return (
     <div className="container">
       <div className="header">
         <div className="searchBox">
-          <i className="fa fa-search"></i> Search
+          <FaSearch />
+          Search
         </div>
         <div className="userSection">
-          <i className="fa fa-bell"></i>
+          <FaRegBell className="bell" />
           <img
             className="studentPhoto"
             src="src/Images/LandingPage/businessman-working-laptop 1@2x.png"
@@ -18,10 +22,9 @@ function StudentDashboard() {
             <div className="userName">Oghenemarho</div>
             <div className="userType">Student</div>
           </div>
-          <i className="fa fa-ellipsis-h"></i>
+          <MdOutlineExpandMore className="More" />
         </div>
       </div>
-
 
       <div className="bluebox">
         <div className="blueboxcontent">
@@ -29,9 +32,7 @@ function StudentDashboard() {
             Hello, <span className="orange">Oghenemarho</span>
           </div>
           <div className="learn">Let’s learn something new today!</div>
-          <div className="course">
-            You have completed 0% of your course 
-          </div>
+          <div className="course">You have completed 0% of your course</div>
           <div className="course">Please check your course.</div>
 
           <div className="calendar">
@@ -56,21 +57,34 @@ function StudentDashboard() {
 
         <div className="side">
           <div className="paymentHistory">
-            <div className="paymentTitle">
-              Payment History 
-            <span className="product">See all</span> </div>
-          
-          <div className="productDesign">
-            <div className="productInfo">
-              <div className="productName">Product Design</div>
-              <div className="product">₦10,000 </div>
-            </div>
+            <div className="paymentTitle">Payment History </div>
+            <div className="product">See all</div>
           </div>
-    </div>
-    </div>
-    </div>
-    </div>
+          <div className="productDesign">
+            <div className="productName">Product Design</div>
+            <div className="product">₦10,000 </div>
+          </div>
+        </div>
+      </div>
 
+      <div className="courseEnrolledBox">
+        <div className="enrolled">
+          <div className="courseEnrolled">Course Enrolled</div>
+          <div className="all">All</div>
+          <div className="inProgress">In Progress</div>
+        </div>
+        <div className="courseDetails">
+          <div className="productName">
+            Product Design
+            <span className="complete">0% Complete</span>
+          </div>
+          <div className="rating">
+            <span className="stars">★</span> (4.9)
+          </div>
+          <div className="viewCourse">View Course</div>
+        </div>
+      </div>
+    </div>
   );
 }
 
