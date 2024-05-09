@@ -1,4 +1,12 @@
+import { FaArrowUpLong } from "react-icons/fa6"
+import { Link } from "react-router-dom"
+
+FaArrowUpLong
 const Footer = () => {
+  const top = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   const titleStyles =
     "text-white text-base pb-5 font-bold font-['Open Sans'] uppercase leading-snug tracking-wide"
   const subStyles =
@@ -33,7 +41,7 @@ const Footer = () => {
         <div>
           <div className="flex justify-end pb-16 border-b-[#ffffff40] border-b-[1px]">
             <img
-              className="flex items-end w-11"
+              className="flex items-end w-11 "
               src="/src/Logos/Logo.png"
               alt="logo"
             />
@@ -45,11 +53,17 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-between pt-[70px] pb-7">
-        <p className={subStyles}>
+
+      <div className="flex justify-between  items-center pt-[60px] pb-7">
+        <p className="text-[#ffffffb7]">
           @2024 -Copyright Group 1: Learnable Build Season
         </p>
-        <img src="" alt="scroll to top" />
+        <i
+          onClick={() => this.top}
+          className="w-12 h-12 border cursor-pointer border-white pt-1 flex justify-center items-baseline rounded-full"
+        >
+          <FaArrowUpLong className="h-16 text-white  motion-safe:animate-bounce" />
+        </i>
       </div>
     </footer>
   )
