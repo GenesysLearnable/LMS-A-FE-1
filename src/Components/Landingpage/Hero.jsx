@@ -2,25 +2,16 @@ import LP_TextArticle from "./LP_TextArticle"
 import LP_TwinCard from "./LP_TwinCard"
 
 const Hero = () => {
-  const details = {
-    heading: " Empowering You with Essential Skills Exactly When You Need Them",
-    text: "Welcome to SkillHub, your ultimate destination for unlocking your full potential! At SkillHub, we're dedicated to providing you with the essential skills precisely when you need them to succeed and excel in your journey of learning and skill development.",
-    size: "40",
-    btn: "Get Started",
-    title: "text-[48px] text-white",
-    textStyle: "text-[#b8b8b8]",
-  }
-
   return (
-    <section className="flex items-center justify-center bg-[#041d31] font-['Open Sans']">
+    <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] font-['Open Sans']">
       <img
-        className="absolute top-20 left-[41%] h-[531px]"
-        src="/src/Images/Vector 10.png"
+        className="absolute top-0 left-[41%] h-[531px]"
+        src="/src/Images/LandingPage/Vector 10.png"
         alt="vector1"
       />
       <img
-        className="absolute top-20 left-[74.2%] h-[531px]"
-        src="/src/Images/Vector 11.png"
+        className="absolute top-0 left-[73.2%] h-[531px]"
+        src="/src/Images/LandingPage/Vector 11.png"
       />
       <LP_TwinCard>
         <article>
@@ -42,7 +33,7 @@ const Hero = () => {
         </article>
         <img
           className="w-[599px] h-[620px]"
-          src={"/src/Images/businessman-working-laptop 1@2x.png"}
+          src={"/src/Images/LandingPage/businessman-working-laptop 1@2x.png"}
           alt="man-on-laptop"
         />
       </LP_TwinCard>
@@ -59,6 +50,15 @@ const Article = ({ text, num }) => {
       </p>
     </article>
   )
+}
+
+const details = {
+  heading: " Empowering You with Essential Skills Exactly When You Need Them",
+  text: "Welcome to SkillHub, your ultimate destination for unlocking your full potential! At SkillHub, we're dedicated to providing you with the essential skills precisely when you need them to succeed and excel in your journey of learning and skill development.",
+  size: "40",
+  btn: "Get Started",
+  title: "text-[45px] leading-[56px] pb-7 text-white",
+  textStyle: "text-[#bbbcbd]",
 }
 
 export default Hero
