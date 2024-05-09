@@ -18,6 +18,7 @@ After you have cloned the repo checkout to branch develop2.0
   ```
   git checkout develop2.0
   ```
+  
 
 Branch develop2.0 is our development branch. To work on any project, checkout from branch develop2.0 to a new branch
 
