@@ -2,7 +2,7 @@ import AboutCards from "./AboutCards"
 
 const AboutCard = () => {
   return (
-    <section className="bg-white flex justify-center items-center mt-[135px] ">
+    <section className="bg-[#f5f6fa] flex justify-center items-center mt-[135px] ">
       <section className="w-[88%] z-10 flex flex-col pt-12 mb-[57.8px]">
         <article>
           <p className="text-sm font-semibold text-[#ac4832]">
