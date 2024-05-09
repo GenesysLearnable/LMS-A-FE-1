@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import Button from "./Button"
 
 const Navbar = () => {
@@ -6,19 +6,19 @@ const Navbar = () => {
     "text-white cursor-pointer hover:text-[#ffffffab] duration-200 text-base font-normal font-['Open Sans'] leading-normal"
 
   return (
-    <nav className="w-full h-20 pl-[102px] py-[16] bg-[#172b3a] ">
+    <nav className="w-full h-20 pl-[102px] py-[16] bg-[#041d31] ">
       <section className="h-full w-full flex justify-between">
         <div className="h-full flex items-center">
           <Link to={"/"}>
           <img src={"/src/Logos/Logo.png"} alt="logo" />
           </Link>
           <div className="flex pl-36 gap-6">
-            <Link to={"/other"}>
+            <Link to={"/"}>
               <p className={textStyles}>Home</p>
             </Link>
-            <Link to={"/other"}>
+            <NavLink to={"/about"}>
               <p className={textStyles}>About</p>
-            </Link>
+            </NavLink>
             <Link to={"/other"}>
               <p className={textStyles}>Courses</p>
             </Link>
