@@ -1,0 +1,72 @@
+
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .form-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .continue-button {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .login-text {
+    color: blaCK;
+    margin-top: 20px;
+  }
+  
+  .login-text span {
+    cursor: pointer;
+    color: red;
+  }
+  
+  .email-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .email-input input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  .google-button,
+  .apple-button {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .google-button:hover,
+  .apple-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .google-button svg,
+  .apple-button svg {
+    margin-right: 5px;
+  }
