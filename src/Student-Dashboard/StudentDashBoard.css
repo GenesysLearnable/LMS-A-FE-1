@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -52,4 +58,113 @@
   line-height: 14.06px;
   text-align: center;
   color: #d5d5d5;
+}
+
+.bluebox {
+  background-color: #1a3d58;
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.blueboxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.learn {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.23px;
+  text-align: left;
+}
+
+.naMe {
+  font-family: Roboto;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 45.7px;
+  text-align: left;
+}
+
+.orange {
+  color: orange;
+  font-family: Roboto;
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 45.7px;
+  text-align: left;
+}
+
+.calendarIcon {
+  margin-top: 10px;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.statBox {
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.statTitle {
+  font-weight: bold;
+}
+
+.statNumber {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.paymentHistory {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.paymentTitle {
+  font-weight: bold;
+}
+
+.seeAll {
+  color: blue;
+  cursor: pointer;
+}
+
+.productDesign {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productName {
+  font-weight: bold;
+}
+
+.productPrice {
+  font-style: italic;
 }
