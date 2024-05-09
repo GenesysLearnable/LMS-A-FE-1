@@ -49,7 +49,7 @@ const Footer = () => {
 
           <div className="flex flex-col items-end pt-6">
             <p className="text-[#ffffffb7]">+234 0802-091-6565</p>
-            <p className="text-[#ffffffb7]">skilhub@gmail.com</p>
+            <p className="text-[#ffffffb7]">skillhub@gmail.com</p>
           </div>
         </div>
       </div>

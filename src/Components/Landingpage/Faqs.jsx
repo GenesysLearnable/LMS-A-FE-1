@@ -11,7 +11,7 @@ const Faqs = () => {
   }
 
   return (
-    <section className="bg-[#f5f6fa]relative pt-[88px] pb-[165px] flex items-center justify-center">
+    <section className="bg-[#f5f6fa] relative pt-[88px] pb-[165px] flex items-center justify-center">
       <img
         className="absolute top-[148px] h-[694px]"
         src="/src/Images/LandingPage/Vector 12.png"
