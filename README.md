@@ -14,6 +14,7 @@ When using this project
   ```bash
   npm run dev
   ```
+  hi
 
 ### Technologies Used
 
