@@ -1,0 +1,38 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+  }
+  
+  .searchBox {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .userSection {
+    display: flex;
+    align-items: center;
+  }
+  
+  .studentPhoto {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+  
+  .userInfo {
+    margin-right: 10px;
+  }
+  
+  .userName {
+    font-weight: bold;
+  }
+  
+  .userType {
+    font-size: 12px;
+  }
+  

@@ -9,6 +9,7 @@ import About from "./Components/Landingpage/About"
 import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout"
 import CoursePage from "./Pages/CoursePage"
 import Testimonials from "./Components/Landingpage/Testimonials"
+import StudentDashboard from "./Student-Dashboard/StudentDashboard"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,9 +19,9 @@ const router = createBrowserRouter(
         <Route path="/about" element={<About />} />
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/course" element={<CoursePage />} />
+      <Route path="/Student" element={<StudentDashboard />} />
       </Route>
       
-      <Route path="*" element={<h1>404 Error or something like that</h1>} />
     </>
   )
 )
