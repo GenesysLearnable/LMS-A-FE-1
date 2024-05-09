@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import Button from "./Button"
 
 const Navbar = () => {
@@ -22,7 +22,7 @@ const Navbar = () => {
               About
             </NavLink>
             <NavLink to={"/course"} className={linkCLass}>
-              <p >Courses</p>
+              <p>Courses</p>
             </NavLink>
             <NavLink to={"/testimonials"} className={linkCLass}>
               <p>Testimonial</p>
@@ -30,8 +30,8 @@ const Navbar = () => {
           </div>
         </div>
         <div className="h-full flex justify-center gap-4 mr-6 items-center">
-          <Button title={"Signup"} bg={"bg-[#cc7342]"} />
-          <Button title={"Login"} bg={"bg-transparent"} />
+          <Button title={"Signup"} bg={"bg-[#cc7342]"} path={"/signup"} />
+          <Button title={"Login"} bg={"bg-transparent"} path={"/other"} />
         </div>
       </section>
     </nav>

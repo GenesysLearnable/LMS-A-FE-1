@@ -60,7 +60,7 @@ When you are done working
 
 ### Technologies Used
 
-Reactjs + Vite
+Reactjs + Vite,
 Tailwind css
 
 ### Project Structure

@@ -11,7 +11,7 @@ const Faqs = () => {
   }
 
   return (
-    <section className="bg-[#f5f6fa]relative pt-[88px] pb-[165px] flex items-center justify-center">
+    <section className="bg-[#f5f6fa] relative pt-[88px] pb-[165px] flex items-center justify-center">
       <img
         className="absolute top-[148px] h-[694px]"
         src="/src/Images/LandingPage/Vector 12.png"
@@ -36,7 +36,11 @@ const Faqs = () => {
 
                 <div>
                   <img
-                    className={selected == index ? "h-7 w-7 duration-300 " : "h-7 w-7 rotate-180 duration-300"} 
+                    className={
+                      selected == index
+                        ? "h-7 w-7 duration-300 "
+                        : "h-7 w-7 rotate-180 duration-300"
+                    }
                     src={"/src/Icons/Landingpage/arrow-down.png"}
                     alt="arrow-down icon"
                   />
