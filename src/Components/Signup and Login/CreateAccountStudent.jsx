@@ -97,7 +97,7 @@ const SubmitForm = () => {
               </p>
             </div>
             <div className="pt-[20px] flex flex-col justify-center items-center gap-3">
-              <Link to={"/other"}>
+              <Link to={"/studentDashBoard"}>
                 <button className="px-4 h-12 outline-none border rounded-lg  w-[416px] bg-[#ff9053] text-white">
                   <p className="text-center text-white text-sm font-medium font-['Roboto'] leading-tight tracking-tight">
                     Signup
