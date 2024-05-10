@@ -1,4 +1,4 @@
-.container {
+.container2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,10 +8,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffff;
+  background-color: #ffffff;
   padding: 10px;
-  width: 80%;
-  margin-left: 90px;
+  width: 93%;
+  margin-left: 100px;
 }
 
 .searchBox {
@@ -70,7 +70,7 @@
   color: #d5d5d5;
 }
 
-.bluebox {
+.secondContainerbox {
   background-color: #1a3d58;
   color: white;
   margin-top: 20px;
@@ -82,13 +82,13 @@
   opacity: 0px;
 }
 
-.blueboxContent {
+.secondContainerboxContent {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.learn {
+.welcomeText {
   font-family: Roboto;
   font-size: 13px;
   font-weight: 500;
@@ -113,30 +113,19 @@
   text-align: left;
 }
 
-.course {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18.75px;
-  text-align: left;
-  margin-top: 20px;
-}
-
 .calendarIcon {
   margin-top: 10px;
 }
 
 .statistics {
   display: flex;
-  width: 715px;
+  width: 730px;
   height: 149px;
   top: 445px;
   left: 310px;
   gap: 36px;
-  opacity: 0px;
   margin-top: 20px;
 }
-
 .statBox {
   background-color: #eaeaea;
   border: 1px solid #ccc;
@@ -170,37 +159,32 @@
 
 .side {
   display: flex;
-  justify-content: space-around;
-  width: 30%;
-  margin: 20px;
-  width: 715px;
-  height: 149px;
-  top: 445px;
-  left: 1045px;
-  gap: 0px;
-  border-radius: 12px 0px 0px 0px;
-  opacity: 0px;
-  background-color: #f2f2f2;
+  width: 294px;
+  background-color: #ffffff;
+  flex-direction: column;
+  gap: 23px;
+  padding: 15px;
+  border-radius: 10px;
 }
 
-.paymentHistory {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-  width: 45%;
-  display: flex;
-  justify-content: space-between;
-}
-
+.paymentHistory,
 .productDesign {
   display: flex;
   justify-content: space-between;
-  border: 1px solid white;
+  align-items: center;
 }
-.paymentTitle {
-  font-weight: bold;
-  justify-content: space-around;
+
+.productDesign {
+  background: #f5f6fa;
+  padding: 15px 5px;
+  border-radius: 5px;
+}
+
+.paymentTitle,
+.product,
+.productName {
+  font-weight: 400;
+  font-size: 13px;
 }
 
 .productInfo {
@@ -208,25 +192,14 @@
   justify-content: space-between;
 }
 
-.productName {
-  font-weight: bold;
-}
-
-.product {
-  font-style: italic;
-}
 .courseEnrolledBox {
   color: white;
   padding: 20px;
   margin-top: 20px;
   background: #1a3d58;
-  width: 1029px;
-  height: 161px;
-  top: 629px;
-  left: 310px;
-  gap: 0px;
-  border-radius: 12px 0px 0px 0px;
-  opacity: 0px;
+  height: 361px;
+  width: 715px;
+  border-radius: 10px;
 }
 
 .all {
@@ -278,12 +251,6 @@
   justify-content: space-around;
 }
 
-.productName {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
 .progressBar {
   margin-bottom: 10px;
 }
@@ -309,5 +276,32 @@
   border-radius: 6px 0px 0px 0px;
   border: 1px solid;
   opacity: 0px;
-  width: 974px;
+  align-items: center;
+  padding: 25px 35px;
+}
+.courseName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.courseProgress {
+  height: 5px;
+  width: 178px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.topHeading h2 {
+  margin-bottom: 10px;
+}
+.topHeading p {
+  font-size: 13px;
+}
+.bottomHeading {
+  margin-top: 38px;
+}
+.welcomeText {
+  font-size: 16px;
+  line-height: 1.5;
 }

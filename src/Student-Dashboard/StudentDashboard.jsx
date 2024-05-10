@@ -5,7 +5,7 @@ import { MdOutlineExpandMore } from "react-icons/md";
 
 function StudentDashboard() {
   return (
-    <div className="container">
+    <div className="container2">
       <div className="header">
         <div className="searchBox">
           <FaSearch />
@@ -19,21 +19,25 @@ function StudentDashboard() {
             alt="Student"
           />
           <div className="userInfo">
-            <div className="userName">Oghenemarho</div>
-            <div className="userType">Student</div>
+            <p className="userName">Oghenemarho</p>
+            <p className="userType">Student</p>
           </div>
           <MdOutlineExpandMore className="More" />
         </div>
       </div>
 
-      <div className="bluebox">
-        <div className="blueboxcontent">
-          <div className="naMe">
-            Hello, <span className="orange">Oghenemarho</span>
+      <div className="secondContainerbox">
+        <div className="SecondContainerboxcontent">
+          <div className="topHeading">
+            <h2 className="naMe">
+              Hello, <span className="orange">Oghenemarho</span>
+            </h2>
+            <p className="welcomeText">Let’s learn something new today!</p>
           </div>
-          <div className="learn">Let’s learn something new today!</div>
-          <div className="course">You have completed 0% of your course</div>
-          <div className="course">Please check your course.</div>
+          <div className="bottomHeading">
+            <p className="welcomeText">You have completed 0% of your course</p>
+            <p className="welcomeText">Please check your course.</p>
+          </div>
 
           <div className="calendar">
             <i className="calendarIcon far fa-calendar-alt"></i>
@@ -43,45 +47,46 @@ function StudentDashboard() {
 
       <div className="statistics">
         <div className="statBox">
-          <div className="statTitle">Total Courses Enrolled</div>
-          <div className="statNumber">1</div>
+          <h4 className="statTitle">Total Course Enrolled</h4>
+          <h6 className="statNumber">1</h6>
         </div>
         <div className="statBox">
-          <div className="statTitle">Completed Courses</div>
-          <div className="statNumber">0</div>
+          <h4 className="statTitle">Completed Course</h4>
+          <h6 className="statNumber">0</h6>
         </div>
         <div className="statBox">
-          <div className="statTitle">Completed Quizzes</div>
-          <div className="statNumber">0</div>
+          <h4 className="statTitle">Completed Quiz</h4>
+          <h6 className="statNumber">0</h6>
         </div>
-
         <div className="side">
           <div className="paymentHistory">
-            <div className="paymentTitle">Payment History </div>
-            <div className="product">See all</div>
+            <h3 className="paymentTitle">Payment History </h3>
+            <p className="product">See all</p>
           </div>
           <div className="productDesign">
-            <div className="productName">Product Design</div>
-            <div className="product">₦10,000 </div>
+            <h3 className="productName">Product Design</h3>
+            <p className="product">₦10,000 </p>
           </div>
         </div>
       </div>
 
       <div className="courseEnrolledBox">
         <div className="enrolled">
-          <div className="courseEnrolled">Course Enrolled</div>
-          <div className="all">All</div>
-          <div className="inProgress">In Progress</div>
+          <h5 className="courseEnrolled">Course Enrolled</h5>
+          <h4 className="all">All</h4>
+          <h4 className="inProgress">In Progress</h4>
         </div>
         <div className="courseDetails">
-          <div className="productName">
-            Product Design
+          <div className="courseName">
+            <p>Product Design</p>
             <span className="complete">0% Complete</span>
+            <span className="courseProgress"></span>
           </div>
+
           <div className="rating">
             <span className="stars">★</span> (4.9)
           </div>
-          <div className="viewCourse">View Course</div>
+          <h5 className="viewCourse">View Course</h5>
         </div>
       </div>
     </div>
