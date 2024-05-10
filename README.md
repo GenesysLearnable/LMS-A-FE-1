@@ -46,7 +46,7 @@ When you are done working
   git pull origin develop2.0
   ```
 - Step 4: Checkout to your feature branch
-- Step 5: Merge feature branch to feature branch
+- Step 5: Merge feature branch to develop2.0 branch
   ```
   git merge develop2.0
   ```
