@@ -1,7 +1,11 @@
+import CourseKeyInfo from '../Components/Courses/CourseKeyInfo';
+
 const CoursePage = () => {
   return (
-    <div>CoursePage</div>
-  )
-}
+    <>
+      <CourseKeyInfo />
+    </>
+  );
+};
 
-export default CoursePage
+export default CoursePage;

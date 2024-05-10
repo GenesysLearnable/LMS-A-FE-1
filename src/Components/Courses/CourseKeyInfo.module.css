@@ -1,0 +1,104 @@
+.course__description {
+  display: flex;
+  justify-content: space-between;
+  gap: 116px;
+  padding: 71px 97px 72px 100px;
+}
+
+.course__image {
+  width: 451px;
+  height: auto;
+}
+
+.course__image img {
+  max-width: 451px;
+  height: auto;
+}
+
+.course__details {
+  padding-top: 9px;
+  padding-bottom: 3px;
+}
+
+.course__details h1,
+.course__details h3,
+.course__rating h4 {
+  /* color: #ffffff; */
+  font-family: Poppins;
+}
+
+.course__details h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.course__general__info {
+  padding-top: 8px;
+}
+
+.course__quick__info {
+  padding-bottom: 24px;
+}
+
+.course__details h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  padding-bottom: 8px;
+}
+
+.course__rating {
+  width: 298.43px;
+  height: auto;
+  display: flex;
+  gap: 4px;
+}
+
+.course__rating > div {
+  display: flex;
+}
+
+.course__rating h4 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27.2px;
+}
+
+.course__rating h5 {
+  color: #ff9053;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 23.8px;
+}
+
+.students {
+  padding-left: 4px;
+}
+
+.enrollment {
+  width: 175px;
+}
+
+.enrollment button,
+.enrollment h2 {
+  font-family: Roboto;
+  line-height: 20px;
+}
+
+.enrollment button {
+  background-color: #ff9053;
+
+  /* color: #fff; */
+  font-weight: 600;
+  font-size: 16px;
+
+  padding: 14px 67px;
+  border-radius: 8px;
+}
+
+.enrollment h2 {
+  font-weight: 800;
+  font-size: 32px;
+  padding-top: 24px;
+}
