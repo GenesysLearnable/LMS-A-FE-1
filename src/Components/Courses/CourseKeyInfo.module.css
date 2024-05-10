@@ -1,4 +1,6 @@
 .course__description {
+  background-color: #041d31;
+
   display: flex;
   justify-content: space-between;
   gap: 116px;
@@ -23,7 +25,7 @@
 .course__details h1,
 .course__details h3,
 .course__rating h4 {
-  /* color: #ffffff; */
+  color: #ffffff;
   font-family: Poppins;
 }
 
@@ -46,6 +48,7 @@
   font-size: 16px;
   line-height: 24px;
   padding-bottom: 8px;
+  max-width: 678px;
 }
 
 .course__rating {
@@ -84,12 +87,12 @@
 .enrollment h2 {
   font-family: Roboto;
   line-height: 20px;
+  color: #fff;
 }
 
 .enrollment button {
   background-color: #ff9053;
 
-  /* color: #fff; */
   font-weight: 600;
   font-size: 16px;
 
