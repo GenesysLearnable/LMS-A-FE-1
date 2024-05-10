@@ -2,32 +2,37 @@ import Id_Button from "../Components/Signup and Login/Id_Button"
 
 const SignupPage = () => {
   return (
-    <section className="w-screen overflow-hidden h-screen relative flex justify-center items-center bg-gradient-to-r from-[#5f7484] via-[#3a5265] to-[#163248]">
+    <section className="w-screen overflow-hidden h-screen relative flex flex-col justify-center items-center bg-gradient-to-r from-[#5f7484] via-[#3a5265] to-[#163248]">
       <img
-        className="absolute top-[-10px] left-[65px] h-fit w-[450px]"
+        className="absolute top-[-10px] left-[65px] h-fit w-fit"
         src="/src/Images/SignupPage/Vector 17.png"
         alt="vector"
       />
       <img
-        className="absolute top-0  left-0 h-fit w-[450px]"
+        className="absolute top-0  left-0 h-fit w-fit"
         src="/src/Images/SignupPage/Vector 18.png"
         alt="vector"
       />
-      <section className="justify-center z-10   items-center">
-        <div className="flex justify-center items-center flex-col gap-[35px]">
-          <div className="flex gap-6 justify-center items-center">
-            <img className="w-[60px]" src="/src/Logos/Logo.png" alt="" />
-            <p className=" text-[#cc7342] text-[80px] font-bold font-['Inter']">
-              SkillHub
-            </p>
-          </div>
+      <section className="absolute top-[130px] left-[647px] ">
+        <img
+          className="w-[50px] md:text-[60px]"
+          src="/src/Logos/Logo.png"
+          alt=""
+        />
+      </section>
+      <section className="justify-center z-10 flex flex-col  items-center">
+        <p>
+          <span className=" text-white text-[30px] pr-1 md:text-[42px] font-bold font-['Roboto']">
+            Welcome to
+          </span>{" "}
+          <span className=" text-[#cc7342] text-[30px] md:text-[42px] font-bold font-['Roboto']">
+            SkillHub
+          </span>
+        </p>
 
-          <p className="h-24 text-center text-white text-[45px] font-bold font-['Inter']">
-            Welcome
-          </p>
-        </div>
         <div className="pt-12">
-          <p className="h-[42px] text-white text-[25px] font-bold font-['Inter']">
+          <p className="text-center text-white text-[35px] md:text-[40px] font-bold font-['Roboto']"></p>
+          <p className=" text-white text-[20px] md:text-[25]  font-bold font-['Inter']">
             Select your category
           </p>
 
@@ -48,8 +53,5 @@ const SignupPage = () => {
     </section>
   )
 }
-
-
-
 
 export default SignupPage
