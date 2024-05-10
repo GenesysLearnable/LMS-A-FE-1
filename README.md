@@ -51,7 +51,6 @@ When you are done working
   git merge develop2.0
   ```
 - Step 6: Push the work to github
-- Step 7: Open pull request for your work
 
 ### DO NOT !
 
