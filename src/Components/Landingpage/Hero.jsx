@@ -3,7 +3,7 @@ import LP_TwinCard from "./LP_TwinCard"
 
 const Hero = () => {
   return (
-    <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] font-['Open Sans']">
+    <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] ">
       <img
         className="absolute top-0 left-[41%] h-[531px]"
         src="/src/Images/LandingPage/Vector 10.png"
@@ -45,8 +45,8 @@ const Hero = () => {
 const Article = ({ text, num }) => {
   return (
     <article className={`flex flex-col`}>
-      <h1 className="text-[#cc7342] py-[2px] flex justify-start text-4xl font-semibold font-['Open Sans']">{`${num}+`}</h1>
-      <p className="text-[#a2a7bb] text-sm font-semibold font-['Open Sans'] leading-7 ">
+      <h1 className="text-[#cc7342] py-[2px] flex justify-start text-4xl font-semibold font-['Roboto']">{`${num}+`}</h1>
+      <p className="text-[#a2a7bb] text-sm font-medium font-['Roboto'] leading-7 ">
         {text}
       </p>
     </article>

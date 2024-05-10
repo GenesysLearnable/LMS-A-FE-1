@@ -9,9 +9,9 @@ import About from "./Components/Landingpage/About"
 import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout"
 import CoursePage from "./Pages/CoursePage"
 import Testimonials from "./Components/Landingpage/Testimonials"
-import SignupPage from "./Pages/SignupPage"
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
 import StudentDashboard from "./Student-Dashboard/StudentDashboard"
+import ErrorPage from "./Pages/ErrorPage"
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -21,10 +21,9 @@ const router = createBrowserRouter(
         <Route path="/testimonials" element={<Testimonials />} />
         <Route path="/course" element={<CoursePage />} />
       </Route>
-      <Route path="/signup" element={<SignupPage />} />
-      <Route path="/signup/student" element={<CreateAccountStudent />} />
+      <Route path="/signup" element={<CreateAccountStudent />} />
       <Route path="/studentDashBoard" element={<StudentDashboard />} />
-      <Route path="*" element={<h1>404 Error or something like that</h1>} />
+      <Route path="*" element={<ErrorPage />} />
     </>
   )
 )
