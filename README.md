@@ -9,12 +9,12 @@ Starting the project
 - Step 1: Copy the link and clone the repo in your local system
 
 - Step 2: Run `npm i` on the terminal to install dependencies
-- Step 3: Run `npm run dev` to start project
+- Step 3: Run `npm run dev` to start the project
 
 Using the project
 
 After you have cloned the repo checkout to branch develop2.0
-- To checkout to branch run
+- To checkout to the branch run
   ```
   git checkout develop2.0
   ```
@@ -46,22 +46,22 @@ When you are done working
   git pull origin develop2.0
   ```
 - Step 4: Checkout to your feature branch
-- Step 5: Merge feature branch to feature branch
+- Step 5: Merge develop2.0 branch to feature branch
   ```
   git merge develop2.0
   ```
-- Step 6: Push the work to github
+- Step 6: Push the work to GitHub
 
-### DO NOT !
+### DO NOT!
 
 1. Merge your pull requests with any branch, only the team lead and I (Chimere) will merge the branches
 2. Do not ever push to develop, do not push to develop2.0, only push to your branch
-3. Touch or edit anybodys code unless the person knows about it to avoid conflicts.
+3. Touch or edit anybody's code unless the person knows about it to avoid conflicts.
 
 ### Technologies Used
 
 Reactjs + Vite,
-Tailwind css
+Tailwind CSS
 
 ### Project Structure
 
@@ -71,7 +71,7 @@ Tailwind css
 
   - The pages file where all platform pages will be stored
   - The components folder where the components will be stored
-  - App.jsx this is where the routing of the pages will be done
+  - App.jsx This is where the routing of the pages will be done
 
 - index.css for the global styles (tailwind utils)
 - main.jsx this renders the app.jsx files
