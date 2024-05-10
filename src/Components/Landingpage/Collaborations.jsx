@@ -1,6 +1,6 @@
 const Collaborations = () => {
   return (
-    <section className="w-full bg-[#f5f6fa] flex flex-col justify-center items-center mt-16 mb-4">
+    <section className="w-full bg-slate-50 flex flex-col justify-center items-center mt-16 mb-4">
       <p className="text-black text-[28.88px] font-semibold font-['Poppins'] leading-[49.10px]">
         We collaborate with, 325+ leading universities and companies
       </p>

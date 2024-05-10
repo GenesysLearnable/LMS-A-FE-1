@@ -1,6 +1,6 @@
 const TestimonialCard = ({ text, name, field, img }) => {
   return (
-    <article className="pt-[81.51px] w-[347.33px] bg-slate-100 z-10 flex flex-col rounded-[14.82px] shadow gap-[30px] pb-[86.14px] px-[25.93px]">
+    <article className="pt-[81.51px] h-[454px] w-[347.33px] bg-slate-100 z-10 flex flex-col rounded-[14.82px] shadow gap-[30px] pb-[86.14px] px-[25.93px]">
       <p className="w-[289.90px] h-[150px] text-neutral-600 text-[14.82px] font-normal font-['Poppins'] leading-[25.19px]">
         {text}
       </p>
