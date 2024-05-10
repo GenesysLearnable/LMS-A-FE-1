@@ -11,7 +11,6 @@ import CoursePage from "./Pages/CoursePage"
 import Testimonials from "./Components/Landingpage/Testimonials"
 import SignupPage from "./Pages/SignupPage"
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
