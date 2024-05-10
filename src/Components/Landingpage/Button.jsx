@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
-const Button = ({ title, bg }) => {
+const Button = ({ title, bg, path }) => {
   return (
-    <Link to={"/other"}>
+    <Link to={path}>
       <button
         className={`${bg} h-12 w-[175px] px-3.5 py-3 rounded-lg gap-1 text-white shadow hover:text-[#ffffffe3] duration-200 border-2 border-[#cc7342] flex justify-center items-center`}
       >
