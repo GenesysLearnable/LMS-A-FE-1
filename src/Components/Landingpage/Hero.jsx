@@ -22,7 +22,7 @@ const Hero = () => {
             btn={details.btn}
             title={details.title}
             textStyle={details.textStyle}
-            path={"/other"}
+            path={"/signup"}
           />
           <article className="flex mt-[160px] items-center justify-between">
             <Article text={"Expert tutors"} num={"500"} />
