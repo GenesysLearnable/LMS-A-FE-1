@@ -1,0 +1,36 @@
+.intro {
+  width: 837px;
+  height: auto;
+  border-radius: 8px;
+  background-color: #041d31;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro h4 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.intro h4:last-child {
+  margin-right: 16px;
+}
+
+.description {
+  height: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 10px;
+  padding-right: 0;
+}
+
+.description img {
+  width: 32px;
+  height: auto;
+  margin-right: 6px;
+}
