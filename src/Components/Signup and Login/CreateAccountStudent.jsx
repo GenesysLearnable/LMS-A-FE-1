@@ -29,7 +29,7 @@ const CreateAccountStudent = () => {
           </section>
         </section>
       </section>
-      <section className="h-screen mix-blend-overlay relative bg-[#041d31]">
+      <section className="h-screen mix-blend-overlay shadow-lg relative bg-[#041d31]">
         <div className="h-screen  w-full z-10 absolute bg-[#041d31d4]"></div>
         <Carousel autoSlide={true}>
           {slides.map((slide, index) => (

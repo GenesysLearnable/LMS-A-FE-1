@@ -37,28 +37,28 @@ const details = [
     title: "Product design",
     text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
     price: "$4,400",
-    path: "/course",
+    path: "/course/product-design",
   },
   {
     img: "/src/Images/LandingPage/How Web 3_0 will Impact Businesses_ 1.png",
     title: "Web3",
     text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
     price: "$4,400",
-    path: "/course",
+    path: "/course/web3",
   },
   {
     img: "/src/Images/LandingPage/html-css-collage-concept-with-person 1.png",
     title: "Backend",
     text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
     price: "$4,400",
-    path: "/course",
+    path: "/course/backend",
   },
   {
     img: "/src/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2 (1).png",
     title: "Frontend",
     text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
     price: "$4,400",
-    path: "/course",
+    path: "/course/frontend",
   },
 ]
 
