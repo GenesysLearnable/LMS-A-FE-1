@@ -11,9 +11,9 @@ const ErrorPage = () => {
         />
         <figcaption>
           <p className="text-xl md:text-4xl text-center text-neutral-800 font-extrabold pt-6 pb-3 font-['Roboto'] leading-normal">
-            404 page not found
+            404 error or something like that
           </p>
-          <p className="text-center text-base font-bold text-neutral-800 font-['Roboto'] leading-normal">or something like that</p>
+          <p className="text-center text-base font-bold text-neutral-800 font-['Roboto'] leading-normal"></p>
         </figcaption>
       </figure>
 
