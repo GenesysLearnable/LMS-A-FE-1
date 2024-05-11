@@ -1,0 +1,16 @@
+.specifications {
+  width: 715px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.specifications h2 {
+  font: 700 24px/36px Poppins;
+}
+
+.specifications {
+  width: max-content;
+}
