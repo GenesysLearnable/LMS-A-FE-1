@@ -34,9 +34,7 @@ const router = createBrowserRouter(
 const App = () => {
   return (
     <>
-      <ToastContainer
-      autoClose={2500}
-       />
+      <ToastContainer autoClose={2500} />
       <RouterProvider router={router} />
     </>
   )
