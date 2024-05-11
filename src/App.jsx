@@ -12,6 +12,9 @@ import Testimonials from "./Components/Landingpage/Testimonials"
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
 import StudentDashboard from "./Student-Dashboard/StudentDashboard"
 import ErrorPage from "./Pages/ErrorPage"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
@@ -29,7 +32,14 @@ const router = createBrowserRouter(
 )
 
 const App = () => {
-  return <RouterProvider router={router} />
+  return (
+    <>
+      <ToastContainer
+      autoClose={2500}
+       />
+      <RouterProvider router={router} />
+    </>
+  )
 }
 
 export default App

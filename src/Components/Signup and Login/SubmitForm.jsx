@@ -1,40 +1,66 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { toast } from "react-toastify"
 
 const SubmitForm = () => {
-  const [value, setValue] = useState("")
+  const [email, setEmail] = useState("")
   const [isEmail, setIsEmail] = useState(true)
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
-  const [noValue, setNoValue] = useState(false)
-  const [errorMsg, setErrorMsg] = useState("")
+
+  const navigate = useNavigate()
+
+  const isValidated = () => {
+    let isProceed = true
+    let errorMessage = "Please enter  "
+    let unmatchedPassword = false
+
+    if (email === null || email === "") {
+      isProceed = false
+      errorMessage += "email address, "
+    } else {
+      setIsEmail(false)
+    }
+    if (password === null || password === "") {
+      isProceed = false
+      errorMessage += "password"
+    }
+    if (confirmPassword === null || confirmPassword === "") {
+      isProceed = false
+    }
+    if (password !== confirmPassword) {
+      isProceed = false
+      unmatchedPassword = true
+    }
+    if (!isProceed) {
+      if (unmatchedPassword) {
+        toast.warn("Password does not match")
+      } else {
+        toast.warning(errorMessage)
+      }
+    }
+
+    return isProceed
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    if (value === "") {
-      setIsEmail(true)
-      setNoValue(true)
-    } else {
-      if (isEmail) {
-        setIsEmail(false)
-        setNoValue(false)
-        pass()
-      }
-    }
-  }
+    const user = { email, password }
 
-  const pass = () => {
-    if (password && confirmPassword !== "") {
-      if (password === confirmPassword) {
-        setErrorMsg("/")
-        const user = { value, password, confirmPassword }
-        console.log(user)
-      } else {
-        setErrorMsg("/signup")
-        setIsEmail(false)
-      }
-      console.log(errorMsg)
+    if (isValidated()) {
+      fetch("http://localhost:8000/user", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify(user),
+      })
+        .then((res) => {
+          toast.success("Registered Successfully")
+          navigate("/")
+        })
+        .catch((err) => {
+          toast.error("Failed: " + err.message)
+        })
     }
   }
 
@@ -49,10 +75,10 @@ const SubmitForm = () => {
           <>
             <input
               className="px-4 h-12 border-[1px] border-[#79747e] rounded-md w-[416px] focus:outline-[#ff9053]"
-              type="text"
+              type="email"
               placeholder="Email address"
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
 
             <div className="pt-[20px] flex flex-col justify-center items-center gap-3">
@@ -93,13 +119,12 @@ const SubmitForm = () => {
               </p>
             </div>
             <div className="pt-[20px] flex flex-col justify-center items-center gap-3">
-              <Link to={errorMsg}>
-                <button className="px-4 h-12 outline-none border rounded-lg  w-[416px] bg-[#ff9053] text-white">
-                  <p className="text-center text-white text-sm font-medium font-['Roboto'] leading-tight tracking-tight">
-                    Signup
-                  </p>
-                </button>
-              </Link>
+              <button className="px-4 h-12 outline-none border rounded-lg  w-[416px] bg-[#ff9053] text-white">
+                <p className="text-center text-white text-sm font-medium font-['Roboto'] leading-tight tracking-tight">
+                  Signup
+                </p>
+              </button>
+
               <p className="opacity-60 text-neutral-400 text-base font-medium font-['Roboto']">
                 Already have an account?{" "}
                 <Link to={"/other"}>

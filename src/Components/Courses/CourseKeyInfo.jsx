@@ -1,5 +1,6 @@
-import StarRating from './StarRatings';
-import CourseStyle from './CourseKeyInfo.module.css';
+import StarRating from "./StarRatings"
+import CourseStyle from "./CourseKeyInfo.module.css"
+import Button from "../Landingpage/Button"
 
 const CourseKeyPoints = () => {
   return (
@@ -34,13 +35,13 @@ const CourseKeyPoints = () => {
             </div>
           </div>
           <div className={CourseStyle.enrollment}>
-            <button>Enroll</button>
+              <Button title={"Enroll"} bg={"bg-[#ff9053]"} path={"/course"} />
             <h2>&#8358;4,400</h2>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CourseKeyPoints;
+export default CourseKeyPoints
