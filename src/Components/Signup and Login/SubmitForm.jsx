@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
+import { UpdateLoginStatus } from "../../LoginContext"
 
 const SubmitForm = () => {
   const [email, setEmail] = useState("")
@@ -9,6 +10,8 @@ const SubmitForm = () => {
   const [confirmPassword, setConfirmPassword] = useState("")
 
   const navigate = useNavigate()
+
+  const toggleLogin = UpdateLoginStatus()
 
   const isValidated = () => {
     let isProceed = true
@@ -57,6 +60,7 @@ const SubmitForm = () => {
         .then((res) => {
           toast.success("Registered Successfully")
           navigate("/")
+          toggleLogin()
         })
         .catch((err) => {
           toast.error("Failed: " + err.message)

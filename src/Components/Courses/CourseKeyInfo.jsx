@@ -1,8 +1,12 @@
 import StarRating from "./StarRatings"
 import CourseStyle from "./CourseKeyInfo.module.css"
 import Button from "../Landingpage/Button"
+import { LoginStatus } from "../../LoginContext"
 
 const CourseKeyPoints = function () {
+
+  const loginStatus = LoginStatus()
+
   return (
     <div className={CourseStyle.course__description}>
       <div className={CourseStyle.course__image}>
@@ -35,7 +39,7 @@ const CourseKeyPoints = function () {
             </div>
           </div>
           <div className={CourseStyle.enrollment}>
-              <Button title={"Enroll"} bg={"bg-[#ff9053]"} path={"/course"} />
+              <Button title={"Enroll"} bg={"bg-[#ff9053]"} path={loginStatus ? "/other" : "/signup"} />
             <h2>&#8358;4,400</h2>
           </div>
         </div>

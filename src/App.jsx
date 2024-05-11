@@ -14,6 +14,8 @@ import StudentDashboard from "./Student-Dashboard/StudentDashboard"
 import ErrorPage from "./Pages/ErrorPage"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import LoginProvider from "./LoginContext"
+
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,10 +35,10 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <>
+    <LoginProvider>
       <ToastContainer autoClose={2500} />
       <RouterProvider router={router} />
-    </>
+    </LoginProvider>
   )
 }
 
