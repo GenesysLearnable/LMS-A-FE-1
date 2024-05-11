@@ -2,7 +2,7 @@ import StarRating from "./StarRatings"
 import CourseStyle from "./CourseKeyInfo.module.css"
 import Button from "../Landingpage/Button"
 
-const CourseKeyPoints = () => {
+const CourseKeyPoints = function () {
   return (
     <div className={CourseStyle.course__description}>
       <div className={CourseStyle.course__image}>
