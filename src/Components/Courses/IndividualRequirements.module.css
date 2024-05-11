@@ -1,0 +1,15 @@
+.outline {
+  width: 715px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.outline img {
+  width: 6px;
+  height: auto;
+}
+
+.outline h4 {
+  font: 400 16px/24px Poppins;
+}
