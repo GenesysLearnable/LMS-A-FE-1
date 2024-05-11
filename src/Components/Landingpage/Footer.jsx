@@ -1,7 +1,5 @@
 import { FaArrowUpLong } from "react-icons/fa6"
-import { Link } from "react-router-dom"
 
-FaArrowUpLong
 const Footer = () => {
   const top = () => {
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -12,7 +10,7 @@ const Footer = () => {
   const subStyles =
     "h-7 text-gray-400 text-base hover:text-gray-300 duration-200 cursor-pointer font-normal font-['Open Sans'] leading-snug"
   return (
-    <footer className="pt-[86px] relative px-[72px]  bg-[#041d31] ">
+    <footer className="pt-[86px] relative px-[72px] bg-gradient-to-b from-[#041d31] to-[#172b3a]">
       <div className="flex justify-between">
         <div className="grid grid-cols-3 ">
           <div className="flex flex-col w-[250.67px]">
@@ -59,10 +57,10 @@ const Footer = () => {
           @2024 -Copyright Group 1: Learnable Build Season
         </p>
         <i
-          onClick={() => this.top}
-          className="w-12 h-12 border cursor-pointer border-white pt-1 flex justify-center items-baseline rounded-full"
+          onClick={() => top()}
+          className="w-11 h-11 border cursor-pointer shadow-sm border-[#ff9053] pt-[0.5px] flex justify-center rounded-full"
         >
-          <FaArrowUpLong className="h-16 text-white  motion-safe:animate-bounce" />
+          <FaArrowUpLong className="h-16 text-sm  text-[#ff9053]  motion-safe:animate-bounce" />
         </i>
       </div>
     </footer>

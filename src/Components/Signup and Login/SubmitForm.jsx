@@ -1,7 +1,10 @@
 import { useState } from "react"
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
 import { UpdateLoginStatus } from "../../LoginContext"
+import FormCard from "./FormCard"
+import Input from "./Input"
+import ButtonFeature from "./ButtonFeature"
 
 const SubmitForm = () => {
   const [email, setEmail] = useState("")
@@ -49,6 +52,7 @@ const SubmitForm = () => {
     e.preventDefault()
 
     const signUpApi = import.meta.env.VITE_SIGNUP_API_URL
+    // const localServer = import.meta.env.VITE_LOCALSERVER_URL
     const user = { email, password }
 
     if (isValidated()) {
@@ -69,77 +73,48 @@ const SubmitForm = () => {
   }
 
   return (
-    <div className="flex flex-col ">
-      <p className="text-zinc-800  pb-8 text-[30px] font-medium font-['Roboto']">
-        Create account
-      </p>
+    <>
+      {isEmail ? (
+        <FormCard text={"Create account"} action={handleSubmit}>
+          <Input
+            type={"email"}
+            placeholder={"Email address"}
+            value={email}
+            setValue={setEmail}
+          />
 
-      <form onSubmit={handleSubmit} action="submit">
-        {isEmail ? (
-          <>
-            <input
-              className="px-4 h-12 border-[1px] border-[#79747e] rounded-md w-[416px] focus:outline-[#ff9053]"
-              type="email"
-              placeholder="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+          <ButtonFeature
+            text={"Already have an account?"}
+            buttonText={"Continue"}
+            spanText={"Login"}
+            path={""}
+          />
+        </FormCard>
+      ) : (
+        <FormCard text={"Create account"} action={handleSubmit}>
+          <div className="flex flex-col gap-5">
+            <Input
+              type={"text"}
+              placeholder={"Password"}
+              value={password}
+              setValue={setPassword}
             />
-
-            <div className="pt-[20px] flex flex-col justify-center items-center gap-3">
-              <button className="px-4 h-12 outline-none border rounded-lg  w-[416px] bg-[#ff9053] text-white">
-                <p className="text-center text-white text-sm font-medium font-['Roboto'] leading-tight tracking-tight">
-                  Continue
-                </p>
-              </button>
-
-              <p className="opacity-60 text-neutral-400 text-base font-medium font-['Roboto']">
-                Already have an account?{" "}
-                <Link to={"/other"}>
-                  <span className="text-orange-400">Login</span>
-                </Link>
-              </p>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="flex flex-col gap-5">
-              <input
-                className="px-4 h-12 border-[1px] border-[#79747e] rounded-md w-[416px] focus:outline-[#ff9053] hover:placeholder:"
-                type="text"
-                placeholder="Password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <input
-                className="px-4 h-12 border-[1px] border-[#79747e] rounded-md w-[416px] focus:outline-[#ff9053] hover:placeholder:"
-                type="text"
-                placeholder="Confirm password"
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-              <p className="text-center py-1 text-neutral-400 text-sm font-normal font-['Roboto']">
-                By signing up, you agree with our{" "}
-                <span className="text-orange-400"> terms and conditions </span>
-              </p>
-            </div>
-            <div className="pt-[20px] flex flex-col justify-center items-center gap-3">
-              <button className="px-4 h-12 outline-none border rounded-lg  w-[416px] bg-[#ff9053] text-white">
-                <p className="text-center text-white text-sm font-medium font-['Roboto'] leading-tight tracking-tight">
-                  Signup
-                </p>
-              </button>
-
-              <p className="opacity-60 text-neutral-400 text-base font-medium font-['Roboto']">
-                Already have an account?{" "}
-                <Link to={"/other"}>
-                  <span className="text-orange-400">Login</span>
-                </Link>
-              </p>
-            </div>
-          </>
-        )}
-      </form>
-    </div>
+            <Input
+              type={"text"}
+              placeholder={"Confirm password"}
+              value={confirmPassword}
+              setValue={setConfirmPassword}
+            />
+            <ButtonFeature
+              text={"Already have an account?"}
+              buttonText={"Signup"}
+              spanText={"Login"}
+              path={""}
+            />
+          </div>
+        </FormCard>
+      )}
+    </>
   )
 }
 
