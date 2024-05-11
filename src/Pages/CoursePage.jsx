@@ -1,3 +1,4 @@
+import CareerCertificate from '../Components/Courses/CareerCertificate';
 import ClassLessons from '../Components/Courses/ClassLessons';
 import CourseKeyInfo from '../Components/Courses/CourseKeyInfo';
 import CourseRequirements from '../Components/Courses/CourseRequirements';
@@ -10,6 +11,7 @@ const CoursePage = () => {
       <LearnInfo />
       <ClassLessons />
       <CourseRequirements />
+      <CareerCertificate />
     </>
   );
 };
