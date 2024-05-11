@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="flex items-center justify-center relative bg-[#f5f6fa] font-['Open Sans']"
+      className="flex items-center justify-center relative bg-slate-50 font-['Roboto']"
     >
       <img
         className="absolute top-[320px] left-0 h-[571px] w-[414px]"

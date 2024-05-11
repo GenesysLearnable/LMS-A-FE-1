@@ -1,6 +1,6 @@
 const AboutCards = ({icon, title, text}) => {
   return (
-    <article className="px-[18px] pt-9 pb-[40.35px] w-[275px] flex flex-col gap-4 ">
+    <article className="px-[18px]  pt-9 pb-[40.35px] w-[275px] flex flex-col gap-4 ">
       <figure>
         <img  src={icon} alt="producivity icon" />
       </figure>

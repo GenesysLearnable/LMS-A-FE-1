@@ -4,15 +4,15 @@ import Button from "./Button"
 const Navbar = () => {
   const linkCLass = ({ isActive }) =>
     isActive
-      ? "text-[#d87139] hover:text-[#cc7242b9] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
-      : "hover:text-[#cc7242b9] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal"
+      ? "text-[#ff9053] hover:text-[#d87139] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
+      : "hover:text-[#ff9053] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal"
 
   return (
     <nav className="w-full h-20 pl-[102px] py-[16] bg-[#041d31] ">
       <section className="h-full w-full flex justify-between">
         <div className="h-full flex items-center">
           <NavLink to={"/"}>
-            <img src={"/src/Logos/Logo.png"} alt="logo" />
+            <img className="w-[44px] h-[42px]" src={"/src/Logos/Logo.png"} alt="logo" />
           </NavLink>
           <div className="flex pl-36 gap-6">
             <NavLink to={"/"} className={linkCLass}>
@@ -30,7 +30,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="h-full flex justify-center gap-4 mr-6 items-center">
-          <Button title={"Signup"} bg={"bg-[#cc7342]"} path={"/signup"} />
+          <Button title={"Signup"} bg={"bg-[#ff9053]"} path={"/signup"} />
           <Button title={"Login"} bg={"bg-transparent"} path={"/other"} />
         </div>
       </section>

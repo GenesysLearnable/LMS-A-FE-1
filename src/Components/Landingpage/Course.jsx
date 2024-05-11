@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom"
 
-const Course = ({ img, title, text, price }) => {
+const Course = ({ img, title, text, price, path }) => {
   const starArray = []
   for (let i = 0; i < 5; i++) {
     starArray.push("/src/Icons/Landingpage/Star 1.png")
   }
 
   return (
-    <Link to={"/"}>
-      <section className="bg-[#f5f6f9] pb-[17.9px] shadow-sm rounded-xl">
+    <Link to={path}>
+      <section className="bg-[#f5f6f9] pb-[17.9px] shadow-md border rounded-xl">
         <img
           className="h-[196.2px] w-[312px] rounded-t-xl "
           src={img}

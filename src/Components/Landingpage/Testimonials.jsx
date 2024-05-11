@@ -2,7 +2,9 @@ import TestimonialCard from "./TestimonialCard"
 
 const Testimonials = () => {
   return (
-    <section className="bg-[#041d31] relative pt-20 pb-[86.23px] pl-[5%]">
+    <section className="bg-[#041d31] overflow-hidden relative  pl-[5%]">
+      <img className="absolute top-[365px] left-0 h-[596px]" src="/src/Images/LandingPage/Vector 14.png"/>
+      <section className="pb-[190px] relative pt-[120px]">
       <article>
         <p className="text-sm text-[#cc7342] font-semibold font-['Poppins'] leading-normal">
           Our users
@@ -12,7 +14,7 @@ const Testimonials = () => {
           What our users have to say
         </p>
       </article>
-      <div className="pt-6 flex overflow-auto gap-5">
+      <div className="pt-8 flex overflow-auto gap-5">
         {details.map((detail, index) => (
           <TestimonialCard
             key={index}
@@ -23,7 +25,8 @@ const Testimonials = () => {
           />
         ))}
       </div>
-      <div className="pb-[133.56px]"></div>
+      <div className="pt-[86px]"></div>
+      </section>
     </section>
   )
 }

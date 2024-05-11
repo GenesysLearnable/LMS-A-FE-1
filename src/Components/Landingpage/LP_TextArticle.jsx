@@ -11,7 +11,7 @@ const LP_TextArticle = ({ heading, text, btn, title, textStyle, path }) => {
         {text}
       </p>
 
-      <Button title={btn} bg={"bg-[#cc7342]"} path={path} />
+      <Button title={btn} bg={"bg-[#ff9053]"} path={path} />
     </article>
   )
 }
