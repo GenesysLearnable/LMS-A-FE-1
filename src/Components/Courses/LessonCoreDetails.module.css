@@ -1,0 +1,23 @@
+.core__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.core__details h2,
+.core__details h5 {
+  font-family: Poppins;
+  font-weight: 700;
+}
+
+.core__details h2 {
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.core__details h5 {
+  font-size: 16px;
+  line-height: 24px;
+  align-self: flex-end;
+}
