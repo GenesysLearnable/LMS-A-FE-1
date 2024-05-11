@@ -7,13 +7,18 @@ import {
 import Landingpage from "./Pages/Landingpage"
 import About from "./Components/Landingpage/About"
 import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout"
-import CoursePage from "./Pages/CoursePage"
 import Testimonials from "./Components/Landingpage/Testimonials"
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
 import StudentDashboard from "./Student-Dashboard/StudentDashboard"
 import ErrorPage from "./Pages/ErrorPage"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
+import LoginProvider from "./LoginContext"
+import Courses from "./Components/Landingpage/Courses"
+import ProductDesign from "./Components/Courses/Course/ProductDesign"
+import Web3 from "./Components/Courses/Course/Web3"
+import Backend from "./Components/Courses/Course/Backend"
+import Frontend from "./Components/Courses/Course/Frontend"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +27,11 @@ const router = createBrowserRouter(
         <Route index element={<Landingpage />} />
         <Route path="/about" element={<About />} />
         <Route path="/testimonials" element={<Testimonials />} />
-        <Route path="/course" element={<CoursePage />} />
+        <Route path="/course" element={<Courses />} />
+        <Route path="/course/product-design" element={<ProductDesign />} />
+        <Route path="/course/web3" element={<Web3 />} />
+        <Route path="/course/backend" element={<Backend />} />
+        <Route path="/course/frontend" element={<Frontend />} />
       </Route>
       <Route path="/signup" element={<CreateAccountStudent />} />
       <Route path="/studentDashBoard" element={<StudentDashboard />} />
@@ -33,12 +42,10 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <>
-      <ToastContainer
-      autoClose={2500}
-       />
+    <LoginProvider>
+      <ToastContainer autoClose={2500} />
       <RouterProvider router={router} />
-    </>
+    </LoginProvider>
   )
 }
 

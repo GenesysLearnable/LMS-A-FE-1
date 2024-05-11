@@ -1,19 +1,25 @@
-import CareerCertificate from '../Components/Courses/CareerCertificate';
-import ClassLessons from '../Components/Courses/ClassLessons';
-import CourseKeyInfo from '../Components/Courses/CourseKeyInfo';
-import CourseRequirements from '../Components/Courses/CourseRequirements';
-import LearnInfo from '../Components/Courses/LearnInfo';
+import CareerCertificate from '../Components/Courses/CareerCertificate'
+import ClassLessons from '../Components/Courses/ClassLessons'
+import CourseKeyInfo from '../Components/Courses/CourseKeyInfo'
+import CourseRequirements from '../Components/Courses/CourseRequirements'
+import LearnInfo from '../Components/Courses/LearnInfo'
 
-const CoursePage = () => {
+const CoursePage = ({ details }) => {
   return (
     <>
-      <CourseKeyInfo />
+      <CourseKeyInfo
+        img={details.img}
+        title={details.title}
+        text={details.text}
+        students={details.students}
+        price={details.price}
+      />
       <LearnInfo />
       <ClassLessons />
       <CourseRequirements />
       <CareerCertificate />
     </>
-  );
-};
+  )
+}
 
-export default CoursePage;
+export default CoursePage
