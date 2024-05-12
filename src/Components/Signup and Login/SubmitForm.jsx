@@ -63,7 +63,7 @@ const SubmitForm = () => {
       })
         .then((res) => {
           if (res.status !== 200) {
-            toast.error("Failed:" + res.status + " Incorrect email format")
+            toast.error("Failed:" + res.status )
           } else {
             toast.success("Registered Successfully")
             navigate("/")
@@ -83,7 +83,7 @@ const SubmitForm = () => {
       {isEmail ? (
         <FormCard text={"Create account"} action={handleSubmit}>
           <Input
-            type={"text"}
+            type={"email"}
             placeholder={"Email address"}
             value={email}
             setValue={setEmail}
