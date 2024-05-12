@@ -14,7 +14,7 @@ const Faqs = () => {
     <section className="bg-[#f5f6fa] relative pt-[88px] pb-[165px] flex items-center justify-center">
       <img
         className="absolute top-[148px] h-[694px]"
-        src="/src/Images/LandingPage/Vector 12.png"
+        src="/Images/LandingPage/Vector 12.png"
         alt="vector"
       />
       <article className="z-10">
@@ -41,7 +41,7 @@ const Faqs = () => {
                         ? "h-7 w-7 duration-300 "
                         : "h-7 w-7 rotate-180 duration-300"
                     }
-                    src={"/src/Icons/Landingpage/arrow-down.png"}
+                    src={"/Icons/Landingpage/arrow-down.png"}
                     alt="arrow-down icon"
                   />
                 </div>
@@ -63,15 +63,6 @@ const Faqs = () => {
   )
 }
 
-// const Article = ({ question, answer }) => {
-//   return (
-
-//   )
-// }
-
-{
-  /* <Article key={index} question={faq.question} answer={faq.answer} /> */
-}
 
 const questions = [
   {

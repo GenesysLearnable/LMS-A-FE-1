@@ -31,22 +31,22 @@ const details = [
   {
     title: "Efficiency ",
     text: "Streamline your academic tasks and processes, saving time and effort with our intuitive and user-friendly platform.",
-    icon: "/src/Icons/Landingpage/Frame 68.png",
+    icon: "/Icons/Landingpage/Frame 68.png",
   },
   {
     title: "Accuracy",
     text: "Ensure precision and reliability in every aspect of your academic journey.",
-    icon: "/src/Icons/Landingpage/Frame 66.png",
+    icon: "/Icons/Landingpage/Frame 66.png",
   },
   {
     title: "Comprehensive Solutions",
     text: "Access a wide range of tools and resources tailored specifically for students",
-    icon: "/src/Icons/Landingpage/Frame 67.png",
+    icon: "/Icons/Landingpage/Frame 67.png",
   },
   {
     title: "Empowerment",
     text: "Feel empowered to take control of your academic success with skillhub, empowering you with the tools and resources you need to excel in your studies.",
-    icon: "/src/Icons/Landingpage/Frame 69.png",
+    icon: "/Icons/Landingpage/Frame 69.png",
   },
 ]
 
