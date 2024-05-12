@@ -1,7 +1,7 @@
 const StarRating = () => {
   return (
     <>
-      <img src="/src/Images/Courses/Stars.svg" alt="Star ratings" />
+      <img src="/Images/Courses/Stars.svg" alt="Star ratings" />
     </>
   );
 };
