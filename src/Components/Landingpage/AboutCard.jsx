@@ -13,9 +13,9 @@ const AboutCard = () => {
           </p>
         </article>
         <section className="pt-6 flex justify-between">
-          {details.map((detail) => (
+          {details.map((detail, index) => (
             <AboutCards
-              key={detail}
+              key={index}
               title={detail.title}
               text={detail.text}
               icon={detail.icon}
