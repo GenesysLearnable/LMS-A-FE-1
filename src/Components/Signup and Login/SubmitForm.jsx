@@ -51,7 +51,7 @@ const SubmitForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    const signUpApi = import.meta.env.VITE_SIGNUP_API_URL
+    const signUpApi = import.meta.env.VITE_SIGNUP_ENDPOINT
     // const localServer = import.meta.env.VITE_LOCALSERVER_URL
     const user = { email, password }
 
@@ -62,10 +62,15 @@ const SubmitForm = () => {
         body: JSON.stringify(user),
       })
         .then((res) => {
-          toast.success("Registered Successfully")
-          navigate("/")
-          toggleLogin()
-          console.log(res)
+          if (res.status !== 200) {
+            toast.error("Failed:" + res.status + " Incorrect email format")
+          } else {
+            toast.success("Registered Successfully")
+            navigate("/")
+            toggleLogin()
+            console.log(res)
+            console.log(res.status)
+          }
         })
         .catch((err) => {
           toast.error("Failed: " + err.message)
