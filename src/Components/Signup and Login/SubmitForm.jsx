@@ -65,6 +65,7 @@ const SubmitForm = () => {
           toast.success("Registered Successfully")
           navigate("/")
           toggleLogin()
+          console.log(res)
         })
         .catch((err) => {
           toast.error("Failed: " + err.message)
@@ -77,7 +78,7 @@ const SubmitForm = () => {
       {isEmail ? (
         <FormCard text={"Create account"} action={handleSubmit}>
           <Input
-            type={"email"}
+            type={"text"}
             placeholder={"Email address"}
             value={email}
             setValue={setEmail}
