@@ -1,0 +1,49 @@
+import Carousel from "./Carousel"
+import SubmitForm from "./SubmitForm"
+
+const CreateAccountStudent = () => {
+  const slides = [
+    "/src/Images/SignupPage/Frame 1000002307.png",
+    "/src/Images/SignupPage/Frame 1000002165.png",
+    "/src/Images/SignupPage/Frame 1000002309.png",
+  ]
+  return (
+    // Twin section
+    <section className="grid grid-cols-2 overflow-hidden ">
+      {/* Display section */}
+      <section className="bg-white flex items-center justify-center">
+        {/* content section  */}
+        <section className="items-center flex flex-col h-screen">
+          <div className="flex items-baseline w-full gap-1 mt-9">
+            <img
+              className="w-6 h-[22px]"
+              src="/src/Logos/Vector 9 (1).png"
+              alt="logo"
+            />
+            <p className="text-[#ff9053] text-xl font-bold font-['Roboto']">
+              SkillHub
+            </p>
+          </div>
+          <section className="h-full flex justify-center items-center">
+            <SubmitForm />
+          </section>
+        </section>
+      </section>
+      <section className="h-screen mix-blend-overlay shadow-lg relative bg-[#041d31]">
+        <div className="h-screen  w-full z-10 absolute bg-[#041d31d4]"></div>
+        <Carousel autoSlide={true}>
+          {slides.map((slide, index) => (
+            <img
+              key={index}
+              className=""
+              src={slide}
+              alt=""
+            />
+          ))}
+        </Carousel>
+      </section>
+    </section>
+  )
+}
+
+export default CreateAccountStudent

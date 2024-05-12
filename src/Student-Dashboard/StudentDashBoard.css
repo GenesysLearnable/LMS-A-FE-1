@@ -1,0 +1,307 @@
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px;
+  width: 93%;
+  margin-left: 100px;
+}
+
+.searchBox {
+  border: 1px solid #d5d5d5;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 300px;
+  color: black;
+  background-color: #d5d5d5;
+  cursor: pointer;
+  font-family: Nunito Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.1px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.More {
+  border: 1px solid #5c5c5c;
+  border-radius: 50%;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+}
+
+.studentPhoto {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.userInfo {
+  margin-right: 10px;
+}
+
+.userName {
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: center;
+}
+
+.userType {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: center;
+  color: #d5d5d5;
+}
+
+.secondContainerbox {
+  background-color: #1a3d58;
+  color: white;
+  margin-top: 20px;
+  width: 715px;
+  height: 278px;
+  padding: 77px 329px 54px 29px;
+  gap: 0px;
+  border-radius: 12px 0px 0px 0px;
+  opacity: 0px;
+}
+
+.secondContainerboxContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.welcomeText {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15.23px;
+  text-align: left;
+}
+
+.naMe {
+  font-family: Roboto;
+  font-size: 39px;
+  font-weight: 700;
+  line-height: 45.7px;
+  text-align: left;
+}
+
+.orange {
+  color: orange;
+  font-family: Roboto;
+  font-size: 39px;
+  font-weight: 400;
+  line-height: 45.7px;
+  text-align: left;
+}
+
+.calendarIcon {
+  margin-top: 10px;
+}
+
+.statistics {
+  display: flex;
+  width: 730px;
+  height: 149px;
+  top: 445px;
+  left: 310px;
+  gap: 36px;
+  margin-top: 20px;
+}
+.statBox {
+  background-color: #eaeaea;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+  width: 200px;
+  background: #1a3d58;
+  color: white;
+  border-radius: 10px;
+}
+
+.statTitle {
+  font-weight: bold;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23.44px;
+  text-align: left;
+}
+
+.statNumber {
+  margin-top: 5px;
+  color: #ff9053;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 23.44px;
+  text-align: left;
+}
+
+.side {
+  display: flex;
+  width: 294px;
+  background-color: #ffffff;
+  flex-direction: column;
+  gap: 23px;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.paymentHistory,
+.productDesign {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productDesign {
+  background: #f5f6fa;
+  padding: 15px 5px;
+  border-radius: 5px;
+}
+
+.paymentTitle,
+.product,
+.productName {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.productInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.courseEnrolledBox {
+  color: white;
+  padding: 20px;
+  margin-top: 20px;
+  background: #1a3d58;
+  height: 361px;
+  width: 715px;
+  border-radius: 10px;
+}
+
+.all {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.3px;
+  text-align: left;
+  color: #ff9053;
+  width: 30px;
+  height: 29px;
+  top: 26px;
+  left: 599px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.courseEnrolled {
+  width: 177px;
+  height: 29px;
+  top: 26px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.3px;
+  text-align: left;
+}
+
+.inProgress {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 29.3px;
+  text-align: left;
+  width: 128px;
+  height: 29px;
+  top: 26px;
+  left: 840px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.enrolled {
+  display: flex;
+  justify-content: space-around;
+}
+
+.progressBar {
+  margin-bottom: 10px;
+}
+
+.rating {
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: gold;
+}
+
+.viewCourse {
+  border: 2px solid orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.courseDetails {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+  border-radius: 6px 0px 0px 0px;
+  border: 1px solid;
+  opacity: 0px;
+  align-items: center;
+  padding: 25px 35px;
+}
+.courseName {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.courseProgress {
+  height: 5px;
+  width: 178px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+.topHeading h2 {
+  margin-bottom: 10px;
+}
+.topHeading p {
+  font-size: 13px;
+}
+.bottomHeading {
+  margin-top: 38px;
+}
+.welcomeText {
+  font-size: 16px;
+  line-height: 1.5;
+}

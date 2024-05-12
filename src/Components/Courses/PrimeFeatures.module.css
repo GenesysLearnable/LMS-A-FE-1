@@ -1,0 +1,19 @@
+.key__info {
+  padding-bottom: 12px;
+
+  display: flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.key__info img {
+  width: 16.03px;
+  height: auto;
+}
+
+.key__info h4 {
+  font-family: Poppins;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
