@@ -5,7 +5,7 @@ const RecommendedCourse = function () {
     <div>
       <div>
         <img
-          src="/src/Images/Courses/How-Web-3.0-will-Impact-Businesses.svg"
+          src="/Images/Courses/How-Web-3.0-will-Impact-Businesses.svg"
           alt="A Web3 Course"
         />
       </div>
