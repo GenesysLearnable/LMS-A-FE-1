@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="flex justify-end pb-16 border-b-[#ffffff40] border-b-[1px]">
             <img
               className="flex items-end w-11 "
-              src="/src/Logos/Logo.png"
+              src="/Logos/Logo.png"
               alt="logo"
             />
           </div>

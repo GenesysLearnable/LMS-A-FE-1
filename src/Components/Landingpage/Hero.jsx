@@ -8,12 +8,12 @@ const Hero = () => {
     <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] ">
       <img
         className="absolute top-0 left-[41%] h-[531px]"
-        src="/src/Images/LandingPage/Vector 10.png"
+        src="/Images/LandingPage/Vector 10.png"
         alt="vector1"
       />
       <img
         className="absolute top-0 left-[73.2%] h-[531px]"
-        src="/src/Images/LandingPage/Vector 11.png"
+        src="/Images/LandingPage/Vector 11.png"
       />
       <LP_TwinCard>
         <article>
@@ -36,7 +36,7 @@ const Hero = () => {
         </article>
         <img
           className="w-[599px] h-[620px]"
-          src={"/src/Images/LandingPage/businessman-working-laptop 1@2x.png"}
+          src={"/Images/LandingPage/businessman-working-laptop 1@2x.png"}
           alt="man-on-laptop"
         />
       </LP_TwinCard>

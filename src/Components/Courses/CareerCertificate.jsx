@@ -12,7 +12,7 @@ const CareerCertificate = function () {
         </h3>
       </div>
 
-      <img src="/src/Images/Courses/Certificate.svg" alt="Certificate" />
+      <img src="/Images/Courses/Certificate.svg" alt="Certificate" />
     </div>
   );
 };
