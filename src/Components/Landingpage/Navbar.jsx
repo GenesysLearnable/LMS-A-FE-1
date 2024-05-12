@@ -59,7 +59,7 @@ const Navbar = () => {
         ) : (
           <div className="h-full flex justify-center gap-4 mr-6 items-center">
             <Button title={"Signup"} bg={"bg-[#ff9053]"} path={"/signup"} />
-            <Button title={"Login"} bg={"bg-transparent"} path={"/other"} />
+            <Button title={"Login"} bg={"bg-transparent"} path={"/login"} />
           </div>
         )}
       </section>

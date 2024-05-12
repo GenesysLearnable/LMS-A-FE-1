@@ -92,8 +92,8 @@ const SubmitForm = () => {
           <ButtonFeature
             text={"Already have an account?"}
             buttonText={"Continue"}
-            spanText={"Login"}
-            path={""}
+            spanText={" Login"}
+            path={"/login"}
           />
         </FormCard>
       ) : (
@@ -114,8 +114,8 @@ const SubmitForm = () => {
             <ButtonFeature
               text={"Already have an account?"}
               buttonText={"Signup"}
-              spanText={"Login"}
-              path={""}
+              spanText={" Login"}
+              path={"/login"}
             />
           </div>
         </FormCard>
