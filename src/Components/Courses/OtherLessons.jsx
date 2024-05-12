@@ -4,7 +4,7 @@ const OtherLessons = function ({ number, title, minutes, seconds }) {
   return (
     <section className={Style.intro}>
       <div className={Style.description}>
-        <img src="/src/Images/Courses/Locked-Icon.svg" alt="Locked" />
+        <img src="/Images/Courses/Locked-Icon.svg" alt="Locked" />
 
         <h4>{number}.</h4>
 

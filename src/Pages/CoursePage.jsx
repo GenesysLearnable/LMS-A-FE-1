@@ -18,7 +18,7 @@ const CoursePage = ({ details }) => {
       <ClassLessons />
       <CourseRequirements />
       <CareerCertificate />
-      <RelatedCourses />
+      {/* <RelatedCourses /> */}
     </>
   );
 };

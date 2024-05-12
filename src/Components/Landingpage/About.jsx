@@ -9,13 +9,13 @@ const About = () => {
     >
       <img
         className="absolute top-[320px] left-0 h-[571px] w-[414px]"
-        src={"/src/Images/LandingPage/Vector 11.1.png"}
+        src={"/Images/LandingPage/Vector 11.1.png"}
         alt="vector"
       />
       <LP_TwinCard>
         <img
           className="w-[599px] h-[620px]"
-          src={"/src/Images/LandingPage/businessman-working-laptop 1.png"}
+          src={"/Images/LandingPage/businessman-working-laptop 1.png"}
           alt=""
         />
         <article>
