@@ -51,34 +51,6 @@
   max-width: 678px;
 }
 
-.course__rating {
-  width: 298.43px;
-  height: auto;
-  display: flex;
-  gap: 4px;
-}
-
-.course__rating > div {
-  display: flex;
-}
-
-.course__rating h4 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27.2px;
-}
-
-.course__rating h5 {
-  color: #ff9053;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 23.8px;
-}
-
-.students {
-  padding-left: 4px;
-}
-
 .enrollment {
   width: 175px;
 }
