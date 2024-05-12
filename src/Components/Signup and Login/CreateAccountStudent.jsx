@@ -3,9 +3,9 @@ import SubmitForm from "./SubmitForm"
 
 const CreateAccountStudent = () => {
   const slides = [
-    "/src/Images/SignupPage/Frame 1000002307.png",
-    "/src/Images/SignupPage/Frame 1000002165.png",
-    "/src/Images/SignupPage/Frame 1000002309.png",
+    "/Images/SignupPage/Frame 1000002307.png",
+    "/Images/SignupPage/Frame 1000002165.png",
+    "/Images/SignupPage/Frame 1000002309.png",
   ]
   return (
     // Twin section
@@ -17,7 +17,7 @@ const CreateAccountStudent = () => {
           <div className="flex items-baseline w-full gap-1 mt-9">
             <img
               className="w-6 h-[22px]"
-              src="/src/Logos/Vector 9 (1).png"
+              src="/Logos/Vector 9 (1).png"
               alt="logo"
             />
             <p className="text-[#ff9053] text-xl font-bold font-['Roboto']">

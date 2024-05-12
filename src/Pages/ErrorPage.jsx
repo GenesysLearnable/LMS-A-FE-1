@@ -6,7 +6,7 @@ const ErrorPage = () => {
       <figure className="flex flex-col items-center justify-center">
         <img
           className="size-80 md:size-96 object-fill"
-          src={"/src/Images/error.png"}
+          src={"/Images/error.png"}
           alt="error"
         />
         <figcaption>
