@@ -63,7 +63,7 @@ const SubmitForm = () => {
       })
         .then((res) => {
           if (res.status !== 200) {
-            toast.error("Failed:" + res.status )
+            toast.error("Error : " + res.status + " Failed to signup:")
           } else {
             toast.success("Registered Successfully")
             navigate("/")
