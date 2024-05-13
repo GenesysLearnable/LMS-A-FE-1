@@ -1,17 +1,19 @@
+import { LoginStatus } from "../../LoginContext"
 import LP_TextArticle from "./LP_TextArticle"
 import LP_TwinCard from "./LP_TwinCard"
 
 const Hero = () => {
+  const loginStatus = LoginStatus()
   return (
-    <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] font-['Open Sans']">
+    <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] ">
       <img
         className="absolute top-0 left-[41%] h-[531px]"
-        src="/src/Images/LandingPage/Vector 10.png"
+        src="/Images/LandingPage/Vector 10.png"
         alt="vector1"
       />
       <img
         className="absolute top-0 left-[73.2%] h-[531px]"
-        src="/src/Images/LandingPage/Vector 11.png"
+        src="/Images/LandingPage/Vector 11.png"
       />
       <LP_TwinCard>
         <article>
@@ -22,7 +24,7 @@ const Hero = () => {
             btn={details.btn}
             title={details.title}
             textStyle={details.textStyle}
-            path={"/other"}
+            path={loginStatus ? "/course" : "/signup"}
           />
           <article className="flex mt-[160px] items-center justify-between">
             <Article text={"Expert tutors"} num={"500"} />
@@ -34,7 +36,7 @@ const Hero = () => {
         </article>
         <img
           className="w-[599px] h-[620px]"
-          src={"/src/Images/LandingPage/businessman-working-laptop 1@2x.png"}
+          src={"/Images/LandingPage/businessman-working-laptop 1@2x.png"}
           alt="man-on-laptop"
         />
       </LP_TwinCard>
@@ -45,8 +47,8 @@ const Hero = () => {
 const Article = ({ text, num }) => {
   return (
     <article className={`flex flex-col`}>
-      <h1 className="text-[#cc7342] py-[2px] flex justify-start text-4xl font-semibold font-['Open Sans']">{`${num}+`}</h1>
-      <p className="text-[#a2a7bb] text-sm font-semibold font-['Open Sans'] leading-7 ">
+      <h1 className="text-[#cc7342] py-[2px] flex justify-start text-4xl font-semibold font-['Roboto']">{`${num}+`}</h1>
+      <p className="text-[#a2a7bb] text-sm font-medium font-['Roboto'] leading-7 ">
         {text}
       </p>
     </article>

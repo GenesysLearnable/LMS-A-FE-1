@@ -1,6 +1,12 @@
+import CASPageLayout from "./CASPageLayout"
+import SubmitForm from "./SubmitForm"
+
 const CreateAccountStudent = () => {
+
   return (
-    <div>CreateAccountStudent</div>
+    <CASPageLayout>
+      <SubmitForm />
+    </CASPageLayout>
   )
 }
 
