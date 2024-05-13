@@ -4,9 +4,7 @@ const FormCard = ({ children, text, action }) => {
       <p className="text-zinc-800  pb-8 text-[30px] font-medium font-['Roboto']">
         {text}
       </p>
-      <form onSubmit={action} action="submit">
-      {children}
-      </form>
+      <form>{children}</form>
     </div>
   )
 }

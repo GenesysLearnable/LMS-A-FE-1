@@ -4,6 +4,10 @@ import FormCard from "../Components/Signup and Login/FormCard"
 import Input from "../Components/Signup and Login/Input"
 import ButtonFeature from "../Components/Signup and Login/ButtonFeature"
 import useFetch from "../utlis/useFetch"
+import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom"
+import { UpdateLoginStatus } from "../LoginContext"
+import Spinners from "../Components/Signup and Login/Spinners"
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false)
@@ -13,6 +17,8 @@ const LoginPage = () => {
   })
 
   const fetchData = useFetch()
+  const navigate = useNavigate()
+  const toggleLogin = UpdateLoginStatus()
 
   const handleChange = ({ target: { name, value } }) => {
     setFormValues((prev) => ({ ...prev, [name]: value }))
@@ -23,14 +29,25 @@ const LoginPage = () => {
     try {
       let res = await fetchData.post("login", formValues)
       console.log(res)
+      setLoading(false)
+      if (res.success == true) {
+        toast.success(res.message)
+        navigate("/")
+        toggleLogin()
+      } else {
+        toast.error(res.message)
+      }
       return
     } catch (error) {
+      setLoading(false)
+      toast.error(`${error}` )
       throw new Error(error)
     }
   }
 
   return (
     <CASPageLayout>
+      <Spinners loading={loading} />
       <FormCard text={"Login"}>
         <div className="flex flex-col gap-3">
           <Input
@@ -51,7 +68,7 @@ const LoginPage = () => {
             text={"Don't have an account?"}
             buttonText={"Login"}
             spanText={" Create account"}
-            path={""}
+            path={"/signup"}
             onClick={handleSubmit}
           />
         </div>

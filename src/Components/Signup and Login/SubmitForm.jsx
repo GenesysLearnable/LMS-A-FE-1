@@ -1,16 +1,28 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { toast } from "react-toastify"
 import { UpdateLoginStatus } from "../../LoginContext"
 import FormCard from "./FormCard"
 import Input from "./Input"
 import ButtonFeature from "./ButtonFeature"
+import useFetch from "../../utlis/useFetch"
+import { toast } from "react-toastify"
+import Spinners from "./Spinners"
 
 const SubmitForm = () => {
-  const [email, setEmail] = useState("")
   const [isEmail, setIsEmail] = useState(true)
-  const [password, setPassword] = useState("")
-  const [confirmPassword, setConfirmPassword] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+
+  const [formValues, setFormValues] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  })
+
+  const fetchData = useFetch()
+
+  const handleChange = ({ target: { name, value } }) => {
+    setFormValues((prev) => ({ ...prev, [name]: value }))
+  }
 
   const navigate = useNavigate()
   const toggleLogin = UpdateLoginStatus()
@@ -20,20 +32,23 @@ const SubmitForm = () => {
     let errorMessage = "Please enter  "
     let unmatchedPassword = false
 
-    if (email === null || email === "") {
+    if (formValues.email === null || formValues.email === "") {
       isProceed = false
       errorMessage += "email address, "
     } else {
       setIsEmail(false)
     }
-    if (password === null || password === "") {
+    if (formValues.password === null || formValues.password === "") {
       isProceed = false
       errorMessage += "password"
     }
-    if (confirmPassword === null || confirmPassword === "") {
+    if (
+      formValues.confirmPassword === null ||
+      formValues.confirmPassword === ""
+    ) {
       isProceed = false
     }
-    if (password !== confirmPassword) {
+    if (formValues.password !== formValues.confirmPassword) {
       isProceed = false
       unmatchedPassword = true
     }
@@ -48,45 +63,43 @@ const SubmitForm = () => {
     return isProceed
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-
-    const signUpApi = import.meta.env.VITE_SIGNUP_ENDPOINT
-    // const localServer = import.meta.env.VITE_LOCALSERVER_URL
-    const user = { email, password }
-
+  const handleSubmit = async () => {
     if (isValidated()) {
-      fetch(signUpApi, {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(user),
-      })
-        .then((res) => {
-          if (res.status !== 200) {
-            toast.error("Error : " + res.status + " Failed to signup:")
-          } else {
-            toast.success("Registered Successfully")
-            navigate("/")
-            toggleLogin()
-            console.log(res)
-            console.log(res.status)
-          }
-        })
-        .catch((err) => {
-          toast.error("Failed: " + err.message)
-        })
+      const formData = {
+        email: formValues.email,
+        password: formValues.password,
+      }
+
+      setIsLoading(true)
+      try {
+        let res = await fetchData.post("", formData)
+        setIsLoading(false)
+        if (res.success == true) {
+          toast.success(res.message)
+          navigate("/")
+          toggleLogin()
+        } else {
+          toast.error(res.message) || toast.error(res.error)
+        }
+      } catch (error) {
+        setIsLoading(false)
+        toast.error(`${error}`)
+        throw new Error(error)
+      }
     }
   }
 
   return (
     <>
+      <Spinners loading={isLoading} />
       {isEmail ? (
-        <FormCard text={"Create account"} action={handleSubmit}>
+        <FormCard text={"Create account"}>
           <Input
-            type={"email"}
+            name="email"
+            type="email"
             placeholder={"Email address"}
-            value={email}
-            setValue={setEmail}
+            value={formValues.email}
+            onChange={handleChange}
           />
 
           <ButtonFeature
@@ -94,28 +107,32 @@ const SubmitForm = () => {
             buttonText={"Continue"}
             spanText={" Login"}
             path={"/login"}
+            onClick={handleSubmit}
           />
         </FormCard>
       ) : (
-        <FormCard text={"Create account"} action={handleSubmit}>
+        <FormCard text={"Create account"}>
           <div className="flex flex-col gap-5">
             <Input
+              name="password"
               type={"text"}
               placeholder={"Password"}
-              value={password}
-              setValue={setPassword}
+              value={formValues.password}
+              onChange={handleChange}
             />
             <Input
+              name="confirmPassword"
               type={"text"}
               placeholder={"Confirm password"}
-              value={confirmPassword}
-              setValue={setConfirmPassword}
+              value={formValues.confirmPassword}
+              onChange={handleChange}
             />
             <ButtonFeature
               text={"Already have an account?"}
               buttonText={"Signup"}
               spanText={" Login"}
               path={"/login"}
+              onClick={handleSubmit}
             />
           </div>
         </FormCard>
