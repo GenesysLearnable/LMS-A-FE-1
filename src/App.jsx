@@ -24,6 +24,7 @@ import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStu
 import StudentDashboard from "./Student-Dashboard/StudentDashboard"
 import ErrorPage from "./Pages/ErrorPage"
 import LoginProvider from "./LoginContext"
+import LoginPage from "./Pages/LoginPage"
 
 // Routes
 const router = createBrowserRouter(
@@ -41,7 +42,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="/signup" element={<CreateAccountStudent />} />
-
+      <Route path="/login" element={<LoginPage />} />
       <Route path="/studentDashBoard" element={<StudentDashboard />} />
 
       <Route path="*" element={<ErrorPage />} />
