@@ -25,7 +25,7 @@ const LoginPage = () => {
   }
 
   const handleSubmit = async () => {
-    setLoading(true)
+    setLoading(false)
     try {
       let res = await fetchData.post("login", formValues)
       console.log(res)
@@ -40,14 +40,13 @@ const LoginPage = () => {
       return
     } catch (error) {
       setLoading(false)
-      toast.error(`${error}` )
+      toast.error(`${error}`)
       throw new Error(error)
     }
   }
 
   return (
-    <CASPageLayout>
-      <Spinners loading={loading} />
+    <CASPageLayout loading={loading}>
       <FormCard text={"Login"}>
         <div className="flex flex-col gap-3">
           <Input
