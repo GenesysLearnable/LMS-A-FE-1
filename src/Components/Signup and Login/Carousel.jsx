@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { BiChevronLeft, BiChevronRight } from "react-icons/bi"
+
 
 const Carousel = ({
   children: slides,

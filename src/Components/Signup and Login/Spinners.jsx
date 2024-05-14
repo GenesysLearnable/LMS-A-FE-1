@@ -1,21 +1,10 @@
-import ClipLoader from "react-spinners/ClipLoader"
+import { SpinnerInfinity } from "spinners-react"
 
-const override = {
-  display: "block",
-  margin: "100px auto",
-  position: "absolute",
-  top: "30%",
-  left: "48%",
-}
-
-const Spinners = ({ loading }) => {
+const Spinners = ({enabled}) => {
   return (
-    <ClipLoader
-      color="#4338ca"
-      loading={loading}
-      cssOverride={override}
-      size={80}
-    />
+    
+      <SpinnerInfinity enabled={enabled} color="#f37c3b"  size={70} thickness={120}/>
+    
   )
 }
 
