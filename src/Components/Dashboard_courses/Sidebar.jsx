@@ -24,7 +24,7 @@ const Sidebar = () => {
           SKILLHUB
         </p>
       </div>
-      <section className="mt-[60px] h-64 flex flex-col">
+      <section className="mt-[60px] h-64 flex flex-col gap-48">
         <div className="flex flex-col gap-4 ">
           <NavLink to={"/students/dashboard"} className={textStyles}>
             <img
@@ -37,7 +37,7 @@ const Sidebar = () => {
           <NavLink to={"/students/account"} className={textStyles}>
             <img
               className="w-6 h-[22px]"
-              src="/public/Icons/dashboard/profile.png"
+              src="/Icons/dashboard/profile.png"
               alt="dashboard icon"
             />
             Account
@@ -45,7 +45,7 @@ const Sidebar = () => {
           <NavLink to={"/students/courses"} className={textStyles}>
             <img
               className="w-6 h-[22px]"
-              src="/public/Icons/dashboard/book-square.png"
+              src="/Icons/dashboard/book-square.png"
               alt="dashboard icon"
             />
             Courses
@@ -53,7 +53,7 @@ const Sidebar = () => {
           <NavLink to={"/students/forum"} className={textStyles}>
             <img
               className="w-6 h-[22px]"
-              src="/public/Icons/dashboard/messages-3.png"
+              src="/Icons/dashboard/messages-3.png"
               alt="dashboard icon"
             />
             Forum
@@ -61,13 +61,21 @@ const Sidebar = () => {
           <NavLink to={"/students/certificate"} className={textStyles}>
             <img
               className="w-6 h-[22px]"
-              src="/public/Icons/dashboard/Graduation Cap.png"
+              src="/Icons/dashboard/Graduation Cap.png"
               alt="dashboard icon"
             />
             Certification
           </NavLink>
         </div>
-        <div className="text-white p-8">hello there</div>
+
+        <div className="flex cursor-pointer text-[#F9F9F9] pl-4 place-items-center gap-2 font-medium text-[16px]">
+          <img
+            className="w-6 h-[22px]"
+            src="/Icons/dashboard/logout.png"
+            alt="logout"
+          />
+          Log out
+        </div>
       </section>
     </section>
   )
