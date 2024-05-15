@@ -1,9 +1,11 @@
-// Resources
+
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
+
+
 } from "react-router-dom"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
@@ -19,6 +21,7 @@ import Backend from "./Components/Courses/Course/Backend"
 import Frontend from "./Components/Courses/Course/Frontend"
 import Testimonials from "./Components/Landingpage/Testimonials"
 
+
 // Sign up page
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
 import StudentDashboard from "./Student-Dashboard/StudentDashboard"
@@ -30,7 +33,7 @@ import Account from "./Pages/student pages/Account"
 import StudentCourses from "./Pages/student pages/StudentCourses"
 import Forum from "./Pages/student pages/Forum"
 import Certification from "./Pages/student pages/Certification"
-
+import Course from "./Components/Landingpage/Course"
 // Routes
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -44,6 +47,7 @@ const router = createBrowserRouter(
         <Route path="/course/backend" element={<Backend />} />
         <Route path="/course/frontend" element={<Frontend />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        
       </Route>
 
       <Route path="/signup" element={<CreateAccountStudent />} />
@@ -59,7 +63,7 @@ const router = createBrowserRouter(
       <Route path="*" element={<ErrorPage />} />
     </>
   )
-)
+);
 
 // Main component
 const App = () => {
@@ -71,4 +75,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
