@@ -5,8 +5,8 @@ const Sidebar = () => {
 
   const textStyles = ({ isActive }) =>
     isActive
-      ? "pl-4 py-[11px] text-[#F9F9F9] w-[180px] flex place-items-center gap-2 font-medium text-[16px] rounded-xl bg-[#ff9053] pr-[4px] "
-      : "pl-4 py-[11px] text-[#F9F9F9] w-[180px] flex place-items-center gap-2 pr-[4px] font-medium text-[16px]"
+      ? "pl-4 py-[11px] text-[#F9F9F9] outline-none w-[180px] flex place-items-center gap-2 font-medium text-[16px] rounded-xl bg-[#ff9053] pr-[4px] "
+      : "pl-4 py-[11px] text-[#F9F9F9] outline-none w-[180px] hover:bg-[#ffa06c2a] flex place-items-center rounded-xl gap-2 pr-[4px] font-medium text-[16px]"
 
   return (
     <section className="bg-[#041D31] h-screen overflow-hidden pl-7 pr-14">
