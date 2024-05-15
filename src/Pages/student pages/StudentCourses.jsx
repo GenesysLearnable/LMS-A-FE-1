@@ -70,8 +70,8 @@ const StudentCourses = () => {
 
           <form className="pb-8">
             <p className="text-black text-xl font-semibold pb-2">Coments(0)</p>
-            <div className="flex">
-              <img src="" alt="" />
+            <div className="flex items-center gap-2">
+              <img src="/public/Icons/dashboard/circle.png" alt="user icon" />
               <textarea
                 className="rounded-lg w-full border-2 px-4 py-3 outline-[#ff9053]"
                 placeholder="Enter your comment here"
