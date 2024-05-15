@@ -41,6 +41,11 @@ import StudentDashboard from "./Student-Dashboard/StudentDashboard"
 import ErrorPage from "./Pages/ErrorPage"
 import LoginProvider from "./LoginContext"
 import LoginPage from "./Pages/LoginPage"
+import SDashboardLayout from "./Layout/Dashboard/SDashboardLayout"
+import Account from "./Pages/student pages/Account"
+import StudentCourses from "./Pages/student pages/StudentCourses"
+import Forum from "./Pages/student pages/Forum"
+import Certification from "./Pages/student pages/Certification"
 
 // Routes
 const router = createBrowserRouter(
@@ -67,7 +72,13 @@ const router = createBrowserRouter(
 
       <Route path="/signup" element={<CreateAccountStudent />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/studentDashBoard" element={<StudentDashboard />} />
+      <Route path="/students" element={<SDashboardLayout />}>
+        <Route path="/students/dashboard" element={<StudentDashboard />} />
+        <Route path="/students/account" element={<Account />} />
+        <Route path="/students/courses" element={<StudentCourses />} />
+        <Route path="/students/forum" element={<Forum />} />
+        <Route path="/students/certificate" element={<Certification />} />
+      </Route>
 
       <Route path="*" element={<ErrorPage />} />
 >>>>>>> develop2.0
