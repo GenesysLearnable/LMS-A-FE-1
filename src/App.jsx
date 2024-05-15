@@ -33,7 +33,7 @@ import Account from "./Pages/student pages/Account"
 import StudentCourses from "./Pages/student pages/StudentCourses"
 import Forum from "./Pages/student pages/Forum"
 import Certification from "./Pages/student pages/Certification"
-
+import Course from "./Components/Landingpage/Course"
 // Routes
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -47,6 +47,7 @@ const router = createBrowserRouter(
         <Route path="/course/backend" element={<Backend />} />
         <Route path="/course/frontend" element={<Frontend />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        
       </Route>
 
       <Route path="/signup" element={<CreateAccountStudent />} />
