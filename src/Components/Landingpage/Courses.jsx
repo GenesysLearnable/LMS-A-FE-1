@@ -33,7 +33,7 @@ const Courses = () => {
 
 const details = [
   {
-    img: "/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2.png",
+    img: "/public/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2.png",
     title: "Product design",
     text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
     price: "$4,400",
