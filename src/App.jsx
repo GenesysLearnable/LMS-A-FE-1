@@ -1,11 +1,8 @@
-
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
-
-
 } from "react-router-dom"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
@@ -20,7 +17,6 @@ import Web3 from "./Components/Courses/Course/Web3"
 import Backend from "./Components/Courses/Course/Backend"
 import Frontend from "./Components/Courses/Course/Frontend"
 import Testimonials from "./Components/Landingpage/Testimonials"
-
 
 // Sign up page
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
@@ -47,7 +43,6 @@ const router = createBrowserRouter(
         <Route path="/course/backend" element={<Backend />} />
         <Route path="/course/frontend" element={<Frontend />} />
         <Route path="/testimonials" element={<Testimonials />} />
-        
       </Route>
 
       <Route path="/signup" element={<CreateAccountStudent />} />
@@ -63,7 +58,7 @@ const router = createBrowserRouter(
       <Route path="*" element={<ErrorPage />} />
     </>
   )
-);
+)
 
 // Main component
 const App = () => {
@@ -75,4 +70,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App
