@@ -44,57 +44,6 @@
   height: 200px;
 }
 
-.nft-container {
-  background-color: #041d31;
-  width: 700px;
-  height: 190px;
-  border-radius: 10px;
-  color: white;
-  margin-left: 40px;
-  margin-top: 10px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-}
-
-.second-image {
-  margin-right: 20px;
-}
-
-.second-image img {
-  width: 100px;
-  height: 50px;
-}
-
-.text-container {
-  margin-right: 20px;
-  
-}
-
-.connect-wallet-button {
-  background-color: #ff9053;
-  color: white;
-  cursor: pointer;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-.forum-container {
-  background-color: white;
-  width: 350px;
-  height: 190px;
-  border-radius: 10px;
-  color: #041d31;
-  margin-left: 20px;
-  margin-top: 10px;
-  padding: 10px;
-}
-.forum-content {
-  font-family: Poppins;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-}
 
 .course-container{
     display: flex;
@@ -115,4 +64,23 @@
     margin-top: 10px;
     padding: 10px
     
+}
+.notificationbadge{
+  margin-top: 30px;
+  font-family: Poppins;
+   font-size: 25px;
+  font-weight: 500;
+   text-align: left;
+
+}
+
+.course-container p{
+  font-family: Poppins;
+font-size: 14px;
+font-weight: 200;
+line-height: 21px;
+text-align: left;
+color: #9B9C9D;
+;
+
 }

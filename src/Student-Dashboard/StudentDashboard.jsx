@@ -1,6 +1,5 @@
 import "./StudentDashBoard.css";
 import { FaRegBell } from "react-icons/fa6";
-import { MdOutlineExpandMore } from "react-icons/md";
 import { PiHandWaving } from "react-icons/pi";
 
 function StudentDashboard() {
@@ -24,27 +23,7 @@ function StudentDashboard() {
         </h1>
         <h4 className="greeting2">Let's learn something new today.</h4>
       </div>
-      <div className="second-container">
-        <div className="nft-container">
-          <div className="second-image">
-            <img
-              src="public/Images/studentdashboard/Frame 1000002575.png"
-              alt=""
-            />
-          </div>
-
-          <div className="text-container">
-            <h3>Quiz-Reward</h3>
-            <h5>NFT-collection</h5>
-          </div>
-          <button className="connect-wallet-button"> Connect Wallet</button>
-        </div>
-        <div className="forum-container">
-          <div className="forum-content">
-            <h5>Forum</h5>
-          </div>
-        </div>
-      </div>
+     
 
       <div className="course-container">
         <div className="enrolled-course-container">
@@ -66,18 +45,18 @@ function StudentDashboard() {
               alt=""
             />
           </div>
-          <h6 className="notificationbadge">6</h6>
+          <h6 className="notificationbadge">5</h6>
         </div>
 
         <div className="quiz-container">
           <div className="course-details">
-            <p>quiz</p>
+            <p>Quiz</p>
             <img
               src="public/Images/studentdashboard/Frame 1000002498 3.png"
               alt=""
             />
           </div>
-          <h6 className="notificationbadge">1</h6>
+          <h6 className="notificationbadge">3</h6>
         </div>
 
         <div className="completed-course-container">
