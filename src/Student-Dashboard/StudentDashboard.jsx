@@ -4,7 +4,10 @@ import { PiHandWaving } from "react-icons/pi";
 
 function StudentDashboard() {
   return (
-    <div className="container">
+ 
+    /* navbar */
+
+    <div className="dashboardcontainer">
       <div className="navbar-t">
         <div className="navbar-item">
           <FaRegBell />
@@ -13,6 +16,8 @@ function StudentDashboard() {
           <img src="public/Images/studentdashboard/Ellipse 1037.png" alt="" />
         </span>
       </div>
+            
+    
       <div className="greeting-container">
         <h1 className="greeting1">
           Hello, Oghenemarho
@@ -24,7 +29,6 @@ function StudentDashboard() {
         <h4 className="greeting2">Let's learn something new today.</h4>
       </div>
      
-
       <div className="course-container">
         <div className="enrolled-course-container">
           <div className="course-details">
@@ -70,7 +74,6 @@ function StudentDashboard() {
           <h6 className="notificationbadge">0</h6>
         </div>
       </div>
-
 
 
     </div>
