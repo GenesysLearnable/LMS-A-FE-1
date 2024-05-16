@@ -1,0 +1,37 @@
+.container {
+  width: 360px;
+  color: #041d3126;
+  box-shadow: 0px 2px 12px 0px #041d3126;
+  border-radius: 8px;
+}
+
+.container > div {
+  padding: 48px 40px 485px 24px;
+}
+
+.container h1,
+.container h2 {
+  font-family: Poppins;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+
+.container h1 {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.container h2 {
+  font-weight: 400;
+}
+
+.the__inclusion div {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.the__inclusion div:not(:last-child) {
+  margin-bottom: 16px;
+}

@@ -1,6 +1,6 @@
-import { Outlet } from "react-router-dom"
-import Navbar from "../../Components/Landingpage/Navbar"
-import Footer from "../../Components/Landingpage/Footer"
+import { Outlet } from 'react-router-dom';
+import Navbar from '../../Components/Landingpage/Navbar';
+import Footer from '../../Components/Landingpage/Footer';
 
 const LandingPageLayout = () => {
   return (
@@ -9,7 +9,7 @@ const LandingPageLayout = () => {
       <Outlet />
       <Footer />
     </main>
-  )
-}
+  );
+};
 
-export default LandingPageLayout
+export default LandingPageLayout;

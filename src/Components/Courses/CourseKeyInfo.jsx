@@ -1,7 +1,7 @@
+import StarRating from './StarRatings';
 import Style from './CourseKeyInfo.module.css';
 import Button from '../Landingpage/Button';
 import { LoginStatus } from '../../LoginContext';
-import CourseRating from './CourseRating';
 
 const CourseKeyPoints = function ({ img, title, text, students, price }) {
   const loginStatus = LoginStatus();
@@ -17,8 +17,21 @@ const CourseKeyPoints = function ({ img, title, text, students, price }) {
         <div className={Style.course__general__info}>
           <div className={Style.course__quick__info}>
             <h3>{text}</h3>
+            <div className={Style.course__rating}>
+              <h4>4.6</h4>
 
-            <CourseRating />
+              <div className={Style.star__rating}>
+                <StarRating />
+                <StarRating />
+                <StarRating />
+                <StarRating />
+                <StarRating />
+              </div>
+
+              <h5>&#10088;69 rating&#10089;</h5>
+
+              <h5 className={Style.students}>{students} students</h5>
+            </div>
           </div>
           <div className={Style.enrollment}>
             <Button
