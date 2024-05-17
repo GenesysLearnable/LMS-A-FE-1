@@ -23,7 +23,7 @@ const CoursePage = ({ details }) => {
           <ClassLessons />
         </section>
         <section className={Style.right__section}>
-          <CourseIncludes />
+          <CourseIncludes duration="16min 14sec" />
         </section>
       </div>
       <CourseRequirements />
