@@ -1,0 +1,11 @@
+.ModuleProgress{
+    display:flex ;
+    flex-direction: column;
+}
+
+.ModuleP{
+    display: flex;
+    justify-content: space-between;
+    
+
+}
