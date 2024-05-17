@@ -1,13 +1,12 @@
 import "./StudentDashBoard.css";
 import EnrolledCourseCard from "../Components/Dashboard_for_students/EnrolledCourseCard";
-import Navbar from "../Components/Dashboard_for_students/Navbar";
 import ProductDesign from "../Components/Dashboard_for_students/ProductDesign";
 import ModuleProgress from "../Components/Dashboard_for_students/ModuleProgress";
 
 function StudentDashboard() {
   return (
     <div className="students-dashboard">
-      <Navbar />
+      
 
       <div className="dashboard">
         <header className="dashboard-header">

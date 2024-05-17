@@ -1,11 +1,38 @@
-.ModuleProgress{
-    display:flex ;
-    flex-direction: column;
+.ModuleProgress {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 
-.ModuleP{
-    display: flex;
-    justify-content: space-between;
-    
+.ModuleP {
+  display: flex;
+  justify-content: space-between;
+}
 
+.nameProgress {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #6d6f71;
+}
+
+.ModuleP h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #041d31;
+}
+
+.ModuleP span {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #00a991;
 }
