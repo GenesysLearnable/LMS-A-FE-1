@@ -18,7 +18,7 @@ function EnrolledCourseCard({cardTitle,number,enrolled}) {
         
         
       </div>
-      <span>{number} </span>
+      <span>{number}</span>
     </div>
   );
 }

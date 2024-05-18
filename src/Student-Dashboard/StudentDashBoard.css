@@ -1,4 +1,7 @@
-
+.students-dashboard{
+  width: calc(100vw - 200px);
+  margin-left: 200px !important;
+}
 
 .dashboard {
   padding: 20px;

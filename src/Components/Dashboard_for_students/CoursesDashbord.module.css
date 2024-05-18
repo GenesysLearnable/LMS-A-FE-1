@@ -1,0 +1,63 @@
+.coursesDashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    }
+  
+  .play {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .play img {
+    width: 24px; 
+  }
+  
+  .play h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #333;
+  }
+  
+  
+  .progressBar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  
+  .progressBar h6 {
+    font-family: 'Poppins';
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    color: #172B3A;
+    margin-bottom: 5px;
+    margin: 0;
+    text-align: center;
+  
+  }
+  
+  .greyBar{
+
+        width: 150px;
+        height: 5px;
+        background-color: #D9D9D9;
+        border-radius: 10px;
+        
+      
+  }
+  
+  
+  .coursesDashboard span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: #666;
+  }
+  
