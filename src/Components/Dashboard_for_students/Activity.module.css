@@ -1,0 +1,64 @@
+.activityGraph {
+  width: 100%;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  height: 360px;
+}
+
+.activity h3 {
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  color: #000000;
+}
+
+.activity p {
+  margin: 5px 0 20px;
+  font-size: 14px;
+  color:#9B9C9D ;
+  font-family: Poppins;
+font-weight: 500;
+line-height: 20px;
+
+
+}
+
+.timeBar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #9b9c9d;
+  text-align: center;
+}
+.imgHour {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+}
+.imgHour img {
+  width: 380px;
+  height: 120px;
+  margin-top: 60px;
+}
+
+.activityGraph span {
+  padding: 12px;
+  margin-left: 16px;
+  gap: 20px;
+  font-family: Poppins;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 2px;
+  color:#9B9C9D ;
+  
+}

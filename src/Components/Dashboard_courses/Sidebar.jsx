@@ -9,7 +9,7 @@ const Sidebar = () => {
       : "pl-4 py-[11px] text-[#F9F9F9] outline-none w-[180px] hover:bg-[#ffa06c2a] flex place-items-center rounded-xl gap-2 pr-[4px] font-medium text-[16px]"
 
   return (
-    <section className="bg-[#041D31] h-screen overflow-hidden pl-7 pr-8">
+    <section className="bg-[#041D31] h-screen fixed top-0 left-0  border-2 border-[green] pl-7 pr-8">
       <div className="flex items-center justify-center w-full gap-1 mt-9">
         <img
           onClick={() => navigate("/")}
