@@ -1,13 +1,10 @@
 .activityGraph {
-  /* max-width: 450px; */
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* margin: 20px; */
   height: 360px;
-  
 }
 
 .activity h3 {
@@ -21,12 +18,10 @@
 .activity p {
   margin: 5px 0 20px;
   font-size: 14px;
-  color:#9B9C9D ;
+  color: #9b9c9d;
   font-family: Poppins;
-font-weight: 500;
-line-height: 20px;
-
-
+  font-weight: 500;
+  line-height: 20px;
 }
 
 .timeBar {
@@ -44,7 +39,6 @@ line-height: 20px;
   display: flex;
   flex-direction: row;
   gap: 10px;
-  
 }
 .imgHour img {
   width: 380px;
@@ -60,6 +54,5 @@ line-height: 20px;
   font-size: 10px;
   font-weight: 500;
   line-height: 2px;
-  color:#9B9C9D ;
-  
+  color: #9b9c9d;
 }

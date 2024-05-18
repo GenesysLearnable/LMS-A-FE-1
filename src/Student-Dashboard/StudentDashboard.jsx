@@ -38,27 +38,31 @@ function StudentDashboard() {
           <Activity />
         </div>
 
-        
         <div className="module-progress">
           <ModuleProgress />
           <CoursesDashboard
             courseContent="Getting Started in Product Design"
+            completePercentage="0% complete"
             courseTime="8:24"
           />
           <CoursesDashboard
             courseContent="Introduction to User Experience"
+            completePercentage="0% complete"
             courseTime="8:24"
           />
           <CoursesDashboard
             courseContent="Introduction to Figma"
+            completePercentage="0% complete"
             courseTime="4:09"
           />
           <CoursesDashboard
             courseContent="Introduction to User Interface Design"
+            completePercentage="0% complete"
             courseTime="2:54"
           />
           <CoursesDashboard
             courseContent="Responsive Design"
+            completePercentage="0% complete"
             courseTime="7:23"
           />
         </div>

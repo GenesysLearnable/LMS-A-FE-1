@@ -1,22 +1,18 @@
-body{
-  background-color:#F5F6FA ;
+body {
+  background-color: #f5f6fa;
 }
 
-
-.students-dashboard{
+.students-dashboard {
   width: 100%;
   overflow: auto;
 }
 
 .dashboard {
-  /* margin-left: 10px; */
-  padding: 20px;
-  
+  padding: 0px 24px;
 }
 
 .dashboard-header {
   padding: 10px 10px 24px;
-  
 }
 
 .dashboard-header h1 {
@@ -44,27 +40,23 @@ body{
   width: 100%;
 }
 
-
-.enroll-container{
+.enroll-container {
   display: flex;
   gap: 24px;
-
 }
-.enrolled-product{
+.enrolled-product {
   display: flex;
   flex-direction: column;
-  gap:24px;
+  gap: 24px;
 }
-.enrolled-completed{
+.enrolled-completed {
   display: flex;
   gap: 10px;
   width: fit-content;
-
 }
 
-
-  .module-progress{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-  }
+.module-progress {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
