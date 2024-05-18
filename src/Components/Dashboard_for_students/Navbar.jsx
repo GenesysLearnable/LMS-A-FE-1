@@ -5,12 +5,6 @@ import { FaSearch } from "react-icons/fa";
 function Navbar() {
   return (
     <div className={styles.navbarDashboard}>
-      <div className={styles.leftContainer}>
-        <div className={styles.searchBar}>
-        <FaSearch />
-          <span>Search</span>
-        </div>
-        </div>
       <div className={styles.rightContainer}>
       <div className="icon">
       <FaRegBell />

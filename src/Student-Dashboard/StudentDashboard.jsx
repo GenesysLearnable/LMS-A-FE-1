@@ -9,7 +9,7 @@ import Activity from "../Components/Dashboard_for_students/Activity";
 function StudentDashboard() {
   return (
     <div className="students-dashboard ">
-      <Navbar/>
+      <Navbar />
 
       <div className="dashboard">
         <header className="dashboard-header">
@@ -21,22 +21,47 @@ function StudentDashboard() {
           </h1>
           <p>Let's Learn Something New Today.</p>
         </header>
+        <div className="enroll-container">
+          <div className="enrolled-product">
+            <div className="enrolled-completed">
+              <EnrolledCourseCard
+                cardTitle="Enrolled Course"
+                number="1"
+                enrolled
+              />
+              <EnrolledCourseCard cardTitle="Completed Course" number="0" />
+            </div>
+            <div className="product-design">
+              <ProductDesign />
+            </div>
+          </div>
+          <Activity />
+        </div>
 
-        <EnrolledCourseCard cardTitle="Enrolled Course" number="1" enrolled />
-        <EnrolledCourseCard cardTitle="Completed Course" number="0" />
-
-        <ProductDesign />
-
-        <Activity/>
         
-
-
-        <ModuleProgress/>
-        <CoursesDashboard courseContent="Getting Started in Product Design" courseTime="8:24"/>
-        <CoursesDashboard courseContent="Introduction to User Experience" courseTime="8:24"/>
-        <CoursesDashboard courseContent="Introduction to Figma" courseTime="4:09"/>
-        <CoursesDashboard courseContent="Introduction to User Interface Design" courseTime="2:54"/>
-        <CoursesDashboard courseContent="Responsive Design" courseTime="7:23"/>
+        <div className="module-progress">
+          <ModuleProgress />
+          <CoursesDashboard
+            courseContent="Getting Started in Product Design"
+            courseTime="8:24"
+          />
+          <CoursesDashboard
+            courseContent="Introduction to User Experience"
+            courseTime="8:24"
+          />
+          <CoursesDashboard
+            courseContent="Introduction to Figma"
+            courseTime="4:09"
+          />
+          <CoursesDashboard
+            courseContent="Introduction to User Interface Design"
+            courseTime="2:54"
+          />
+          <CoursesDashboard
+            courseContent="Responsive Design"
+            courseTime="7:23"
+          />
+        </div>
       </div>
     </div>
   );
