@@ -1,18 +1,22 @@
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import Button from "../Landingpage/Button"
 import { FaArrowLeftLong } from "react-icons/fa6"
 
 const CourseContent = () => {
   const listStyles = ({ isActive }) =>
     isActive
-      ? "text-slate-100 h-14 items-center bg-[#041D31] px-4 py-[3px] text-sm font-medium flex justify-between"
-      : "text-[#041D31] h-14 items-center px-4 py-[3px] text-sm font-medium flex justify-between"
+      ? "text-slate-100 h-14 rounded-lg border border-gray-100 items-center bg-[#041D31] px-4 py-[3px] text-sm font-medium flex justify-between"
+      : "text-[#041D31] h-14 rounded-lg border border-gray-200 items-center px-4 py-[3px] text-sm font-medium flex justify-between"
 
+  const navigate = useNavigate()
   return (
-    <section className="w-full flex flex-col ml-[48px] gap-7 mt-6">
+    <section className="w-full flex flex-col gap-7 mt-6">
       <p className="flex items-center gap-2 text-[#222427] text-base font-medium">
-        <FaArrowLeftLong className="text-[#222427]" /> Module 1: Getting Started
-        in product design
+        <FaArrowLeftLong
+          onClick={() => navigate("/students/courses")}
+          className="text-[#222427] cursor-pointer"
+        />{" "}
+        Module 1: Getting Started in product design
       </p>
 
       <section className={"flex gap-[52px] overflow-auto "}>
@@ -89,12 +93,12 @@ const CourseContent = () => {
                   <span>15% Complete</span>
                   <span>1/5</span>
                 </p>
-                <p className="bg-[#D9D9D9] mt-3 w-full p-1 rounded-md">
+                <p className="bg-[#BBBCBD] mt-3 w-full p-1 rounded-md">
                   <span className="bg-[#172B3A] w-1/6 h-2"></span>
                 </p>
               </div>
             </div>
-            <div className="pt-8 flex flex-col gap-1">
+            <div className="pt-8 flex px-2 flex-col gap-2">
               <NavLink className={listStyles}>
                 <p className="w-[215px] flex gap-2 items-center">
                   <img src="/Icons/dashboard/Ellipse 1020.png" alt="icon" />{" "}

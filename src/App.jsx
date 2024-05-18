@@ -29,7 +29,7 @@ import Account from "./Pages/student pages/Account"
 import StudentCourses from "./Pages/student pages/StudentCourses"
 import Forum from "./Pages/student pages/Forum"
 import Certification from "./Pages/student pages/Certification"
-import Course from "./Components/Landingpage/Course"
+import CourseContent from "./Components/Dashboard_courses/CourseContent"
 // Routes
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -51,6 +51,7 @@ const router = createBrowserRouter(
         <Route path="/students/dashboard" element={<StudentDashboard />} />
         <Route path="/students/account" element={<Account />} />
         <Route path="/students/courses" element={<StudentCourses />} />
+        <Route path="/students/courses/pd" element={<CourseContent />} />
         <Route path="/students/forum" element={<Forum />} />
         <Route path="/students/certificate" element={<Certification />} />
       </Route>
