@@ -1,6 +1,6 @@
 import "./StudentDashBoard.css";
 import { FaRegBell } from "react-icons/fa6";
-import { MdOutlineExpandMore } from "react-icons/md";
+// import { MdOutlineExpandMore } from "react-icons/md";
 import { PiHandWaving } from "react-icons/pi";
 
 function StudentDashboard() {
@@ -11,7 +11,7 @@ function StudentDashboard() {
           <FaRegBell />
         </div>
         <span className="first-image">
-          <img src="public/Images/studentdashboard/Ellipse 1037.png" alt="" />
+          <img src="/public/Images/studentdashboard/Ellipse 1037.png" alt="" />
         </span>
       </div>
       <div className="greeting-container">
@@ -28,7 +28,7 @@ function StudentDashboard() {
         <div className="nft-container">
           <div className="second-image">
             <img
-              src="public/Images/studentdashboard/Frame 1000002575.png"
+              src="/public/Images/studentdashboard/Frame 1000002575.png"
               alt=""
             />
           </div>
