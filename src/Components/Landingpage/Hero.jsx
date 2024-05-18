@@ -24,7 +24,7 @@ const Hero = () => {
             btn={details.btn}
             title={details.title}
             textStyle={details.textStyle}
-            path={loginStatus ? "/course" : "/signup"}
+            path={loginStatus ? "/students" : "/signup"}
           />
           <article className="flex mt-[160px] items-center justify-between">
             <Article text={"Expert tutors"} num={"500"} />
