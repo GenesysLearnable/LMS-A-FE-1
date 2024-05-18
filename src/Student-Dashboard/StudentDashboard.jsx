@@ -8,7 +8,7 @@ import Activity from "../Components/Dashboard_for_students/Activity";
 
 function StudentDashboard() {
   return (
-    <div className="students-dashboard">
+    <div className="students-dashboard ">
       <Navbar/>
 
       <div className="dashboard">

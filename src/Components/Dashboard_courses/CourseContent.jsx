@@ -1,31 +1,36 @@
-import { NavLink, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate, useParams } from "react-router-dom"
 import Button from "../Landingpage/Button"
 import { FaArrowLeftLong } from "react-icons/fa6"
 
+import { course } from "./courseDetails"
+
 const CourseContent = () => {
+  const { id, moduleId } = useParams()
+
+  const courseContent = course.find((course) => course.id === parseInt(id))
+  const module = courseContent.modules.find(
+    (mod) => mod.moduleId === parseInt(moduleId)
+  )
+
   const listStyles = ({ isActive }) =>
     isActive
       ? "text-slate-100 h-14 rounded-lg border border-gray-100 items-center bg-[#041D31] px-4 py-[3px] text-sm font-medium flex justify-between"
-      : "text-[#041D31] h-14 rounded-lg border border-gray-200 items-center px-4 py-[3px] text-sm font-medium flex justify-between"
+      : "text-[#041D31] h-14 rounded-lg border border-gray-200 items-center px-4 py-[3px] text-sm font-medium flex justify-between hover:bg-[#041d31d7] hover:text-white"
 
   const navigate = useNavigate()
   return (
     <section className="w-full flex flex-col gap-7 mt-6">
       <p className="flex items-center gap-2 text-[#222427] text-base font-medium">
         <FaArrowLeftLong
-          onClick={() => navigate("/students/courses")}
+          onClick={() => navigate(`/students/courses/${id}`)}
           className="text-[#222427] cursor-pointer"
-        />{" "}
-        Module 1: Getting Started in product design
+        />
+        Module: {module.name}
       </p>
 
       <section className={"flex gap-[52px] overflow-auto "}>
         <section className={`flex flex-col gap-6`}>
-          <video
-            className="h-[335px] w-[616px]"
-            src="/stock video.mp4"
-            controls
-          />
+          <video className="h-[335px] w-[616px]" src={module.videos} controls />
 
           <div>
             <p className="text-zinc-800 text-xl py-2 font-semibold">
@@ -33,24 +38,7 @@ const CourseContent = () => {
             </p>
 
             <p className="h-auto w-[616px] text-neutral-500 text-sm font-normal font-['Poppins'] leading-relaxed">
-              Understand the Problem: Begin by clearly defining the problem you
-              want to solve or the need you want to address with your product.
-              Research your target audience to understand their pain points,
-              preferences, and behaviors. Market Research: Analyze the market to
-              identify existing solutions and competitors. Understand what works
-              well and where there are gaps or opportunities for innovation.
-              Conceptualization: Generate ideas and concepts for your product.
-              Brainstorming, sketching, and prototyping are common techniques to
-              explore different possibilities. Prototyping: Create prototypes to
-              visualize and test your ideas. Prototypes can range from simple
-              sketches to more detailed mock-ups or functional prototypes,
-              depending on the stage of development. User Testing: Gather
-              feedback from potential users through usability testing and
-              surveys. This will help you understand how people interact with
-              your product and identify areas for improvement. Iterate and
-              Refine: Use the feedback from user testing to refine your design.
-              Iterate on your prototypes, making adjustments and improvements
-              based on what you learn.
+              {module.content}
             </p>
           </div>
 
@@ -91,7 +79,7 @@ const CourseContent = () => {
               <div>
                 <p className="flex justify-between text-slate-800 text-sm font-medium">
                   <span>15% Complete</span>
-                  <span>1/5</span>
+                  <span>1/{courseContent.modules.length}</span>
                 </p>
                 <p className="bg-[#BBBCBD] mt-3 w-full p-1 rounded-md">
                   <span className="bg-[#172B3A] w-1/6 h-2"></span>
@@ -99,41 +87,36 @@ const CourseContent = () => {
               </div>
             </div>
             <div className="pt-8 flex px-2 flex-col gap-2">
-              <NavLink className={listStyles}>
-                <p className="w-[215px] flex gap-2 items-center">
-                  <img src="/Icons/dashboard/Ellipse 1020.png" alt="icon" />{" "}
-                  Getting started in Product Design
-                </p>
-                <span>1:28</span>
-              </NavLink>
-              <NavLink to={"/students/dashboard"} className={listStyles}>
-                <p className="w-[215px] flex gap-2 items-center">
-                  <img src="/Icons/dashboard/play-circle.png" alt="icon" />
-                  Introduction to User experience.
-                </p>
-                <span>8:24</span>
-              </NavLink>
-              <NavLink to={"/students/dashboard"} className={listStyles}>
-                <p className="w-[215px] flex gap-2 items-center">
-                  <img src="/Icons/dashboard/play-circle.png" alt="icon" />
-                  Introduction to figma.
-                </p>
-                <span>4:09</span>
-              </NavLink>
-              <NavLink to={"/students/dashboard"} className={listStyles}>
-                <p className="w-[215px] flex gap-2 items-center">
-                  <img src="/Icons/dashboard/play-circle.png" alt="icon" />
-                  Introduction to user interface design.
-                </p>
-                <span>2:54</span>
-              </NavLink>
-              <NavLink to={"/students/dashboard"} className={listStyles}>
-                <p className="w-[215px] flex gap-2 items-center">
-                  <img src="/Icons/dashboard/play-circle.png" alt="icon" />
-                  Responsive design.
-                </p>
-                <span>7:23</span>
-              </NavLink>
+              {courseContent.modules.map((items, index) => (
+                <div key={index}>
+                  {items.status === "Continue" ? (
+                    <NavLink
+                      to={`/students/courses/${id}/${items.moduleId}`}
+                      className={listStyles}
+                    >
+                      <p className="w-[215px] flex gap-2 items-center">
+                        <img
+                          src="/Icons/dashboard/play-circle.png"
+                          alt="icon"
+                        />{" "}
+                        {items.name}
+                      </p>
+                      <span>{items.duration}</span>
+                    </NavLink>
+                  ) : (
+                    <div className="text-[#041D31] h-14 rounded-lg border hover:bg-[#041d3136] cursor-pointer border-gray-200 items-center px-4 py-[3px] text-sm font-medium flex justify-between">
+                      <p className="w-[215px] flex gap-2 items-center">
+                        <img
+                          src="/Icons/dashboard/play-circle.png"
+                          alt="icon"
+                        />{" "}
+                        {items.name}
+                      </p>
+                      <span>{items.duration}</span>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 
