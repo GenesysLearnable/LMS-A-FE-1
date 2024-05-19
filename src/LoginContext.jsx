@@ -1,7 +1,9 @@
-import React, { useContext, useState } from "react"
+import { createContext, useContext, useState, useEffect } from "react"
+import useToken from "./utlis/useToken"
+import { toast } from "react-toastify"
 
-const LoginContext = React.createContext()
-const UpdateLoginContext = React.createContext()
+const LoginContext = createContext()
+const UpdateLoginContext = createContext()
 
 export const LoginStatus = () => {
   return useContext(LoginContext)
@@ -12,15 +14,27 @@ export const UpdateLoginStatus = () => {
 }
 
 const LoginProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const { setToken, clearToken, token } = useToken()
+  const [isLoggedIn, setIsLoggedIn] = useState(!!token)
 
-  const toggleLogIn = () => {
-    setIsLoggedIn((prevStatus) => !prevStatus)
+  useEffect(() => {
+    setIsLoggedIn(!!token)
+  }, [token])
+
+  const logIn = (userToken) => {
+    setToken(userToken)
+    setIsLoggedIn(true)
+  }
+
+  const logOut = () => {
+    clearToken()
+    setIsLoggedIn(false)
+    toast.success("Logged Out")
   }
 
   return (
     <LoginContext.Provider value={isLoggedIn}>
-      <UpdateLoginContext.Provider value={toggleLogIn}>
+      <UpdateLoginContext.Provider value={{ logIn, logOut }}>
         {children}
       </UpdateLoginContext.Provider>
     </LoginContext.Provider>

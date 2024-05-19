@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom"
 import Sidebar from "../../Components/Dashboard_courses/Sidebar"
 
-const SDashboardLayout = ({setToken}) => {
+const SDashboardLayout = () => {
   return (
     <section className="flex overflow-hidden h-screen bg-slate-100 ">
       <section>
-        <Sidebar setToken={setToken} />
+        <Sidebar />
       </section>
 
       <Outlet />

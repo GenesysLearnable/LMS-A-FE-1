@@ -2,16 +2,19 @@ import { NavLink } from "react-router-dom"
 import Button from "./Button"
 import { LoginStatus, UpdateLoginStatus } from "../../LoginContext"
 import { FaUserAstronaut } from "react-icons/fa6"
-import { toast } from "react-toastify"
 
-const Navbar = ({setToken}) => {
+const Navbar = () => {
   const linkCLass = ({ isActive }) =>
     isActive
       ? "text-[#ff9053] hover:text-[#d87139] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
       : "hover:text-[#ff9053] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal"
 
   const loginStatus = LoginStatus()
-  const toggleLogIn = UpdateLoginStatus()
+  const { logOut } = UpdateLoginStatus()
+
+  const handleLogout = () => {
+    logOut()
+  }
 
   return (
     <nav className="w-full h-20 pl-[102px] py-[16] bg-[#041d31] ">
@@ -45,12 +48,7 @@ const Navbar = ({setToken}) => {
               <FaUserAstronaut className="text-white size-5" />
             </span>
             <Button
-              onClick={() => {
-                setToken(null)
-                toggleLogIn()
-                toast.success("Logged Out")
-
-              }}
+              onClick={handleLogout}
               title={"Logout"}
               bg={"bg-[#ff9053]"}
               path={"/"}
@@ -61,7 +59,12 @@ const Navbar = ({setToken}) => {
         ) : (
           <div className="h-full flex justify-center gap-4 mr-6 items-center">
             <Button title={"Signup"} bg={"bg-[#ff9053]"} path={"/signup"} />
-            <Button title={"Login"} h="h-11"  border={"border-2 border-[#ff9053] rounded-lg"} path={"/login"} />
+            <Button
+              title={"Login"}
+              h="h-11"
+              border={"border-2 border-[#ff9053] rounded-lg"}
+              path={"/login"}
+            />
           </div>
         )}
       </section>
