@@ -19,7 +19,7 @@ const CourseContent = () => {
 
   const navigate = useNavigate()
   return (
-    <section className="w-full flex flex-col gap-7 mt-6">
+    <section className="w-full flex ml-12 flex-col gap-7 mt-6">
       <p className="flex items-center gap-2 text-[#222427] text-base font-medium">
         <FaArrowLeftLong
           onClick={() => navigate(`/students/courses/${id}`)}
