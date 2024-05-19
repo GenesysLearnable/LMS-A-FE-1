@@ -5,7 +5,7 @@ function CoursesDashboard({courseContent,courseTime}) {
   return (
     <div className={styles.coursesDashboard}>
       <div className={styles.play}>
-        <img src="/public/Images/studentdashboard/play-circle.png" alt="" />
+        <img src="/Images/studentdashboard/play-circle.png" alt="" />
         <h4>{courseContent}</h4>
       </div>
       

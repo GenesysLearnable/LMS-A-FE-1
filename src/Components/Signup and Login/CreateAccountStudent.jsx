@@ -8,7 +8,7 @@ import FormCard from "./FormCard"
 import Input from "./Input"
 import ButtonFeature from "./ButtonFeature"
 
-const CreateAccountStudent = () => {
+const CreateAccountStudent = ({ setToken }) => {
   const [isEmail, setIsEmail] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -75,11 +75,12 @@ const CreateAccountStudent = () => {
         let res = await fetchData.post("", formData)
         setIsLoading(false)
         if (res.success == true) {
-          toast.success(res.message)
-          navigate("/")
+          setToken(res.data.token)
+          toast.success(`${res.message}!!`)
           toggleLogin()
+          navigate("/")
         } else {
-          toast.error(res.message) || toast.error(res.error)
+          toast.error(`${res.message}!!`) || toast.error(res.error)
         }
       } catch (error) {
         setIsLoading(false)

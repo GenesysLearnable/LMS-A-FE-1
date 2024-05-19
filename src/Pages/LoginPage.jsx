@@ -7,9 +7,8 @@ import useFetch from "../utlis/useFetch"
 import { toast } from "react-toastify"
 import { useNavigate } from "react-router-dom"
 import { UpdateLoginStatus } from "../LoginContext"
-import Spinners from "../Components/Signup and Login/Spinners"
 
-const LoginPage = () => {
+const LoginPage = ({ setToken }) => {
   const [loading, setLoading] = useState(false)
   const [formValues, setFormValues] = useState({
     email: "",
@@ -25,21 +24,22 @@ const LoginPage = () => {
   }
 
   const handleSubmit = async () => {
-    setLoading(false)
+    setLoading(true)
     try {
       let res = await fetchData.post("login", formValues)
-      console.log(res)
       setLoading(false)
       if (res.success == true) {
-        toast.success(res.message)
-        navigate("/")
+        setToken(res.data.token)
+        toast.success(`${res.message}`)
         toggleLogin()
+        navigate("/")
       } else {
-        toast.error(res.message)
+        toast.error(`${res.message}!!`)
       }
       return
     } catch (error) {
       setLoading(false)
+      navigate("/")
       toast.error(`${error}`)
       throw new Error(error)
     }

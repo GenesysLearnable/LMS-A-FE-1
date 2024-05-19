@@ -16,7 +16,7 @@ function Navbar() {
       <FaRegBell />
         </div>
         <div className={styles.smallPicture}>
-          <img src="/public/Images/studentdashboard/Ellipse 1037.png" alt="Profile Picture" />
+          <img src="/Images/studentdashboard/Ellipse 1037.png" alt="Profile Picture" />
         </div>
         <button className={styles.connectWallet}>Connect Wallet</button>
       </div>
