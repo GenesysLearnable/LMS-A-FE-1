@@ -10,7 +10,7 @@ const SelectedCourse = () => {
   const navigate = useNavigate()
 
   return (
-    <section className="w-full flex overflow-auto flex-col ml-[18px] gap-3 mt-6">
+    <section className="w-full flex overflow-auto flex-col ml-12 gap-3 mt-6">
       <div className="flex items-center gap-2">
         <FaArrowLeftLong
           onClick={() => navigate(`/students/courses`)}
