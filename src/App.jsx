@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { Routes, Route, Navigate, BrowserRouter } from "react-router-dom"
+import { Routes, Route, BrowserRouter } from "react-router-dom"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
@@ -24,18 +23,15 @@ import Frontend from "./Components/Courses/Course/Frontend"
 import Testimonials from "./Components/Landingpage/Testimonials"
 import ErrorPage from "./Pages/ErrorPage"
 import LoginProvider from "./LoginContext"
-
+import ProtectedRoute from "./ProtectedRoute"
 
 const App = () => {
-  const [ token, setToken ] = useState(null)
-
-
   return (
     <LoginProvider>
       <ToastContainer autoClose={2500} />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPageLayout setToken={setToken} />}>
+          <Route path="/" element={<LandingPageLayout />}>
             <Route index element={<Landingpage />} />
             <Route path="about" element={<About />} />
             <Route path="course" element={<Courses />} />
@@ -45,28 +41,27 @@ const App = () => {
             <Route path="course/frontend" element={<Frontend />} />
             <Route path="testimonials" element={<Testimonials />} />
           </Route>
+          <Route path="signup" element={<CreateAccountStudent />} />
+          <Route path="login" element={<LoginPage />} />
+
           <Route
-            path="signup"
-            element={<CreateAccountStudent setToken={setToken} />}
-          />
-          <Route path="login" element={<LoginPage setToken={setToken} />} />
-          {token ? (
-            <Route
-              path="/students"
-              element={<SDashboardLayout setToken={setToken} />}
-            >
-              <Route path="dashboard" element={<StudentDashboard />} />
-              <Route path="account" element={<Account />} />
-              <Route path="courses" element={<StudentCourses />} />
-              <Route path="courses/:id" element={<SelectedCourse />} />
-              <Route path="courses/:id/:moduleId" element={<CourseContent />} />
-              <Route path="quiz" element={<Quiz />} />
-              <Route path="forum" element={<Forum />} />
-              <Route path="certificate" element={<Certification />} />
-            </Route>
-          ) : (
-            <Route path="*" element={<Navigate to="/login" replace />} />
-          )}
+            path="/students"
+            element={
+              <ProtectedRoute>
+                <SDashboardLayout />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="dashboard" element={<StudentDashboard />} />
+            <Route path="account" element={<Account />} />
+            <Route path="courses" element={<StudentCourses />} />
+            <Route path="courses/:id" element={<SelectedCourse />} />
+            <Route path="courses/:id/:moduleId" element={<CourseContent />} />
+            <Route path="quiz" element={<Quiz />} />
+            <Route path="forum" element={<Forum />} />
+            <Route path="certificate" element={<Certification />} />
+          </Route>
+
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>

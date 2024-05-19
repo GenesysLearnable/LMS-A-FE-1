@@ -1,14 +1,14 @@
 import { useState } from "react"
 import CASPageLayout from "./CASPageLayout"
 import useFetch from "../../utlis/useFetch"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { UpdateLoginStatus } from "../../LoginContext"
 import { toast } from "react-toastify"
 import FormCard from "./FormCard"
 import Input from "./Input"
 import ButtonFeature from "./ButtonFeature"
 
-const CreateAccountStudent = ({ setToken }) => {
+const CreateAccountStudent = () => {
   const [isEmail, setIsEmail] = useState(true)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -18,14 +18,14 @@ const CreateAccountStudent = ({ setToken }) => {
     confirmPassword: "",
   })
 
-  const fetchData = useFetch()
-
   const handleChange = ({ target: { name, value } }) => {
     setFormValues((prev) => ({ ...prev, [name]: value }))
   }
 
+  const fetchData = useFetch()
+  const { logIn } = UpdateLoginStatus()
   const navigate = useNavigate()
-  const toggleLogin = UpdateLoginStatus()
+  const location = useLocation()
 
   const isValidated = () => {
     let isProceed = true
@@ -75,12 +75,12 @@ const CreateAccountStudent = ({ setToken }) => {
         let res = await fetchData.post("", formData)
         setIsLoading(false)
         if (res.success == true) {
-          setToken(res.data.token)
-          toast.success(`${res.message}!!`)
-          toggleLogin()
-          navigate("/")
+          logIn({ token: res.data.token })
+          toast.success(`${res.message}`)
+          const from = location.state?.from?.pathname || "/"
+          navigate(from)
         } else {
-          toast.error(`${res.message}!!`) || toast.error(res.error)
+          toast.error(`${res.message}`) || toast.error(res.error)
         }
       } catch (error) {
         setIsLoading(false)

@@ -5,10 +5,10 @@ import Input from "../Components/Signup and Login/Input"
 import ButtonFeature from "../Components/Signup and Login/ButtonFeature"
 import useFetch from "../utlis/useFetch"
 import { toast } from "react-toastify"
-import { useNavigate } from "react-router-dom"
+import { useLocation, useNavigate } from "react-router-dom"
 import { UpdateLoginStatus } from "../LoginContext"
 
-const LoginPage = ({ setToken }) => {
+const LoginPage = () => {
   const [loading, setLoading] = useState(false)
   const [formValues, setFormValues] = useState({
     email: "",
@@ -16,8 +16,9 @@ const LoginPage = ({ setToken }) => {
   })
 
   const fetchData = useFetch()
+  const { logIn } = UpdateLoginStatus()
   const navigate = useNavigate()
-  const toggleLogin = UpdateLoginStatus()
+  const location = useLocation()
 
   const handleChange = ({ target: { name, value } }) => {
     setFormValues((prev) => ({ ...prev, [name]: value }))
@@ -29,10 +30,10 @@ const LoginPage = ({ setToken }) => {
       let res = await fetchData.post("login", formValues)
       setLoading(false)
       if (res.success == true) {
-        setToken(res.data.token)
+        logIn({ token: res.data.token })
         toast.success(`${res.message}`)
-        toggleLogin()
-        navigate("/")
+        const from = location.state?.from?.pathname || "/"
+        navigate(from)
       } else {
         toast.error(`${res.message}!!`)
       }

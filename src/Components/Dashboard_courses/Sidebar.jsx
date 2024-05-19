@@ -1,14 +1,18 @@
 import { NavLink, useNavigate } from "react-router-dom"
-import { toast } from "react-toastify"
 import { UpdateLoginStatus } from "../../LoginContext"
 
-const Sidebar = ({ setToken }) => {
+const Sidebar = () => {
   const navigate = useNavigate()
-  const toggleLogIn = UpdateLoginStatus()
+  const { logOut } = UpdateLoginStatus()
   const textStyles = ({ isActive }) =>
     isActive
       ? "pl-4 py-[11px] text-[#F9F9F9] outline-none w-[180px] flex place-items-center gap-2 font-medium text-[16px] rounded-xl bg-[#ff9053] pr-[4px] "
       : "pl-4 py-[11px] text-[#F9F9F9] outline-none w-[180px] hover:bg-[#ffa06c2a] flex place-items-center rounded-xl gap-2 pr-[4px] font-medium text-[16px]"
+
+  const handleLogout = () => {
+    logOut()
+    navigate("/")
+  }
 
   return (
     <section className="bg-[#041D31] h-screen overflow-hidden pl-7 pr-8">
@@ -64,12 +68,7 @@ const Sidebar = ({ setToken }) => {
         </div>
 
         <div
-          onClick={() => {
-            setToken(null)
-            toggleLogIn()
-            toast.success("Logged Out")
-            navigate("/")
-          }}
+          onClick={handleLogout}
           className="flex cursor-pointer text-[#F9F9F9] pl-4 place-items-center gap-2 font-medium text-[16px]"
         >
           <img
