@@ -58,7 +58,7 @@ const CASPageLayout = ({ children, loading }) => {
           <section className="bg-white flex items-center justify-center">
             {/* content section  */}
             <section className="items-center flex flex-col h-screen">
-              <div className="flex items-baseline w-full gap-1 mt-9">
+              <div className="flex items-center w-full gap-1 mt-9">
                 <img
                   onClick={() => navigate("/")}
                   className="w-6 h-[22px] cursor-pointer "
@@ -69,7 +69,7 @@ const CASPageLayout = ({ children, loading }) => {
                   onClick={() => navigate("/")}
                   className="text-[#ff9053] text-xl cursor-pointer font-bold font-['Roboto']"
                 >
-                  SkillHub
+                  SKILLHUB
                 </p>
               </div>
               <section className="h-full flex justify-center items-center">

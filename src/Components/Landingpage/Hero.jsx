@@ -1,9 +1,7 @@
-import { LoginStatus } from "../../LoginContext"
 import LP_TextArticle from "./LP_TextArticle"
 import LP_TwinCard from "./LP_TwinCard"
 
 const Hero = () => {
-  const loginStatus = LoginStatus()
   return (
     <section className="flex items-center relative overflow-hidden justify-center bg-[#041d31] ">
       <img
@@ -24,7 +22,7 @@ const Hero = () => {
             btn={details.btn}
             title={details.title}
             textStyle={details.textStyle}
-            path={loginStatus ? "/students" : "/signup"}
+            path={"/students/dashboard"}
           />
           <article className="flex mt-[160px] items-center justify-between">
             <Article text={"Expert tutors"} num={"500"} />

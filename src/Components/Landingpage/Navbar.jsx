@@ -4,7 +4,7 @@ import { LoginStatus, UpdateLoginStatus } from "../../LoginContext"
 import { FaUserAstronaut } from "react-icons/fa6"
 import { toast } from "react-toastify"
 
-const Navbar = () => {
+const Navbar = ({setToken}) => {
   const linkCLass = ({ isActive }) =>
     isActive
       ? "text-[#ff9053] hover:text-[#d87139] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
@@ -46,8 +46,10 @@ const Navbar = () => {
             </span>
             <Button
               onClick={() => {
+                setToken(null)
                 toggleLogIn()
                 toast.success("Logged Out")
+
               }}
               title={"Logout"}
               bg={"bg-[#ff9053]"}
@@ -59,7 +61,7 @@ const Navbar = () => {
         ) : (
           <div className="h-full flex justify-center gap-4 mr-6 items-center">
             <Button title={"Signup"} bg={"bg-[#ff9053]"} path={"/signup"} />
-            <Button title={"Login"}  bg={"bg-transparent border-2 border-[#ff9053]"} path={"/login"} />
+            <Button title={"Login"} h="h-11"  border={"border-2 border-[#ff9053] rounded-lg"} path={"/login"} />
           </div>
         )}
       </section>
