@@ -1,22 +1,21 @@
 import React from "react";
-import styles from './CoursesDashbord.module.css';
+import styles from "./CoursesDashbord.module.css";
 
-function CoursesDashboard({courseContent,courseTime}) {
+function CoursesDashboard({ courseContent, completePercentage, courseTime }) {
   return (
     <div className={styles.coursesDashboard}>
       <div className={styles.play}>
         <img src="/Images/studentdashboard/play-circle.png" alt="" />
         <h4>{courseContent}</h4>
       </div>
-      
+
       <div className={styles.progressBar}>
-        <h6>0% Complete </h6>
+        <h6>{completePercentage} </h6>
         <div className={styles.greyBar}></div>
       </div>
-    
-      <span>{courseTime} </span>
+
+      <p>{courseTime} </p>
     </div>
-   
   );
 }
 
