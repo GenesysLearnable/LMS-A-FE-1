@@ -1,0 +1,39 @@
+.navbarDashboard {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  font-family: poppins;
+  height: 40px;
+  width: 100%;
+}
+
+.rightContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.smallPicture img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.connectWallet {
+  background-color: #ff9053;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 143px;
+  height: 29px;
+  font-size: 10px;
+  cursor: pointer;
+  margin-left: 15px;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+}
