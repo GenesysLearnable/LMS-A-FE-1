@@ -38,7 +38,7 @@ const CourseKeyPoints = function ({img, title, text, students, price}) {
             </div>
           </div>
           <div className={CourseStyle.enrollment}>
-              <Button title={"Enroll"} bg={"bg-[#ff9053]"} path={"/students/dashboard"} />
+              <Button title={"Enroll"} bg={"bg-[#ff9053]"} path={"/students/courses"} />
             <h2>&#8358;{price}</h2>
           </div>
         </div>
