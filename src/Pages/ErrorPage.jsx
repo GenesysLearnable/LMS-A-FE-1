@@ -2,7 +2,7 @@ import Button from "../Components/Landingpage/Button"
 
 const ErrorPage = () => {
   return (
-    <section className="flex flex-col items-center justify-center h-screen">
+    <section className="flex flex-col relative items-center justify-center h-screen">
       <figure className="flex flex-col items-center justify-center">
         <img
           className="size-80 md:size-96 object-fill"

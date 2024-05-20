@@ -1,0 +1,102 @@
+.Quiz {
+  background-color: #f5f6fa;
+  font-family: "Poppins";
+
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+  color: #6d6f71;
+}
+.module {
+  width: Fixed (616px) px;
+  height: Hug (1, 660.26px) px;
+  padding-top: 60px;
+  /* padding-left: 344px; */
+  gap: 16px;
+  opacity: 0px;
+}
+.header {
+  display: flex;
+  gap: 3px;
+  flex-direction: row;
+}
+.prev {
+  width: 24px;
+  height: 24px;
+  border: 2.5px;
+  color: black;
+}
+h2 {
+  font-family: "Poppins";
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.5px;
+  text-align: left;
+  color: black;
+}
+.what {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  text-align: left;
+  color: #515355;
+}
+.Question {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 11.94px;
+}
+
+.option {
+  border: 1.5px solid;
+  border-radius: 8px;
+  width: 616px;
+  height: 46px;
+  border-color: black;
+  padding-top: 20px;
+  padding-left: 59.87px;
+}
+.answer {
+  width: 182px;
+  height: 33px;
+
+  border-radius: 24px;
+  opacity: 0px;
+
+  background-color: #041d313d;
+}
+.single {
+  color: white;
+  text-align: center;
+  padding-top: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14.92px;
+  font-weight: 700;
+  line-height: 17.49px;
+}
+button {
+  display: block;
+  margin: 10px 250px;
+  width: 132px;
+  height: 33px;
+  gap: 8px;
+  border: transparent;
+  border-radius: 8px;
+  opacity: 0px;
+  background-color: #ff9053;
+  color: #ffff;
+  padding-bottom: 10px;
+  font-family: "Poppins";
+  text-align: center;
+}
+.submit {
+  padding-bottom: 10px;
+  text-align: center;
+}

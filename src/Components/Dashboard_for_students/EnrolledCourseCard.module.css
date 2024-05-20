@@ -1,0 +1,34 @@
+.card {
+  background-color: #fff;
+  width: 284px;
+  height: 114px;
+  gap: 20px;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.cardContent img {
+  width: 30px;
+}
+
+.cardContent h6 {
+  font-size: 14px;
+  color: #9b9c9d;
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+.card span {
+  font-family: Poppins;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 48px;
+
+}
