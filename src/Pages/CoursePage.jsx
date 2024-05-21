@@ -9,6 +9,7 @@ const CoursePage = ({ details }) => {
   return (
     <>
       <CourseKeyInfo
+        id={details.id}
         img={details.img}
         title={details.title}
         text={details.text}
