@@ -8,7 +8,7 @@ function EnrolledCourseCard({ cardTitle, number, enrolled }) {
         <h6>{cardTitle} </h6>
         {enrolled ? (
           <img
-            src="/public/Images/studentdashboard/Frame 1000002498.png"
+            src="/Images/studentdashboard/Frame 1000002498.png"
             alt=""
           />
         ) : (

@@ -19,7 +19,7 @@ function Activity() {
 
         <img
           className={styles.imageBar}
-          src="/public/Images/studentdashboard/Vector 1.png"
+          src="/Images/studentdashboard/Vector 1.png"
           alt=""
         />
       </div>

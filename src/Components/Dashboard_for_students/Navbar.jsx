@@ -11,7 +11,7 @@ function Navbar() {
         </div>
         <div className={styles.smallPicture}>
           <img
-            src="/public/Images/studentdashboard/Ellipse 1037.png"
+            src="/Images/studentdashboard/Ellipse 1037.png"
             alt="Profile Picture"
           />
         </div>
