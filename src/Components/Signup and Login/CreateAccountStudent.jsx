@@ -1,48 +1,143 @@
-import Carousel from "./Carousel"
-import SubmitForm from "./SubmitForm"
+import { useState } from "react"
+import CASPageLayout from "./CASPageLayout"
+import useFetch from "../../utlis/useFetch"
+import { useLocation, useNavigate } from "react-router-dom"
+import { UpdateLoginStatus } from "../../LoginContext"
+import { toast } from "react-toastify"
+import FormCard from "./FormCard"
+import Input from "./Input"
+import ButtonFeature from "./ButtonFeature"
 
 const CreateAccountStudent = () => {
-  const slides = [
-    "/Images/SignupPage/Frame 1000002307.png",
-    "/Images/SignupPage/Frame 1000002165.png",
-    "/Images/SignupPage/Frame 1000002309.png",
-  ]
+  const [isEmail, setIsEmail] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
+
+  const [formValues, setFormValues] = useState({
+    email: "",
+    password: "",
+    confirmPassword: "",
+  })
+
+  const handleChange = ({ target: { name, value } }) => {
+    setFormValues((prev) => ({ ...prev, [name]: value }))
+  }
+
+  const fetchData = useFetch()
+  const { logIn } = UpdateLoginStatus()
+  const navigate = useNavigate()
+  const location = useLocation()
+
+  const isValidated = () => {
+    let isProceed = true
+    let errorMessage = "Please enter  "
+    let unmatchedPassword = false
+
+    if (formValues.email === null || formValues.email === "") {
+      isProceed = false
+      errorMessage += "email address, "
+    } else {
+      setIsEmail(false)
+    }
+    if (formValues.password === null || formValues.password === "") {
+      isProceed = false
+      errorMessage += "password"
+    }
+    if (
+      formValues.confirmPassword === null ||
+      formValues.confirmPassword === ""
+    ) {
+      isProceed = false
+    }
+    if (formValues.password !== formValues.confirmPassword) {
+      isProceed = false
+      unmatchedPassword = true
+    }
+    if (!isProceed) {
+      if (unmatchedPassword) {
+        toast.warn("Password does not match")
+      } else {
+        toast.warning(errorMessage)
+      }
+    }
+
+    return isProceed
+  }
+
+  const handleSubmit = async () => {
+    if (isValidated()) {
+      const formData = {
+        email: formValues.email,
+        password: formValues.password,
+      }
+
+      setIsLoading(true)
+      try {
+        let res = await fetchData.post("", formData)
+        setIsLoading(false)
+        if (res.success == true) {
+          logIn({ token: res.data.token })
+          toast.success(`${res.message}`)
+          const from = location.state?.from?.pathname || "/"
+          navigate(from)
+        } else {
+          toast.error(`${res.message}`) || toast.error(res.error)
+        }
+      } catch (error) {
+        setIsLoading(false)
+        toast.error(`${error}`)
+        throw new Error(error)
+      }
+    }
+  }
+
   return (
-    // Twin section
-    <section className="grid grid-cols-2 overflow-hidden ">
-      {/* Display section */}
-      <section className="bg-white flex items-center justify-center">
-        {/* content section  */}
-        <section className="items-center flex flex-col h-screen">
-          <div className="flex items-baseline w-full gap-1 mt-9">
-            <img
-              className="w-6 h-[22px]"
-              src="/Logos/Vector 9 (1).png"
-              alt="logo"
+    <CASPageLayout loading={isLoading}>
+      {isEmail ? (
+        <FormCard text={"Create account"}>
+          <Input
+            name="email"
+            type="email"
+            placeholder={"Email address"}
+            value={formValues.email}
+            onChange={handleChange}
+          />
+
+          <ButtonFeature
+            text={"Already have an account?"}
+            buttonText={"Continue"}
+            spanText={" Login"}
+            path={"/login"}
+            onClick={handleSubmit}
+          />
+        </FormCard>
+      ) : (
+        <FormCard text={"Create account"}>
+          <div className="flex flex-col gap-5">
+            <Input
+              name="password"
+              type={"text"}
+              placeholder={"Password"}
+              value={formValues.password}
+              onChange={handleChange}
             />
-            <p className="text-[#ff9053] text-xl font-bold font-['Roboto']">
-              SkillHub
-            </p>
+            <Input
+              name="confirmPassword"
+              type={"text"}
+              placeholder={"Confirm password"}
+              value={formValues.confirmPassword}
+              onChange={handleChange}
+            />
+            <ButtonFeature
+              text={"Already have an account?"}
+              buttonText={"Signup"}
+              spanText={" Login"}
+              path={"/login"}
+              onClick={handleSubmit}
+            />
           </div>
-          <section className="h-full flex justify-center items-center">
-            <SubmitForm />
-          </section>
-        </section>
-      </section>
-      <section className="h-screen mix-blend-overlay shadow-lg relative bg-[#041d31]">
-        <div className="h-screen  w-full z-10 absolute bg-[#041d31d4]"></div>
-        <Carousel autoSlide={true}>
-          {slides.map((slide, index) => (
-            <img
-              key={index}
-              className=""
-              src={slide}
-              alt=""
-            />
-          ))}
-        </Carousel>
-      </section>
-    </section>
+        </FormCard>
+      )}
+    </CASPageLayout>
   )
 }
 

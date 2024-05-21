@@ -38,8 +38,8 @@ const Faqs = () => {
                   <img
                     className={
                       selected == index
-                        ? "h-7 w-7 duration-300 "
-                        : "h-7 w-7 rotate-180 duration-300"
+                        ? "h-7 w-7 duration-300 rotate-180"
+                        : "h-7 w-7 duration-300"
                     }
                     src={"/Icons/Landingpage/arrow-down.png"}
                     alt="arrow-down icon"

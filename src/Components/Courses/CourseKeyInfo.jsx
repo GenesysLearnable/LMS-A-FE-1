@@ -33,11 +33,11 @@ const CourseKeyPoints = function ({ img, title, text, students, price }) {
               <h5 className={Style.students}>{students} students</h5>
             </div>
           </div>
-          <div className={Style.enrollment}>
+          <div className={CourseStyle.enrollment}>
             <Button
               title={'Enroll'}
               bg={'bg-[#ff9053]'}
-              path={loginStatus ? '/other' : '/signup'}
+              path={'/students/dashboard'}
             />
             <h2>&#8358;{price}</h2>
           </div>

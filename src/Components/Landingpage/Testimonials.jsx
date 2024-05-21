@@ -1,31 +1,47 @@
 import TestimonialCard from "./TestimonialCard"
 
 const Testimonials = () => {
+  const noScrollbar = {
+    // Hide scrollbar for Chrome, Safari and Opera
+    "::-webkit-scrollbar": {
+      display: "none",
+    },
+    // Hide scrollbar for IE, Edge and Firefox
+    "-ms-overflow-style": "none", // IE and Edge
+    "scrollbar-width": "none", // Firefox
+  }
+
   return (
     <section className="bg-[#041d31] overflow-hidden relative  pl-[5%]">
-      <img className="absolute top-[365px] left-0 h-[596px]" src="/Images/LandingPage/Vector 14.png"/>
+      <img
+        className="absolute top-[365px] left-0 h-[596px]"
+        src="/Images/LandingPage/Vector 14.png"
+      />
       <section className="pb-[190px] relative pt-[120px]">
-      <article>
-        <p className="text-sm text-[#cc7342] font-semibold font-['Poppins'] leading-normal">
-          Our users
-        </p>
+        <article>
+          <p className="text-sm text-[#cc7342] font-semibold font-['Poppins'] leading-normal">
+            Our users
+          </p>
 
-        <p className="text-[28.88px] text-white font-bold font-['Inter'] leading-[49.10px]">
-          What our users have to say
-        </p>
-      </article>
-      <div className="pt-8 flex overflow-auto gap-5">
-        {details.map((detail, index) => (
-          <TestimonialCard
-            key={index}
-            text={detail.text}
-            name={detail.name}
-            field={detail.field}
-            img={detail.img}
-          />
-        ))}
-      </div>
-      <div className="pt-[86px]"></div>
+          <p className="text-[28.88px] text-white font-bold font-['Inter'] leading-[49.10px]">
+            What our users have to say
+          </p>
+        </article>
+        <div
+          style={{ ...noScrollbar }}
+          className="pt-8 flex overflow-auto gap-5"
+        >
+          {details.map((detail, index) => (
+            <TestimonialCard
+              key={index}
+              text={detail.text}
+              name={detail.name}
+              field={detail.field}
+              img={detail.img}
+            />
+          ))}
+        </div>
+        <div className="pt-[86px]"></div>
       </section>
     </section>
   )
