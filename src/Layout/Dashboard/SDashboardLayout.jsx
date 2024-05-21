@@ -3,7 +3,7 @@ import Sidebar from "../../Components/Dashboard_courses/Sidebar"
 
 const SDashboardLayout = () => {
   return (
-    <section className="flex gap-0 overflow-hidden h-screen bg-slate-100 ">
+    <section className="flex overflow-hidden h-screen bg-slate-100 ">
       <section>
         <Sidebar />
       </section>
