@@ -35,7 +35,7 @@ const LoginPage = () => {
         const from = location.state?.from?.pathname || "/"
         navigate(from)
       } else {
-        toast.error(`${res.message}!!`)
+        toast.error(`${res.message}`)
       }
       return
     } catch (error) {
@@ -64,6 +64,9 @@ const LoginPage = () => {
             value={formValues.password}
             onChange={handleChange}
           />
+
+          <p onClick={() => navigate("/forgot-password")} className="text-left text-[#ff9053] hover:text-[#ff8f53d0] duration-200 cursor-pointer text-base font-medium">Forgot Password?</p>
+          
           <ButtonFeature
             text={"Don't have an account?"}
             buttonText={"Login"}

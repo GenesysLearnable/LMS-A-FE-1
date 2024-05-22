@@ -1,10 +1,28 @@
-import StarRating from './StarRatings';
-import Style from './CourseKeyInfo.module.css';
-import Button from '../Landingpage/Button';
-import { LoginStatus } from '../../LoginContext';
+import StarRating from "./StarRatings"
+import Style from "./CourseKeyInfo.module.css"
+import Button from "../Landingpage/Button"
 
-const CourseKeyPoints = function ({ img, title, text, students, price }) {
-  const loginStatus = LoginStatus();
+const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
+  const enrollCourse = async (id) => {
+    try {
+      const res = await fetch(
+        `http://localhost:8080/api/v1/courses/${id}/enroll`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ enrolled: true }),
+        }
+      )
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`)
+      }
+    } catch (error) {
+      console.log("Error enrolling in course", error)
+    }
+  }
 
   return (
     <div className={Style.course__description}>
@@ -33,18 +51,19 @@ const CourseKeyPoints = function ({ img, title, text, students, price }) {
               <h5 className={Style.students}>{students} students</h5>
             </div>
           </div>
-          <div className={CourseStyle.enrollment}>
+          <div className={Style.enrollment}>
             <Button
-              title={'Enroll'}
-              bg={'bg-[#ff9053]'}
-              path={'/students/dashboard'}
+              title={"Enroll"}
+              bg={"bg-[#ff9053]"}
+              path={"/students/courses"}
+              onClick={() => enrollCourse(id)}
             />
             <h2>&#8358;{price}</h2>
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CourseKeyPoints;
+export default CourseKeyPoints
