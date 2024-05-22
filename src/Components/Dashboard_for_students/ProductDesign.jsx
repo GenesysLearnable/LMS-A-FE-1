@@ -1,10 +1,10 @@
-import React from "react";
-import styles from "./ProductDesign.module.css";
+import React from 'react';
+import styles from './ProductDesign.module.css';
 function ProductDesign() {
   return (
     <div className={styles.courseCard}>
       <img
-        src="/public/Images/studentdashboard/Intro Video.png"
+        src="/Images/studentdashboard/Intro Video.png"
         alt="Course Thumbnail"
       />
       <div className={styles.courseInfo}>

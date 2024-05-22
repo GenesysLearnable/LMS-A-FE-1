@@ -31,4 +31,4 @@ export const details = [
     students: "1,200",
     price: "4,400 ",
   },
-]
+];

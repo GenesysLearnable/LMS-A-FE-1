@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./Navbar.module.css";
-import { FaRegBell } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
+import React from 'react';
+import styles from './Navbar.module.css';
+import { FaRegBell } from 'react-icons/fa6';
+import { FaSearch } from 'react-icons/fa';
 function Navbar() {
   return (
     <div className={styles.navbarDashboard}>
@@ -11,7 +11,7 @@ function Navbar() {
         </div>
         <div className={styles.smallPicture}>
           <img
-            src="/public/Images/studentdashboard/Ellipse 1037.png"
+            src="/Images/studentdashboard/Ellipse 1037.png"
             alt="Profile Picture"
           />
         </div>

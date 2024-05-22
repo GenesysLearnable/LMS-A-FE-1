@@ -25,20 +25,24 @@ const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
   }
 
   return (
-    <div className={CourseStyle.course__description}>
-      <div className={CourseStyle.course__image}>
+    <div className={Style.course__description}>
+      <div className={Style.course__image}>
         <img src={img} alt="UI/UX Design" />
       </div>
-      <div className={CourseStyle.course__details}>
+      <div className={Style.course__details}>
         <h1>{title}</h1>
 
+        <div className={Style.course__general__info}>
+          <div className={Style.course__quick__info}>
+            <h3>{text}</h3>
+            <div className={Style.course__rating}>
         <div className={CourseStyle.course__general__info}>
           <div className={CourseStyle.course__quick__info}>
             <h3>{text}</h3>
             <div className={CourseStyle.course__rating}>
               <h4>4.6</h4>
 
-              <div className={CourseStyle.star__rating}>
+              <div className={Style.star__rating}>
                 <StarRating />
                 <StarRating />
                 <StarRating />
@@ -48,7 +52,7 @@ const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
 
               <h5>&#10088;69 rating&#10089;</h5>
 
-              <h5 className={CourseStyle.students}>{students} students</h5>
+              <h5 className={Style.students}>{students} students</h5>
             </div>
           </div>
           <div className={CourseStyle.enrollment}>
@@ -63,7 +67,7 @@ const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CourseKeyPoints
+export default CourseKeyPoints;
