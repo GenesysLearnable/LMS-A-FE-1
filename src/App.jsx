@@ -26,7 +26,10 @@ import LoginProvider from "./LoginContext"
 import ProtectedRoute from "./ProtectedRoute"
 import ForgotPassword from "./Components/Signup and Login/ForgotPassword"
 
+
 const App = () => {
+
+
   return (
     <LoginProvider>
       <ToastContainer autoClose={2500} />
@@ -56,7 +59,7 @@ const App = () => {
           >
             <Route path="dashboard" element={<StudentDashboard />} />
             <Route path="account" element={<Account />} />
-            <Route path="courses" element={<StudentCourses />} />
+            <Route path="courses" element={<StudentCourses  />} />
             <Route path="courses/:id" element={<SelectedCourse />} />
             <Route path="courses/:id/:moduleId" element={<CourseContent />} />
             <Route path="quiz" element={<Quiz />} />

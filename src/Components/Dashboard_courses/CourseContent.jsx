@@ -1,13 +1,21 @@
 import { NavLink, useNavigate, useParams } from "react-router-dom"
 import Button from "../Landingpage/Button"
 import { FaArrowLeftLong } from "react-icons/fa6"
-
-import { course } from "./courseDetails"
+import useCourseStore from "../../utlis/loader"
+import { useEffect } from "react"
 
 const CourseContent = () => {
+  const { course, fetchCourse } = useCourseStore()
+
+  useEffect(() => {
+    fetchCourse()
+  }, [fetchCourse])
+
+
   const { id, moduleId } = useParams()
 
   const courseContent = course.find((course) => course.id === parseInt(id))
+  console.log(courseContent)
   const module = courseContent.modules.find(
     (mod) => mod.moduleId === parseInt(moduleId)
   )
