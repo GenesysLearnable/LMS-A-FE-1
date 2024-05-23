@@ -1,4 +1,3 @@
-import { course } from "./courseDetails"
 
 const EnrolledCourse = ({ title, img }) => {
   return (
