@@ -7,14 +7,10 @@ function EnrolledCourseCard({ cardTitle, number, enrolled }) {
       <div className={styles.cardContent}>
         <h6>{cardTitle} </h6>
         {enrolled ? (
-<<<<<<< HEAD
-          <img
+          <><img
             src="/Images/studentdashboard/Frame 1000002498.png"
-            alt=""
-          />
-=======
-          <img src="/Images/studentdashboard/Frame 1000002498.png" alt="" />
->>>>>>> a1dee8febaa8ca1e8ad4b3c92bf5498a799aa520
+            alt="" />
+            <img src="/Images/studentdashboard/Frame 1000002498.png" alt="" /></>
         ) : (
           <img src="/Images/studentdashboard/Frame 1000002498 2.png" alt="" />
         )}

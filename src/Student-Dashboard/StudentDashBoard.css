@@ -9,6 +9,10 @@ body {
 
 .dashboard {
   padding: 0px 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 .dashboard-header {
