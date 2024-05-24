@@ -7,7 +7,7 @@ const RecommendedCourse = function (props) {
   const { courseName, courseDescription, video, videoAlt, stars, cost } = props;
 
   return (
-    <div className={Style.course}>
+    <div  className={Style.course}>
       <div className={Style.course__image}>
         <img src={video} alt={videoAlt} />
       </div>

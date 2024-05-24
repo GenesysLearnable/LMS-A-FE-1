@@ -1,8 +1,8 @@
 import axios from "axios"
 
 const useFetch = () => {
-  // const endPoint = import.meta.env.VITE_SIGNUP_ENDPOINT
-  const endPoint = "http://localhost:8080/api/v1"
+  const endPoint = import.meta.env.VITE_SIGNUP_ENDPOINT
+  // const endPoint = "http://localhost:8080/api/v1"
 
   const fetchData = async (method, uri = "", data = null) => {
      try {

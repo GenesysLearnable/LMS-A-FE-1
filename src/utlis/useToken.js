@@ -1,8 +1,15 @@
 import { useEffect, useState } from "react"
 
 export default function useToken() {
-  const [token, setToken] = useState()
-  const [email, setEmail] = useState()
+  const [token, setToken] = useState(() => {
+    const tokenString = sessionStorage.getItem("token")
+    return tokenString ? JSON.parse(tokenString).token : null
+  })
+
+  const [email, setEmail] = useState(() => {
+    const emailString = sessionStorage.getItem("email")
+    return emailString ? JSON.parse(emailString).email : null
+  })
 
   useEffect(() => {
     const tokenString = sessionStorage.getItem("token")

@@ -14,6 +14,7 @@ const Courses = () => {
             beginners and seasoned professionals alike.
           </p>
         </article>
+        
         <div className="grid grid-cols-4 gap-6 justify-around">
           {details.map((detail, index) => (
             <Course

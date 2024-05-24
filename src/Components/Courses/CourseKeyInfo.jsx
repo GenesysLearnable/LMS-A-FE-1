@@ -2,55 +2,44 @@ import StarRating from "./StarRatings"
 import Style from "./CourseKeyInfo.module.css"
 import Button from "../Landingpage/Button"
 import { UserEmail } from "../../LoginContext"
-import axios from "axios"
 
 const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
   const { email } = UserEmail()
 
-  const fetchData = use
-
-  // const enrollCourse = async (id, userEmail) => {
-  //   try {
-  //     console.log("Enrolling user with email:", userEmail) // Log the email being sent
-
-  //     const res = await fetch(
-  //       `http://localhost:8080/api/v1/courses/${id}/enroll`,
-  //       {
-  //         method: "PUT",
-  //         headers: {
-  //           "Content-Type": "application/json",
-  //         },
-  //         body: { userEmail },
-  //       }
-  //     )
-
-  //     if (!res.ok) {
-  //       throw new Error(`HTTP error! status: ${res.status}`)
-  //     }
-
-  //     const data = await res.json()
-  //     console.log("Enrollment successful", data)
-  //   } catch (error) {
-  //     console.log("Error enrolling in course", error)
-  //   }
-  // }
-
-  const enrollCourse = async (id, email) => {
+  const enrollCourse = async (id, userEmail) => {
     try {
-      const res = await axios.put(
+      console.log("Enrolling user with email:", userEmail) // Log the email being sent
+
+      const res = await fetch(
         `http://localhost:8080/api/v1/courses/${id}/enroll`,
-        email
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: { userEmail },
+        }
       )
-      console.log(res)
+
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`)
+      }
+
+      const data = await res.json()
+      console.log("Enrollment successful", data)
     } catch (error) {
-      console.log(`Error: ${error}`)
+      console.log("Error enrolling in course", error)
     }
   }
 
   return (
     <div className={Style.course__description}>
-      <div className={Style.course__image}>
-        <img src={img} alt="UI/UX Design" />
+      <div className="">
+        <img
+          className="w-[451px] h-[283px] rounded-lg"
+          src={img}
+          alt="UI/UX Design"
+        />
       </div>
       <div className={Style.course__details}>
         <h1>{title}</h1>
