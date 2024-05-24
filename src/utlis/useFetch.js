@@ -6,19 +6,34 @@ const useFetch = () => {
 
   const fetchData = async (method, uri = "", data = null) => {
     try {
+      const tokenString = sessionStorage.getItem("token");
+      const userToken = JSON.parse(tokenString);
+      const token = userToken?.token;
+      console.log("Token:", token); // Log the token for debugging
+
+      const headers = {
+        "Content-Type": "application/json",
+        ...(token && { Authorization: `Bearer ${token}` }), // Add the token if it exists
+      };
+
+      console.log("Headers:", headers); // Log the headers for debugging
+
       let response;
       switch (method) {
         case "GET":
-          response = await axios.get(`${endPoint}/${uri}`);
+          response = await axios.get(`${endPoint}/${uri}`, { headers });
           break;
         case "POST":
-          response = await axios.post(`${endPoint}/${uri}`, data);
+          response = await axios.post(`${endPoint}/${uri}`, data, { headers });
           break;
         case "PUT":
-          response = await axios.put(`${endPoint}/${uri}`, data);
+          response = await axios.put(`${endPoint}/${uri}`, data, { headers });
           break;
         case "DELETE":
-          response = await axios.delete(`${endPoint}/${uri}`, data);
+          response = await axios.delete(`${endPoint}/${uri}`, {
+            headers,
+            data,
+          });
           break;
         default:
           throw new Error("Invalid HTTP method");

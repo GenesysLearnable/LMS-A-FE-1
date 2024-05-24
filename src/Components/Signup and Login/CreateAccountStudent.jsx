@@ -115,14 +115,14 @@ const CreateAccountStudent = () => {
           <div className="flex flex-col gap-5">
             <Input
               name="password"
-              type={"text"}
+              type={"password"}
               placeholder={"Password"}
               value={formValues.password}
               onChange={handleChange}
             />
             <Input
               name="confirmPassword"
-              type={"text"}
+              type={"password"}
               placeholder={"Confirm password"}
               value={formValues.confirmPassword}
               onChange={handleChange}
