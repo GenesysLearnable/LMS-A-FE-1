@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import Button from "../Landingpage/Button"
+import { Link } from "react-router-dom";
+import Button from "../Landingpage/Button";
 
 const CourseLessons = ({
   img,
@@ -32,7 +32,7 @@ const CourseLessons = ({
         path={path}
       />
     </Link>
-  )
-}
+  );
+};
 
-export default CourseLessons
+export default CourseLessons;

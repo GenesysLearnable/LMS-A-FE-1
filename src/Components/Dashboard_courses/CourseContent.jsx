@@ -1,23 +1,23 @@
-import { NavLink, useNavigate, useParams } from "react-router-dom"
-import Button from "../Landingpage/Button"
-import { FaArrowLeftLong } from "react-icons/fa6"
+import { NavLink, useNavigate, useParams } from "react-router-dom";
+import Button from "../Landingpage/Button";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
-import { course } from "./courseDetails"
+import { course } from "./courseDetails";
 
 const CourseContent = () => {
-  const { id, moduleId } = useParams()
+  const { id, moduleId } = useParams();
 
-  const courseContent = course.find((course) => course.id === parseInt(id))
+  const courseContent = course.find((course) => course.id === parseInt(id));
   const module = courseContent.modules.find(
-    (mod) => mod.moduleId === parseInt(moduleId)
-  )
+    (mod) => mod.moduleId === parseInt(moduleId),
+  );
 
   const listStyles = ({ isActive }) =>
     isActive
       ? "text-slate-100 h-14 rounded-lg border border-gray-100 items-center bg-[#041D31] px-4 py-[3px] text-sm font-medium flex justify-between"
-      : "text-[#041D31] h-14 rounded-lg border border-gray-200 items-center px-4 py-[3px] text-sm font-medium flex justify-between hover:bg-[#041d31d7] hover:text-white"
+      : "text-[#041D31] h-14 rounded-lg border border-gray-200 items-center px-4 py-[3px] text-sm font-medium flex justify-between hover:bg-[#041d31d7] hover:text-white";
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <section className="w-full flex ml-12 flex-col gap-7 mt-6">
       <p className="flex items-center gap-2 text-[#222427] text-base font-medium">
@@ -159,7 +159,7 @@ const CourseContent = () => {
         </section>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default CourseContent
+export default CourseContent;

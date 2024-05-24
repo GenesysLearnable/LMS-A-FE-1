@@ -1,4 +1,4 @@
-import Course from './Course';
+import Course from "./Course";
 
 const Courses = () => {
   return (
@@ -33,32 +33,32 @@ const Courses = () => {
 
 const details = [
   {
-    img: '/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2.png',
-    title: 'Product design',
-    text: 'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    price: '$4,400',
-    path: '/course/product-design',
+    img: "/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2.png",
+    title: "Product design",
+    text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    price: "$4,400",
+    path: "/course/product-design",
   },
   {
-    img: '/Images/LandingPage/How Web 3_0 will Impact Businesses_ 1.png',
-    title: 'Web3',
-    text: 'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    price: '$4,400',
-    path: '/course/web3',
+    img: "/Images/LandingPage/How Web 3_0 will Impact Businesses_ 1.png",
+    title: "Web3",
+    text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    price: "$4,400",
+    path: "/course/web3",
   },
   {
-    img: '/Images/LandingPage/html-css-collage-concept-with-person 1.png',
-    title: 'Backend',
-    text: 'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    price: '$4,400',
-    path: '/course/backend',
+    img: "/Images/LandingPage/html-css-collage-concept-with-person 1.png",
+    title: "Backend",
+    text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    price: "$4,400",
+    path: "/course/backend",
   },
   {
-    img: '/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2 (1).png',
-    title: 'Frontend',
-    text: 'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    price: '$4,400',
-    path: '/course/frontend',
+    img: "/Images/LandingPage/How Web 3_0 will Impact Businesses_ 2 (1).png",
+    title: "Frontend",
+    text: "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    price: "$4,400",
+    path: "/course/frontend",
   },
 ];
 

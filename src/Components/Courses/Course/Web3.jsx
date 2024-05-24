@@ -1,8 +1,8 @@
-import CoursePage from "../../../Pages/CoursePage"
-import { details } from "./CourseDetails"
+import CoursePage from "../../../Pages/CoursePage";
+import { details } from "./CourseDetails";
 
 const Web3 = () => {
-    return <CoursePage details={details[1]} />
-}
+  return <CoursePage details={details[1]} />;
+};
 
-export default Web3
+export default Web3;

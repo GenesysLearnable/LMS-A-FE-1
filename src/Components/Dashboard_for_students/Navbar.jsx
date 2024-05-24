@@ -1,7 +1,7 @@
-import React from 'react';
-import styles from './Navbar.module.css';
-import { FaRegBell } from 'react-icons/fa6';
-import { FaSearch } from 'react-icons/fa';
+import React from "react";
+import styles from "./Navbar.module.css";
+import { FaRegBell } from "react-icons/fa6";
+import { FaSearch } from "react-icons/fa";
 function Navbar() {
   return (
     <div className={styles.navbarDashboard}>

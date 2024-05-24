@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom"
-import Sidebar from "../../Components/Dashboard_courses/Sidebar"
+import { Outlet } from "react-router-dom";
+import Sidebar from "../../Components/Dashboard_courses/Sidebar";
 
 const SDashboardLayout = () => {
   return (
@@ -10,7 +10,7 @@ const SDashboardLayout = () => {
 
       <Outlet />
     </section>
-  )
-}
+  );
+};
 
-export default SDashboardLayout
+export default SDashboardLayout;

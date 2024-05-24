@@ -5,8 +5,8 @@ const StarRating = ({ size = 15.89 }) => {
         src="/Images/Courses/Stars.svg"
         alt="Star ratings"
         style={{
-          width: size + 'px',
-          height: size + 'px',
+          width: size + "px",
+          height: size + "px",
         }}
       />
     </>

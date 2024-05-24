@@ -15,7 +15,7 @@ const TestimonialCard = ({ text, name, field, img }) => {
         <img className="w-[59.27px] pt-1" src={img} alt="user picture" />
       </div>
     </article>
-  )
-}
+  );
+};
 
-export default TestimonialCard
+export default TestimonialCard;

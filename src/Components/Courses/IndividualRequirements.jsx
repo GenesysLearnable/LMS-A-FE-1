@@ -1,4 +1,4 @@
-import Style from './IndividualRequirements.module.css';
+import Style from "./IndividualRequirements.module.css";
 
 const IndividualRequirements = function ({ theRequirement }) {
   return (

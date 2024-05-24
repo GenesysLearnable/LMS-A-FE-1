@@ -1,7 +1,7 @@
-import IntroductoryLesson from './IntroductoryLesson';
-import OtherLessons from './OtherLessons';
-import LessonCoreDetails from './LessonCoreDetails';
-import Style from './ClassLessons.module.css';
+import IntroductoryLesson from "./IntroductoryLesson";
+import OtherLessons from "./OtherLessons";
+import LessonCoreDetails from "./LessonCoreDetails";
+import Style from "./ClassLessons.module.css";
 
 const ClassLessons = function () {
   return (

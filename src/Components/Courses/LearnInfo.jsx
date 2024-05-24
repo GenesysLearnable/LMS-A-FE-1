@@ -1,5 +1,5 @@
-import CheckMarks from './PrimeFeatures';
-import Style from './LearnInfo.module.css';
+import CheckMarks from "./PrimeFeatures";
+import Style from "./LearnInfo.module.css";
 
 const LearnInfo = function () {
   return (

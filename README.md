@@ -1,4 +1,5 @@
 # LMS platform for Adults
+
 hi
 
 This platform is built by Group 1 of the Learnable23 internship program
@@ -15,11 +16,11 @@ Starting the project
 Using the project
 
 After you have cloned the repo checkout to branch develop2.0
+
 - To checkout to the branch run
   ```
   git checkout develop2.0
   ```
-  
 
 Branch develop2.0 is our development branch. To work on any project, checkout from branch develop2.0 to a new branch
 

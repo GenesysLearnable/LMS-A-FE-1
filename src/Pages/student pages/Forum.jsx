@@ -1,7 +1,5 @@
 const Forum = () => {
-  return (
-    <div className="w-full">Forum</div>
-  )
-}
+  return <div className="w-full">Forum</div>;
+};
 
-export default Forum
+export default Forum;

@@ -1,15 +1,15 @@
-import { useNavigate } from "react-router-dom"
-import Carousel from "./Carousel"
-import Spinners from "./Spinners"
+import { useNavigate } from "react-router-dom";
+import Carousel from "./Carousel";
+import Spinners from "./Spinners";
 
 const CASPageLayout = ({ children, loading }) => {
   const slides = [
     "/Images/SignupPage/Frame 1000002307.png",
     "/Images/SignupPage/Frame 1000002165.png",
     "/Images/SignupPage/Frame 1000002309.png",
-  ]
+  ];
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <section>
@@ -88,7 +88,7 @@ const CASPageLayout = ({ children, loading }) => {
         </section>
       )}
     </section>
-  )
-}
+  );
+};
 
-export default CASPageLayout
+export default CASPageLayout;

@@ -5,8 +5,8 @@ const VideoSymbol = ({ size = 24 }) => {
         src="/Images/Courses/Video-Symbol.svg"
         alt="Star ratings"
         style={{
-          width: size + 'px',
-          height: size + 'px',
+          width: size + "px",
+          height: size + "px",
         }}
       />
     </>

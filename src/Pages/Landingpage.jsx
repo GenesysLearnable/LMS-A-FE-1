@@ -1,10 +1,10 @@
-import About from "../Components/Landingpage/About"
-import AboutCard from "../Components/Landingpage/AboutCard"
-import Collaborations from "../Components/Landingpage/Collaborations"
-import Courses from "../Components/Landingpage/Courses"
-import Faqs from "../Components/Landingpage/Faqs"
-import Hero from "../Components/Landingpage/Hero"
-import Testimonials from "../Components/Landingpage/Testimonials"
+import About from "../Components/Landingpage/About";
+import AboutCard from "../Components/Landingpage/AboutCard";
+import Collaborations from "../Components/Landingpage/Collaborations";
+import Courses from "../Components/Landingpage/Courses";
+import Faqs from "../Components/Landingpage/Faqs";
+import Hero from "../Components/Landingpage/Hero";
+import Testimonials from "../Components/Landingpage/Testimonials";
 
 const Landingpage = () => {
   const noScrollbar = {
@@ -15,7 +15,7 @@ const Landingpage = () => {
     // Hide scrollbar for IE, Edge and Firefox
     "-ms-overflow-style": "none", // IE and Edge
     "scrollbar-width": "none", // Firefox
-  }
+  };
   return (
     <>
       <Hero />
@@ -26,7 +26,7 @@ const Landingpage = () => {
       <Testimonials />
       <Faqs />
     </>
-  )
-}
+  );
+};
 
-export default Landingpage
+export default Landingpage;

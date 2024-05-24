@@ -1,5 +1,5 @@
-import StarRating from './StarRatings';
-import Style from './RecommendedCourse.module.css';
+import StarRating from "./StarRatings";
+import Style from "./RecommendedCourse.module.css";
 
 const RecommendedCourse = function (props) {
   const size = 11.7;

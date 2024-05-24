@@ -1,13 +1,13 @@
-import { useNavigate, useParams } from "react-router-dom"
-import CourseLessons from "./CourseLessons"
-import { course } from "./courseDetails"
-import { FaArrowLeftLong } from "react-icons/fa6"
+import { useNavigate, useParams } from "react-router-dom";
+import CourseLessons from "./CourseLessons";
+import { course } from "./courseDetails";
+import { FaArrowLeftLong } from "react-icons/fa6";
 
 const SelectedCourse = () => {
-  const { id } = useParams()
-  const courseContent = course.find((course) => course.id === parseInt(id))
+  const { id } = useParams();
+  const courseContent = course.find((course) => course.id === parseInt(id));
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   return (
     <section className="w-full flex overflow-auto flex-col ml-12 gap-3 mt-6">
@@ -81,7 +81,7 @@ const SelectedCourse = () => {
         </section>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default SelectedCourse
+export default SelectedCourse;

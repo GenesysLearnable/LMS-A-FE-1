@@ -1,11 +1,14 @@
-import { SpinnerInfinity } from "spinners-react"
+import { SpinnerInfinity } from "spinners-react";
 
-const Spinners = ({enabled}) => {
+const Spinners = ({ enabled }) => {
   return (
-    
-      <SpinnerInfinity enabled={enabled} color="#f37c3b"  size={70} thickness={120}/>
-    
-  )
-}
+    <SpinnerInfinity
+      enabled={enabled}
+      color="#f37c3b"
+      size={70}
+      thickness={120}
+    />
+  );
+};
 
-export default Spinners
+export default Spinners;

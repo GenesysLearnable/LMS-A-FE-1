@@ -1,4 +1,4 @@
-import Style from './IntroductoryLesson.module.css';
+import Style from "./IntroductoryLesson.module.css";
 
 const IntroductoryLesson = function ({ title, minutes, seconds }) {
   return (

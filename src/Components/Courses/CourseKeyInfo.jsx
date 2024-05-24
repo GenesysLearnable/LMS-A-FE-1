@@ -1,7 +1,7 @@
-import StarRating from './StarRatings';
-import Style from './CourseKeyInfo.module.css';
-import Button from '../Landingpage/Button';
-import { LoginStatus } from '../../LoginContext';
+import StarRating from "./StarRatings";
+import Style from "./CourseKeyInfo.module.css";
+import Button from "../Landingpage/Button";
+import { LoginStatus } from "../../LoginContext";
 
 const CourseKeyPoints = function ({ img, title, text, students, price }) {
   const loginStatus = LoginStatus();
@@ -35,9 +35,9 @@ const CourseKeyPoints = function ({ img, title, text, students, price }) {
           </div>
           <div className={CourseStyle.enrollment}>
             <Button
-              title={'Enroll'}
-              bg={'bg-[#ff9053]'}
-              path={'/students/dashboard'}
+              title={"Enroll"}
+              bg={"bg-[#ff9053]"}
+              path={"/students/dashboard"}
             />
             <h2>&#8358;{price}</h2>
           </div>

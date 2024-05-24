@@ -1,4 +1,4 @@
-import Style from './OtherLessons.module.css';
+import Style from "./OtherLessons.module.css";
 
 const OtherLessons = function ({ number, title, minutes, seconds }) {
   return (

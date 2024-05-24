@@ -1,29 +1,29 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom"
-import { ToastContainer } from "react-toastify"
-import "react-toastify/dist/ReactToastify.css"
-import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent"
-import LoginPage from "./Pages/LoginPage"
-import SDashboardLayout from "./Layout/Dashboard/SDashboardLayout"
-import StudentDashboard from "./Student-Dashboard/StudentDashboard"
-import Account from "./Pages/student pages/Account"
-import StudentCourses from "./Pages/student pages/StudentCourses"
-import SelectedCourse from "./Components/Dashboard_courses/SelectedCourse"
-import CourseContent from "./Components/Dashboard_courses/CourseContent"
-import Quiz from "./quiz/quiz"
-import Forum from "./Pages/student pages/Forum"
-import Certification from "./Pages/student pages/Certification"
-import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout"
-import Landingpage from "./Pages/Landingpage"
-import About from "./Components/Landingpage/About"
-import Courses from "./Components/Landingpage/Courses"
-import ProductDesign from "./Components/Dashboard_for_students/ProductDesign"
-import Web3 from "./Components/Courses/Course/Web3"
-import Backend from "./Components/Courses/Course/Backend"
-import Frontend from "./Components/Courses/Course/Frontend"
-import Testimonials from "./Components/Landingpage/Testimonials"
-import ErrorPage from "./Pages/ErrorPage"
-import LoginProvider from "./LoginContext"
-import ProtectedRoute from "./ProtectedRoute"
+import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import CreateAccountStudent from "./Components/Signup and Login/CreateAccountStudent";
+import LoginPage from "./Pages/LoginPage";
+import SDashboardLayout from "./Layout/Dashboard/SDashboardLayout";
+import StudentDashboard from "./Student-Dashboard/StudentDashboard";
+import Account from "./Pages/student pages/Account";
+import StudentCourses from "./Pages/student pages/StudentCourses";
+import SelectedCourse from "./Components/Dashboard_courses/SelectedCourse";
+import CourseContent from "./Components/Dashboard_courses/CourseContent";
+import Quiz from "./quiz/quiz";
+import Forum from "./Pages/student pages/Forum";
+import Certification from "./Pages/student pages/Certification";
+import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout";
+import Landingpage from "./Pages/Landingpage";
+import About from "./Components/Landingpage/About";
+import Courses from "./Components/Landingpage/Courses";
+import ProductDesign from "./Components/Dashboard_for_students/ProductDesign";
+import Web3 from "./Components/Courses/Course/Web3";
+import Backend from "./Components/Courses/Course/Backend";
+import Frontend from "./Components/Courses/Course/Frontend";
+import Testimonials from "./Components/Landingpage/Testimonials";
+import ErrorPage from "./Pages/ErrorPage";
+import LoginProvider from "./LoginContext";
+import ProtectedRoute from "./ProtectedRoute";
 
 const App = () => {
   return (
@@ -66,6 +66,6 @@ const App = () => {
         </Routes>
       </BrowserRouter>
     </LoginProvider>
-  )
-}
-export default App
+  );
+};
+export default App;

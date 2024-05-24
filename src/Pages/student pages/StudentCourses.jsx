@@ -1,5 +1,5 @@
-import { course } from "../../Components/Dashboard_courses/courseDetails"
-import Course from "../../Components/Landingpage/Course"
+import { course } from "../../Components/Dashboard_courses/courseDetails";
+import Course from "../../Components/Landingpage/Course";
 
 const StudentCourses = () => {
   return (
@@ -15,7 +15,7 @@ const StudentCourses = () => {
         </div>
       ))}
     </section>
-  )
-}
+  );
+};
 
-export default StudentCourses
+export default StudentCourses;

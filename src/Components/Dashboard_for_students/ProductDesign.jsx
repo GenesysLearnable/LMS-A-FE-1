@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './ProductDesign.module.css';
+import React from "react";
+import styles from "./ProductDesign.module.css";
 function ProductDesign() {
   return (
     <div className={styles.courseCard}>

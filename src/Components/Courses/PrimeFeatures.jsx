@@ -1,4 +1,4 @@
-import Style from './PrimeFeatures.module.css';
+import Style from "./PrimeFeatures.module.css";
 
 const CheckMarks = function ({ coreIdeas }) {
   return (

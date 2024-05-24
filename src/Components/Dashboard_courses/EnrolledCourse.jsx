@@ -1,4 +1,4 @@
-import { course } from "./courseDetails"
+import { course } from "./courseDetails";
 
 const EnrolledCourse = ({ title, img }) => {
   return (
@@ -28,6 +28,6 @@ const EnrolledCourse = ({ title, img }) => {
         />
       </div>
     </section>
-  )
-}
-export default EnrolledCourse
+  );
+};
+export default EnrolledCourse;

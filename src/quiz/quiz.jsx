@@ -1,4 +1,4 @@
-import "./quiz.css"
+import "./quiz.css";
 
 function Quiz() {
   return (
@@ -136,6 +136,6 @@ function Quiz() {
         </button>
       </div>
     </div>
-  )
+  );
 }
-export default Quiz
+export default Quiz;

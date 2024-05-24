@@ -1,14 +1,14 @@
-import { FaArrowUpLong } from "react-icons/fa6"
+import { FaArrowUpLong } from "react-icons/fa6";
 
 const Footer = () => {
   const top = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" })
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const titleStyles =
-    "text-white text-base pb-5 font-bold font-['Open Sans'] uppercase leading-snug tracking-wide"
+    "text-white text-base pb-5 font-bold font-['Open Sans'] uppercase leading-snug tracking-wide";
   const subStyles =
-    "h-7 text-gray-400 text-base hover:text-gray-300 duration-200 cursor-pointer font-normal font-['Open Sans'] leading-snug"
+    "h-7 text-gray-400 text-base hover:text-gray-300 duration-200 cursor-pointer font-normal font-['Open Sans'] leading-snug";
   return (
     <footer className="pt-[86px] relative px-[72px] bg-gradient-to-b from-[#041d31] to-[#172b3a]">
       <div className="flex justify-between">
@@ -64,7 +64,7 @@ const Footer = () => {
         </i>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

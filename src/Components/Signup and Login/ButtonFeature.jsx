@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom"
-import SubmitButton from "./SubmitButton"
+import { Link } from "react-router-dom";
+import SubmitButton from "./SubmitButton";
 
 const ButtonFeature = ({ text, buttonText, spanText, path, onClick }) => {
   return (
@@ -13,7 +13,7 @@ const ButtonFeature = ({ text, buttonText, spanText, path, onClick }) => {
         </Link>
       </p>
     </div>
-  )
-}
+  );
+};
 
-export default ButtonFeature
+export default ButtonFeature;

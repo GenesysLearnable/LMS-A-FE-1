@@ -1,20 +1,20 @@
-import { NavLink } from "react-router-dom"
-import Button from "./Button"
-import { LoginStatus, UpdateLoginStatus } from "../../LoginContext"
-import { FaUserAstronaut } from "react-icons/fa6"
+import { NavLink } from "react-router-dom";
+import Button from "./Button";
+import { LoginStatus, UpdateLoginStatus } from "../../LoginContext";
+import { FaUserAstronaut } from "react-icons/fa6";
 
 const Navbar = () => {
   const linkCLass = ({ isActive }) =>
     isActive
       ? "text-[#ff9053] hover:text-[#d87139] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
-      : "hover:text-[#ff9053] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal"
+      : "hover:text-[#ff9053] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal";
 
-  const loginStatus = LoginStatus()
-  const { logOut } = UpdateLoginStatus()
+  const loginStatus = LoginStatus();
+  const { logOut } = UpdateLoginStatus();
 
   const handleLogout = () => {
-    logOut()
-  }
+    logOut();
+  };
 
   return (
     <nav className="w-full h-20 pl-[102px] py-[16] bg-[#041d31] ">
@@ -69,7 +69,7 @@ const Navbar = () => {
         )}
       </section>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,7 +1,7 @@
-import CoursePage from "../../../Pages/CoursePage"
-import { details } from "./CourseDetails"
+import CoursePage from "../../../Pages/CoursePage";
+import { details } from "./CourseDetails";
 const ProductDesign = () => {
-  return <CoursePage details={details[0]} />
-}
+  return <CoursePage details={details[0]} />;
+};
 
-export default ProductDesign
+export default ProductDesign;

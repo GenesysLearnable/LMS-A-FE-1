@@ -6,7 +6,7 @@ const FormCard = ({ children, text, action }) => {
       </p>
       <form>{children}</form>
     </div>
-  )
-}
+  );
+};
 
-export default FormCard
+export default FormCard;

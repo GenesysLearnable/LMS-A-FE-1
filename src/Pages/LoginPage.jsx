@@ -1,50 +1,50 @@
-import { useState } from "react"
-import CASPageLayout from "../Components/Signup and Login/CASPageLayout"
-import FormCard from "../Components/Signup and Login/FormCard"
-import Input from "../Components/Signup and Login/Input"
-import ButtonFeature from "../Components/Signup and Login/ButtonFeature"
-import useFetch from "../utlis/useFetch"
-import { toast } from "react-toastify"
-import { useLocation, useNavigate } from "react-router-dom"
-import { UpdateLoginStatus } from "../LoginContext"
+import { useState } from "react";
+import CASPageLayout from "../Components/Signup and Login/CASPageLayout";
+import FormCard from "../Components/Signup and Login/FormCard";
+import Input from "../Components/Signup and Login/Input";
+import ButtonFeature from "../Components/Signup and Login/ButtonFeature";
+import useFetch from "../utlis/useFetch";
+import { toast } from "react-toastify";
+import { useLocation, useNavigate } from "react-router-dom";
+import { UpdateLoginStatus } from "../LoginContext";
 
 const LoginPage = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
-  })
+  });
 
-  const fetchData = useFetch()
-  const { logIn } = UpdateLoginStatus()
-  const navigate = useNavigate()
-  const location = useLocation()
+  const fetchData = useFetch();
+  const { logIn } = UpdateLoginStatus();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleChange = ({ target: { name, value } }) => {
-    setFormValues((prev) => ({ ...prev, [name]: value }))
-  }
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
 
   const handleSubmit = async () => {
-    setLoading(true)
+    setLoading(true);
     try {
-      let res = await fetchData.post("login", formValues)
-      setLoading(false)
+      let res = await fetchData.post("login", formValues);
+      setLoading(false);
       if (res.success == true) {
-        logIn({ token: res.data.token })
-        toast.success(`${res.message}`)
-        const from = location.state?.from?.pathname || "/"
-        navigate(from)
+        logIn({ token: res.data.token });
+        toast.success(`${res.message}`);
+        const from = location.state?.from?.pathname || "/";
+        navigate(from);
       } else {
-        toast.error(`${res.message}!!`)
+        toast.error(`${res.message}!!`);
       }
-      return
+      return;
     } catch (error) {
-      setLoading(false)
-      navigate("/")
-      toast.error(`${error}`)
-      throw new Error(error)
+      setLoading(false);
+      navigate("/");
+      toast.error(`${error}`);
+      throw new Error(error);
     }
-  }
+  };
 
   return (
     <CASPageLayout loading={loading}>
@@ -74,7 +74,7 @@ const LoginPage = () => {
         </div>
       </FormCard>
     </CASPageLayout>
-  )
-}
+  );
+};
 
-export default LoginPage
+export default LoginPage;

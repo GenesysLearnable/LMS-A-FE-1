@@ -1,5 +1,5 @@
-import LP_TextArticle from "./LP_TextArticle"
-import LP_TwinCard from "./LP_TwinCard"
+import LP_TextArticle from "./LP_TextArticle";
+import LP_TwinCard from "./LP_TwinCard";
 
 const Hero = () => {
   return (
@@ -39,8 +39,8 @@ const Hero = () => {
         />
       </LP_TwinCard>
     </section>
-  )
-}
+  );
+};
 
 const Article = ({ text, num }) => {
   return (
@@ -50,8 +50,8 @@ const Article = ({ text, num }) => {
         {text}
       </p>
     </article>
-  )
-}
+  );
+};
 
 const details = {
   heading: " Empowering You with Essential Skills Exactly When You Need Them",
@@ -60,6 +60,6 @@ const details = {
   btn: "Get Started",
   title: "text-[45px] leading-[56px] pb-7 text-white",
   textStyle: "text-[#bbbcbd]",
-}
+};
 
-export default Hero
+export default Hero;

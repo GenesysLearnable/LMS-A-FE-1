@@ -1,5 +1,5 @@
-import LP_TextArticle from "./LP_TextArticle"
-import LP_TwinCard from "./LP_TwinCard"
+import LP_TextArticle from "./LP_TextArticle";
+import LP_TwinCard from "./LP_TwinCard";
 
 const About = () => {
   return (
@@ -31,8 +31,8 @@ const About = () => {
         </article>
       </LP_TwinCard>
     </section>
-  )
-}
+  );
+};
 
 const details = {
   heading: "About Skillhub",
@@ -41,6 +41,6 @@ const details = {
   btn: "Learn more",
   title: "text-[28px] pb-4 text-black",
   textStyle: "text-black",
-}
+};
 
-export default About
+export default About;

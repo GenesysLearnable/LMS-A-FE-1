@@ -1,4 +1,4 @@
-import Button from "../Components/Landingpage/Button"
+import Button from "../Components/Landingpage/Button";
 
 const ErrorPage = () => {
   return (
@@ -21,7 +21,7 @@ const ErrorPage = () => {
         <Button title={"Back to Home"} bg={"bg-[#ff9053]"} path={"/"} />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ErrorPage
+export default ErrorPage;

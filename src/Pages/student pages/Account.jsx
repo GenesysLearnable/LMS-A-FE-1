@@ -1,4 +1,4 @@
-import { FaRegBell } from "react-icons/fa"
+import { FaRegBell } from "react-icons/fa";
 
 const Account = () => {
   const currentDate = new Date();
@@ -8,15 +8,15 @@ const Account = () => {
   const formattedDate = `${day}/${month}/${year}`;
   return (
     <div className="w-full px-10 text-[14px]">
-      <section className="flex items-center justify-end"> 
+      <section className="flex items-center justify-end">
         <div className="flex items-center justify-center w-5 h-5 cursor-pointer relative">
-          <FaRegBell className="text-black text-[32px]"/>
-          <div className="notification-dot absolute top-1 right-[1px] w-[6px] h-[6px] bg-red-500 rounded-full">
-          </div>
+          <FaRegBell className="text-black text-[32px]" />
+          <div className="notification-dot absolute top-1 right-[1px] w-[6px] h-[6px] bg-red-500 rounded-full"></div>
         </div>
-        <img 
-        className="w-5 h-5 rounded-full ml-2"
-        src="/public/Icons/accounts/ellipse 1037.png" alt="user dp"
+        <img
+          className="w-5 h-5 rounded-full ml-2"
+          src="/public/Icons/accounts/ellipse 1037.png"
+          alt="user dp"
         />
       </section>
 
@@ -26,16 +26,20 @@ const Account = () => {
       <section className="mt-3 py-4 px-8 border rounded-md border-[#BBBCBD]">
         <div className="flex justify-between items-center">
           <div className="flex flex-row items-center">
-            <img 
-            className="w-14 h-14 rounded-full mr-3"
-            src="/public/Icons/accounts/ellipse 1037.png" alt="user dp"
+            <img
+              className="w-14 h-14 rounded-full mr-3"
+              src="/public/Icons/accounts/ellipse 1037.png"
+              alt="user dp"
             />
             <div className>
               <h1 className="font-bold">Oghenemarho Collins</h1>
               <p className="pt-1 text-[#9B9C9D]">Student</p>
             </div>
           </div>
-          <button className="px-4 py-2 border-none text-[#FF9053] bg-orange-50"> Edit </button>
+          <button className="px-4 py-2 border-none text-[#FF9053] bg-orange-50">
+            {" "}
+            Edit{" "}
+          </button>
         </div>
 
         <div className="mt-5 text-[12px] flex justify-between">
@@ -79,15 +83,15 @@ const Account = () => {
           </div>
         </div>
         <div>
-          <img 
-          src="/public/Icons/accounts/genesys logo.png" 
-          alt="Logo" 
-          className="w-20"
+          <img
+            src="/public/Icons/accounts/genesys logo.png"
+            alt="Logo"
+            className="w-20"
           />
         </div>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default Account
+export default Account;

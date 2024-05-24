@@ -1,4 +1,4 @@
-import Id_Button from "../Components/Signup and Login/Id_Button"
+import Id_Button from "../Components/Signup and Login/Id_Button";
 
 const SignupPage = () => {
   return (
@@ -51,7 +51,7 @@ const SignupPage = () => {
         </div>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default SignupPage
+export default SignupPage;

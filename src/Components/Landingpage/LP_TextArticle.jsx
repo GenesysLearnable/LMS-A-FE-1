@@ -1,5 +1,4 @@
-import Button from "./Button"
-
+import Button from "./Button";
 
 const LP_TextArticle = ({ heading, text, btn, title, textStyle, path }) => {
   return (
@@ -13,7 +12,7 @@ const LP_TextArticle = ({ heading, text, btn, title, textStyle, path }) => {
 
       <Button title={btn} bg={"bg-[#ff9053]"} path={path} />
     </article>
-  )
-}
+  );
+};
 
-export default LP_TextArticle
+export default LP_TextArticle;

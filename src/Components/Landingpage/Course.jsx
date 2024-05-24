@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Course = ({ img, title, text, price, path }) => {
-  const starArray = []
+  const starArray = [];
   for (let i = 0; i < 5; i++) {
-    starArray.push("/Icons/Landingpage/Star 1.png")
+    starArray.push("/Icons/Landingpage/Star 1.png");
   }
 
   return (
@@ -44,7 +44,7 @@ const Course = ({ img, title, text, price, path }) => {
         </article>
       </section>
     </Link>
-  )
-}
+  );
+};
 
-export default Course
+export default Course;

@@ -1,94 +1,94 @@
-import { useState } from "react"
-import CASPageLayout from "./CASPageLayout"
-import useFetch from "../../utlis/useFetch"
-import { useLocation, useNavigate } from "react-router-dom"
-import { UpdateLoginStatus } from "../../LoginContext"
-import { toast } from "react-toastify"
-import FormCard from "./FormCard"
-import Input from "./Input"
-import ButtonFeature from "./ButtonFeature"
+import { useState } from "react";
+import CASPageLayout from "./CASPageLayout";
+import useFetch from "../../utlis/useFetch";
+import { useLocation, useNavigate } from "react-router-dom";
+import { UpdateLoginStatus } from "../../LoginContext";
+import { toast } from "react-toastify";
+import FormCard from "./FormCard";
+import Input from "./Input";
+import ButtonFeature from "./ButtonFeature";
 
 const CreateAccountStudent = () => {
-  const [isEmail, setIsEmail] = useState(true)
-  const [isLoading, setIsLoading] = useState(false)
+  const [isEmail, setIsEmail] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
     confirmPassword: "",
-  })
+  });
 
   const handleChange = ({ target: { name, value } }) => {
-    setFormValues((prev) => ({ ...prev, [name]: value }))
-  }
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
 
-  const fetchData = useFetch()
-  const { logIn } = UpdateLoginStatus()
-  const navigate = useNavigate()
-  const location = useLocation()
+  const fetchData = useFetch();
+  const { logIn } = UpdateLoginStatus();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const isValidated = () => {
-    let isProceed = true
-    let errorMessage = "Please enter  "
-    let unmatchedPassword = false
+    let isProceed = true;
+    let errorMessage = "Please enter  ";
+    let unmatchedPassword = false;
 
     if (formValues.email === null || formValues.email === "") {
-      isProceed = false
-      errorMessage += "email address, "
+      isProceed = false;
+      errorMessage += "email address, ";
     } else {
-      setIsEmail(false)
+      setIsEmail(false);
     }
     if (formValues.password === null || formValues.password === "") {
-      isProceed = false
-      errorMessage += "password"
+      isProceed = false;
+      errorMessage += "password";
     }
     if (
       formValues.confirmPassword === null ||
       formValues.confirmPassword === ""
     ) {
-      isProceed = false
+      isProceed = false;
     }
     if (formValues.password !== formValues.confirmPassword) {
-      isProceed = false
-      unmatchedPassword = true
+      isProceed = false;
+      unmatchedPassword = true;
     }
     if (!isProceed) {
       if (unmatchedPassword) {
-        toast.warn("Password does not match")
+        toast.warn("Password does not match");
       } else {
-        toast.warning(errorMessage)
+        toast.warning(errorMessage);
       }
     }
 
-    return isProceed
-  }
+    return isProceed;
+  };
 
   const handleSubmit = async () => {
     if (isValidated()) {
       const formData = {
         email: formValues.email,
         password: formValues.password,
-      }
+      };
 
-      setIsLoading(true)
+      setIsLoading(true);
       try {
-        let res = await fetchData.post("", formData)
-        setIsLoading(false)
+        let res = await fetchData.post("", formData);
+        setIsLoading(false);
         if (res.success == true) {
-          logIn({ token: res.data.token })
-          toast.success(`${res.message}`)
-          const from = location.state?.from?.pathname || "/"
-          navigate(from)
+          logIn({ token: res.data.token });
+          toast.success(`${res.message}`);
+          const from = location.state?.from?.pathname || "/";
+          navigate(from);
         } else {
-          toast.error(`${res.message}`) || toast.error(res.error)
+          toast.error(`${res.message}`) || toast.error(res.error);
         }
       } catch (error) {
-        setIsLoading(false)
-        toast.error(`${error}`)
-        throw new Error(error)
+        setIsLoading(false);
+        toast.error(`${error}`);
+        throw new Error(error);
       }
     }
-  }
+  };
 
   return (
     <CASPageLayout loading={isLoading}>
@@ -138,7 +138,7 @@ const CreateAccountStudent = () => {
         </FormCard>
       )}
     </CASPageLayout>
-  )
-}
+  );
+};
 
-export default CreateAccountStudent
+export default CreateAccountStudent;

@@ -17,12 +17,15 @@ const Collaborations = () => {
           alt="genesys logo"
         />
 
-        <img src="/Logos/Landingpage/Group 31.png" alt="internet archive logo" />
+        <img
+          src="/Logos/Landingpage/Group 31.png"
+          alt="internet archive logo"
+        />
         <img src="/Logos/Landingpage/ibm 1.png" alt="ibm logo" />
         <img src="/Logos/Landingpage/Group 32.png" alt="open library logo" />
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Collaborations
+export default Collaborations;

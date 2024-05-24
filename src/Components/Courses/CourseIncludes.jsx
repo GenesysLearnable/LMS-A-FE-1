@@ -1,5 +1,5 @@
-import Style from './CourseIncludes.module.css';
-import VideoSymbol from './VideoSymbol';
+import Style from "./CourseIncludes.module.css";
+import VideoSymbol from "./VideoSymbol";
 
 const CourseIncludes = function ({ duration }) {
   return (

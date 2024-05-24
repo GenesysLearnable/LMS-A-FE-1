@@ -1,5 +1,5 @@
-import IndividualRequirements from './IndividualRequirements';
-import Style from './CourseRequirements.module.css';
+import IndividualRequirements from "./IndividualRequirements";
+import Style from "./CourseRequirements.module.css";
 
 const CourseRequirements = function () {
   return (

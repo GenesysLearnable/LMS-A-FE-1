@@ -1,4 +1,4 @@
-import Style from './CareerCertificate.module.css';
+import Style from "./CareerCertificate.module.css";
 
 const CareerCertificate = function () {
   return (

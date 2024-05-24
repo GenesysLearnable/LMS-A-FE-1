@@ -1,21 +1,20 @@
-import { useEffect, useState } from "react"
-
+import { useEffect, useState } from "react";
 
 const Carousel = ({
   children: slides,
   autoSlide = false,
   autoSlideInterval = 4000,
 }) => {
-  const [current, setCurrent] = useState(0)
+  const [current, setCurrent] = useState(0);
 
   const next = () =>
-    setCurrent((curr) => (curr === slides.length - 1 ? 0 : curr + 1))
+    setCurrent((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
 
   useEffect(() => {
-    if (!autoSlide) return
-    const slideInterval = setInterval(next, autoSlideInterval)
-    return () => clearInterval(slideInterval)
-  }, [])
+    if (!autoSlide) return;
+    const slideInterval = setInterval(next, autoSlideInterval);
+    return () => clearInterval(slideInterval);
+  }, []);
 
   return (
     <div className="overflow-hidden relative">
@@ -39,7 +38,7 @@ const Carousel = ({
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Carousel
+export default Carousel;

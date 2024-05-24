@@ -1,4 +1,4 @@
-import AboutCards from "./AboutCards"
+import AboutCards from "./AboutCards";
 
 const AboutCard = () => {
   return (
@@ -24,8 +24,8 @@ const AboutCard = () => {
         </section>
       </section>
     </section>
-  )
-}
+  );
+};
 
 const details = [
   {
@@ -48,6 +48,6 @@ const details = [
     text: "Feel empowered to take control of your academic success with skillhub, empowering you with the tools and resources you need to excel in your studies.",
     icon: "/Icons/Landingpage/Frame 69.png",
   },
-]
+];
 
-export default AboutCard
+export default AboutCard;

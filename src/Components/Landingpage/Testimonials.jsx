@@ -1,4 +1,4 @@
-import TestimonialCard from "./TestimonialCard"
+import TestimonialCard from "./TestimonialCard";
 
 const Testimonials = () => {
   const noScrollbar = {
@@ -9,7 +9,7 @@ const Testimonials = () => {
     // Hide scrollbar for IE, Edge and Firefox
     "-ms-overflow-style": "none", // IE and Edge
     "scrollbar-width": "none", // Firefox
-  }
+  };
 
   return (
     <section className="bg-[#041d31] overflow-hidden relative  pl-[5%]">
@@ -44,8 +44,8 @@ const Testimonials = () => {
         <div className="pt-[86px]"></div>
       </section>
     </section>
-  )
-}
+  );
+};
 
 const details = [
   {
@@ -72,6 +72,6 @@ const details = [
     field: "Artist",
     img: "/Images/LandingPage/Frame 364 (1).png",
   },
-]
+];
 
-export default Testimonials
+export default Testimonials;

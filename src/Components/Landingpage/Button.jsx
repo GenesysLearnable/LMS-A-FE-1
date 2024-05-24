@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Button = ({
   onClick = null,
@@ -8,7 +8,7 @@ const Button = ({
   w = "w-[175px]",
   h = "h-12",
   textStyle = "text-base",
-  border
+  border,
 }) => {
   return (
     <Link to={path} className={border}>
@@ -23,7 +23,7 @@ const Button = ({
         </p>
       </button>
     </Link>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

@@ -115,8 +115,7 @@ export const course = [
         duration: "9.36",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -131,8 +130,7 @@ export const course = [
         duration: "8:09",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -147,8 +145,7 @@ export const course = [
         duration: "7.34",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -157,7 +154,6 @@ export const course = [
           },
         ],
       },
-     
     ],
   },
   {
@@ -188,8 +184,7 @@ export const course = [
         duration: "9.36",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -204,8 +199,7 @@ export const course = [
         duration: "8:09",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -220,8 +214,7 @@ export const course = [
         duration: "7.34",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -230,7 +223,6 @@ export const course = [
           },
         ],
       },
-     
     ],
   },
   {
@@ -261,8 +253,7 @@ export const course = [
         duration: "3:09",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -277,8 +268,7 @@ export const course = [
         duration: "8:09",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -293,8 +283,7 @@ export const course = [
         duration: "7.34",
         status: "Locked",
         videos: "/stock video.mp4",
-        content:
-          "",
+        content: "",
 
         quizzes: [
           {
@@ -303,7 +292,6 @@ export const course = [
           },
         ],
       },
-     
     ],
   },
-]
+];

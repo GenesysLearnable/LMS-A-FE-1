@@ -1,33 +1,33 @@
-import RecommendedCourse from './RecommendedCourse';
-import Style from './RelatedCourses.module.css';
+import RecommendedCourse from "./RecommendedCourse";
+import Style from "./RelatedCourses.module.css";
 
 const theCourses = [
   {
-    courseName: 'WEB3',
+    courseName: "WEB3",
     courseDescription:
-      'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    video: '/Images/Courses/Web3-Course.svg',
-    videoAlt: 'Web 3',
+      "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    video: "/Images/Courses/Web3-Course.svg",
+    videoAlt: "Web 3",
     stars: 5,
-    cost: '4,400',
+    cost: "4,400",
   },
   {
-    courseName: 'Frontend',
+    courseName: "Frontend",
     courseDescription:
-      'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    video: '/Images/Courses/Frontend-Course.svg',
-    videoAlt: 'Frontend Web Development',
+      "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    video: "/Images/Courses/Frontend-Course.svg",
+    videoAlt: "Frontend Web Development",
     stars: 5,
-    cost: '4,400',
+    cost: "4,400",
   },
   {
-    courseName: 'Backend',
+    courseName: "Backend",
     courseDescription:
-      'Designing User Interface (UI), Crafting User Experience (UX), branding products.....',
-    video: '/Images/Courses/Backend-Course.svg',
-    videoAlt: 'Backend Web Development',
+      "Designing User Interface (UI), Crafting User Experience (UX), branding products.....",
+    video: "/Images/Courses/Backend-Course.svg",
+    videoAlt: "Backend Web Development",
     stars: 5,
-    cost: '4,400',
+    cost: "4,400",
   },
 ];
 

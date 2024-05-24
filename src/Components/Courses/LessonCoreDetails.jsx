@@ -1,4 +1,4 @@
-import Style from './LessonCoreDetails.module.css';
+import Style from "./LessonCoreDetails.module.css";
 
 const CoreDetails = function ({ numberOfLessons, totalDuration }) {
   return (

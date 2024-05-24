@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './EnrolledCourseCard.module.css';
+import React from "react";
+import styles from "./EnrolledCourseCard.module.css";
 
 function EnrolledCourseCard({ cardTitle, number, enrolled }) {
   return (

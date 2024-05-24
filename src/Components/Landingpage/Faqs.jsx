@@ -1,14 +1,14 @@
-import { useState } from "react"
+import { useState } from "react";
 
 const Faqs = () => {
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
     if (selected == i) {
-      return setSelected(null)
+      return setSelected(null);
     }
-    setSelected(i)
-  }
+    setSelected(i);
+  };
 
   return (
     <section className="bg-[#f5f6fa] relative pt-[88px] pb-[165px] flex items-center justify-center">
@@ -60,9 +60,8 @@ const Faqs = () => {
         ))}
       </article>
     </section>
-  )
-}
-
+  );
+};
 
 const questions = [
   {
@@ -90,6 +89,6 @@ const questions = [
     answer:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium quos voluptates recusandae nostrum dolore ",
   },
-]
+];
 
-export default Faqs
+export default Faqs;
