@@ -1,26 +1,49 @@
 import StarRating from "./StarRatings"
 import Style from "./CourseKeyInfo.module.css"
 import Button from "../Landingpage/Button"
+import { UserEmail } from "../../LoginContext"
+import axios from "axios"
 
 const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
-  const enrollCourse = async (id) => {
-    try {
-      const res = await fetch(
-        `http://localhost:8080/api/v1/courses/${id}/enroll`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ enrolled: true }),
-        }
-      )
+  const { email } = UserEmail()
 
-      if (!res.ok) {
-        throw new Error(`HTTP error! status: ${res.status}`)
-      }
+  const fetchData = use
+
+  // const enrollCourse = async (id, userEmail) => {
+  //   try {
+  //     console.log("Enrolling user with email:", userEmail) // Log the email being sent
+
+  //     const res = await fetch(
+  //       `http://localhost:8080/api/v1/courses/${id}/enroll`,
+  //       {
+  //         method: "PUT",
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //         },
+  //         body: { userEmail },
+  //       }
+  //     )
+
+  //     if (!res.ok) {
+  //       throw new Error(`HTTP error! status: ${res.status}`)
+  //     }
+
+  //     const data = await res.json()
+  //     console.log("Enrollment successful", data)
+  //   } catch (error) {
+  //     console.log("Error enrolling in course", error)
+  //   }
+  // }
+
+  const enrollCourse = async (id, email) => {
+    try {
+      const res = await axios.put(
+        `http://localhost:8080/api/v1/courses/${id}/enroll`,
+        email
+      )
+      console.log(res)
     } catch (error) {
-      console.log("Error enrolling in course", error)
+      console.log(`Error: ${error}`)
     }
   }
 
@@ -56,7 +79,7 @@ const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
               title={"Enroll"}
               bg={"bg-[#ff9053]"}
               path={"/students/courses"}
-              onClick={() => enrollCourse(id)}
+              onClick={() => enrollCourse(id, email)}
             />
             <h2>&#8358;{price}</h2>
           </div>

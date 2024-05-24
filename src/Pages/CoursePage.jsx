@@ -7,7 +7,7 @@ import LearnInfo from '../Components/Courses/LearnInfo';
 import RelatedCourses from '../Components/Courses/RelatedCourses';
 import Style from './CoursePage.module.css';
 
-const CoursePage = ({ details }) => {
+const CoursePage = ({ details}) => {
   return (
     <>
       <CourseKeyInfo

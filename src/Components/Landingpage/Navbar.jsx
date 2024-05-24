@@ -9,7 +9,7 @@ const Navbar = () => {
       ? "text-[#ff9053] hover:text-[#d87139] cursor-pointer duration-200 text-base font-semibold font-['Open Sans'] leading-normal"
       : "hover:text-[#ff9053] text-white cursor-pointer duration-200 text-base font-normal font-['Open Sans'] leading-normal"
 
-  const loginStatus = LoginStatus()
+  const isLoggedIn = LoginStatus()
   const { logOut } = UpdateLoginStatus()
 
   const handleLogout = () => {
@@ -42,7 +42,7 @@ const Navbar = () => {
             </NavLink>
           </div>
         </div>
-        {loginStatus ? (
+        {isLoggedIn ? (
           <div className="h-full flex justify-center gap-4 mr-6 items-center">
             <span className="w-[38px] h-[38px] bg-[#ff9053] rounded-full flex items-center justify-center ">
               <FaUserAstronaut className="text-white size-5" />

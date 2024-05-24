@@ -6,15 +6,19 @@ const useCourseStore = create(
     (set) => ({
       course: [],
       setCourse: (course) => set({ course }),
-      fetchCourse: async () => {
+      fetchCourse: async (email) => {
         try {
-          const res = await fetch("http://localhost:8080/api/v1/courses", {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-            },
-          })
+          const res = await fetch(
+            `http://localhost:8080/api/v1/courses/${email}`,
+            {
+              method: "GET",
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          )
           const data = await res.json()
+          console.log(data)
           set({ course: data })
         } catch (error) {
           console.error("Error fetching courses:", error)
@@ -26,7 +30,7 @@ const useCourseStore = create(
       storage: createJSONStorage(() => localStorage),
       onRehydrateStorage: () => (state) => {
         // Always fetch the latest data on rehydrate
-        state.fetchCourse()
+        state.fetchCourse(state.email) // Pass the email stored in the state
       },
     }
   )

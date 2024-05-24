@@ -1,18 +1,12 @@
 import { useNavigate, useParams } from "react-router-dom"
 import CourseLessons from "./CourseLessons"
 import { FaArrowLeftLong } from "react-icons/fa6"
-import useCourseStore from "../../utlis/loader";
-import { useEffect } from "react";
-
+import useCourseStore from "../../utlis/loader"
+import { useEffect } from "react"
+import { UserEmail } from "../../LoginContext"
 
 const SelectedCourse = () => {
-
-  const { course, fetchCourse } = useCourseStore()
-
-  useEffect(() => {
-    fetchCourse()
-  }, [fetchCourse])
-
+ 
 
   const { id } = useParams()
   const courseContent = course.find((course) => course.id === parseInt(id))

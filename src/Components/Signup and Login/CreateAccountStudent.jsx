@@ -2,7 +2,7 @@ import { useState } from "react"
 import CASPageLayout from "./CASPageLayout"
 import useFetch from "../../utlis/useFetch"
 import { useLocation, useNavigate } from "react-router-dom"
-import { UpdateLoginStatus } from "../../LoginContext"
+import { UpdateLoginStatus, UserEmail } from "../../LoginContext"
 import { toast } from "react-toastify"
 import FormCard from "./FormCard"
 import Input from "./Input"
@@ -24,6 +24,7 @@ const CreateAccountStudent = () => {
 
   const fetchData = useFetch()
   const { logIn } = UpdateLoginStatus()
+  const { usersEmail } = UserEmail()
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -76,6 +77,7 @@ const CreateAccountStudent = () => {
         setIsLoading(false)
         if (res.success == true) {
           logIn({ token: res.data.token })
+          usersEmail({ email: res.data.email })
           toast.success(`${res.message}`)
           const from = location.state?.from?.pathname || "/"
           navigate(from)
