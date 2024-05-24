@@ -1,109 +1,81 @@
-.course__description {
+/* .course__description {
   background-color: #041d31;
 
   display: flex;
   justify-content: space-between;
   gap: 116px;
   padding: 71px 97px 72px 100px;
-}
+} */
 
-.course__image {
-  width: 451px;
-  height: auto;
-}
+/* .course__image {
+    @apply w-[451px] h-auto;
+} */
 
-.course__image img {
-  max-width: 451px;
-  border-radius: 12px;
-  height: auto;
-}
+/* .course__image img {
+    @apply max-w-[451px] h-auto rounded-xl;
+} */
 
-.course__details {
-  padding-top: 9px;
-  padding-bottom: 3px;
-}
+/* .course__details {
+    @apply pt-[9px] pb-[3px];
+} */
 
-.course__details h1,
+/* .course__details h1,
 .course__details h3,
 .course__rating h4 {
-  color: #ffffff;
+  @apply text-white;
   font-family: Poppins;
-}
+} */
 
-.course__details h1 {
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 60px;
-}
+/* .course__details h1 {
+    @apply font-extrabold text-[40px] leading-[60px];
+} */
 
-.course__general__info {
-  padding-top: 8px;
-}
+/* .course__general__info {
+    @apply pt-2;
+} */
 
-.course__quick__info {
-  padding-bottom: 24px;
-}
+/* .course__quick__info {
+    @apply pb-6;
+} */
 
-.course__quick__info h3 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  padding-bottom: 8px;
-  max-width: 678px;
-}
+/* .course__quick__info h3 {
+    @apply font-medium text-base leading-6 max-w-[678px] pb-2;
+} */
 
-.course__rating {
-  width: 298.43px;
-  height: auto;
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
+/* .course__rating {
+    @apply w-[298.43px] h-auto flex gap-1 items-center;
+} */
 
-.course__rating > div {
-  display: flex;
-}
+/* .course__rating > div {
+    @apply flex;
+} */
 
-.course__rating h4 {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 27.2px;
-}
+/* .course__rating h4 {
+    @apply font-normal text-base leading-[27.2px];
+} */
 
-.course__rating h5 {
-  color: #ff9053;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 23.8px;
-}
+/* .course__rating h5 {
+    @apply text-[#ff9053] font-semibold text-sm leading-[23.8px];
+} */
 
-.students {
-  padding-left: 4px;
-}
+/* .students {
+    @apply pl-1;
+} */
 
-.enrollment {
-  width: 175px;
-}
+/* .enrollment {
+    @apply w-[175px];
+} */
 
-.enrollment button,
+/* .enrollment button,
 .enrollment h2 {
+  @apply leading-5 text-white;
   font-family: Roboto;
-  line-height: 20px;
-  color: #fff;
-}
+} */
 
-.enrollment button {
-  background-color: #ff9053;
+/* .enrollment button {
+    @apply bg-[#ff9053] font-semibold text-base px-[67px] py-3.5 rounded-lg;
+} */
 
-  font-weight: 600;
-  font-size: 16px;
-
-  padding: 14px 67px;
-  border-radius: 8px;
-}
-
-.enrollment h2 {
-  font-weight: 800;
-  font-size: 32px;
-  padding-top: 24px;
-}
+/* .enrollment h2 {
+    @apply font-extrabold text-[32px] pt-6;
+} */

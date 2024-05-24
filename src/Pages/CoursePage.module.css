@@ -1,6 +1,3 @@
-.divider {
-  width: 1240px;
-  margin: 43px 100px 0 100px;
-  display: flex;
-  gap: 40px;
-}
+/* .divider {
+    @apply w-[1240px] flex gap-10 mt-[43px] mb-0 mx-[100px];
+} */

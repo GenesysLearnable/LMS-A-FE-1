@@ -33,10 +33,12 @@ const theCourses = [
 
 const RelatedCourses = function () {
   return (
-    <div className={Style.container}>
-      <h2>Related courses</h2>
+    <div className="w-[921px] ml-[100px] mb-[79.1px]">
+      <h2 className="mb-6 font-bold text-2xl leading-9 font-['Poppins']">
+        Related courses
+      </h2>
 
-      <div>
+      <div className="flex gap-6">
         {theCourses.map((theCourse, index) => (
           <RecommendedCourse
             key={index}

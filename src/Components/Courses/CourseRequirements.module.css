@@ -1,16 +1,11 @@
-.specifications {
-  width: 715px;
-  margin-left: 100px;
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
+/* .specifications {
+    @apply w-[715px] flex flex-col gap-4 ml-[100px] mb-[50px];
+} */
 
-.specifications h2 {
+/* .specifications h2 {
   font: 700 24px/36px Poppins;
-}
+} */
 
-.specifications {
-  width: max-content;
-}
+/* .specifications {
+    @apply w-max;
+} */

@@ -1,14 +1,8 @@
-.course__key__info {
-  margin-top: 2px;
-  margin-bottom: 77px;
-}
+/* .course__key__info {
+    @apply mt-0.5 mb-[77px];
+} */
 
-.course__key__info h2 {
+/* .course__key__info h2 {
+  @apply font-bold text-2xl leading-9 ml-px mb-[15px];
   font-family: Poppins;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-
-  margin-left: 1px;
-  margin-bottom: 15px;
-}
+} */

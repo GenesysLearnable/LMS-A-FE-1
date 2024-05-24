@@ -3,8 +3,10 @@ import Style from './CourseRequirements.module.css';
 
 const CourseRequirements = function () {
   return (
-    <div className={Style.specifications}>
-      <h2>Requirements</h2>
+    <div className="w-[715px] flex flex-col gap-4 ml-[100px] mb-[50px] w-max">
+      <h2 className="font-bold text-2xl leading-9 font-['Poppins']">
+        Requirements
+      </h2>
       <div>
         <IndividualRequirements theRequirement="This course is specifically designed for absolute beginners to UI/UX design." />
 

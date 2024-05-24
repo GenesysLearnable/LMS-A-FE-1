@@ -1,15 +1,13 @@
-import { useNavigate, useParams } from "react-router-dom"
-import CourseLessons from "./CourseLessons"
+import { useNavigate, useParams } from 'react-router-dom';
+import CourseLessons from './CourseLessons';
 // import { course } from "./courseDetails"
-import { FaArrowLeftLong } from "react-icons/fa6"
+import { FaArrowLeftLong } from 'react-icons/fa6';
 
 const SelectedCourse = () => {
-  
-
-  const { id } = useParams()
+  const { id } = useParams();
   // const courseContent = course.find((course) => course.id === parseInt(id))
-  
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
 
   return (
     <section className="w-full flex overflow-auto flex-col ml-12 gap-3 mt-6">
@@ -58,22 +56,22 @@ const SelectedCourse = () => {
               <CourseLessons
                 key={index}
                 hover={
-                  content.status === "Continue"
-                    ? "hover:bg-[#041D31] hover:text-white"
-                    : "hover:bg-[#041d3136]"
+                  content.status === 'Continue'
+                    ? 'hover:bg-[#041D31] hover:text-white'
+                    : 'hover:bg-[#041d3136]'
                 }
-                img={"/Icons/dashboard/play-circle2.png"}
+                img={'/Icons/dashboard/play-circle2.png'}
                 text={content.name}
                 duration={content.duration}
                 btnText={content.status}
                 btnBg={
-                  content.status === "Continue"
-                    ? "bg-[#ff9053]"
-                    : "bg-slate-800/25"
+                  content.status === 'Continue'
+                    ? 'bg-[#ff9053]'
+                    : 'bg-slate-800/25'
                 }
-                btnW={"w-[88px]"}
+                btnW={'w-[88px]'}
                 path={
-                  content.status === "Continue"
+                  content.status === 'Continue'
                     ? `/students/courses/${id}/${content.moduleId}`
                     : null
                 }
@@ -83,7 +81,7 @@ const SelectedCourse = () => {
         </section>
       </section>
     </section>
-  )
-}
+  );
+};
 
-export default SelectedCourse
+export default SelectedCourse;

@@ -3,8 +3,10 @@ import Style from './LearnInfo.module.css';
 
 const LearnInfo = function () {
   return (
-    <div className={Style.course__key__info}>
-      <h2>What you&apos;ll learn</h2>
+    <div className="mt-0.5 mb-[77px]">
+      <h2 className="font-bold text-2xl leading-9 ml-px mb-[15px] font-['Poppins']">
+        What you&apos;ll learn
+      </h2>
       <div>
         <CheckMarks coreIdeas="Learn the basics of UI/UX Design" />
 

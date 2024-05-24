@@ -18,12 +18,12 @@ const CoursePage = ({ details }) => {
         students={details.students}
         price={details.price}
       />
-      <div className={Style.divider}>
-        <section className={Style.left__section}>
+      <div className="w-[1240px] flex gap-10 mt-[43px] mb-0 mx-[100px]">
+        <section>
           <LearnInfo />
           <ClassLessons />
         </section>
-        <section className={Style.right__section}>
+        <section>
           <CourseIncludes duration="16min 14sec" />
         </section>
       </div>

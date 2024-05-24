@@ -5,7 +5,7 @@ import Style from './ClassLessons.module.css';
 
 const ClassLessons = function () {
   return (
-    <div className={Style.lessons}>
+    <div className="w-[840px] mb-[91px]">
       <LessonCoreDetails numberOfLessons={5} totalDuration="16min 14secs" />
 
       <div>

@@ -1,76 +1,63 @@
-.course {
-  width: 291px;
-  box-shadow: 0px 3.35px 8px 0px #041d3133;
-  border-radius: 12px;
-}
+/* .course {
+    @apply w-[291px] shadow-[0px_3.35px_8px_0px_#041d3133] rounded-xl;
+} */
 
-.course__image {
-  height: 197.91px;
-  border-top-left-radius: 11.74px;
-  border-top-right-radius: 11.74px;
-  margin-bottom: 15.1px;
-}
+/* .course__image {
+    @apply h-[197.91px] mb-[15.1px] rounded-t-[11.74px];
+} */
 
-.course__image img {
-  border-radius: 11.74px 11.74px 0 0;
-}
+/* .course__image img {
+    @apply rounded-[11.74px_11.74px_0_0];
+} */
 
-.course__info {
-  width: 255.38px;
-  margin-left: 13.42px;
-  margin-bottom: 17.09px;
-}
+/* .course__info {
+    @apply w-[255.38px] ml-[13.42px] mb-[17.09px];
+} */
 
-.course__info img {
-  width: 43.62px;
-}
+/* .course__info img {
+    @apply w-[43.62px];
+} */
 
-.course__details h1 {
+/* .course__details h1 {
   font: 800 19.03px/28.55px Poppins;
   margin-bottom: 3.35px;
-}
+} */
 
-.course__brief__description h3 {
+/* .course__brief__description h3 {
   font: 500 11.1px/18.88px Poppins;
   margin-bottom: 6.71px;
-}
+} */
 
-.course__rating {
-  width: 75.83px;
-}
+/* .test {
+    @apply font-medium text-[11.1px] leading-[18.88px] mb-[6.71px];
+} */
 
-.course__rating > div:first-child {
-  display: flex;
-  width: 75.83px;
-  align-items: center;
-  gap: 1.96px;
-  margin-bottom: 1.96px;
-}
+/* .course__rating {
+    @apply w-[75.83px];
+} */
 
-.course__rating > div h4 {
+/* .course__rating > div:first-child {
+    @apply flex w-[75.83px] items-center gap-[1.96px] mb-[1.96px];
+} */
+
+/* .course__rating > div h4 {
+  @apply text-[#041d31];
   font: 400 10.06px / 17.11px Poppins;
-  color: #041d31;
-}
+} */
 
-.stars {
-  width: 58.87px;
-  height: 11.77px;
-  display: flex;
-}
+/* .stars {
+    @apply w-[58.87px] h-[11.77px] flex;
+} */
 
-.course__rating h2 {
+/* .course__rating h2 {
   font: 700 15.86px / 23.79px Poppins;
   color: #041d31;
-}
+} */
 
-.course__price {
-  width: 71.87px;
-  height: 24.53px;
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
+/* .course__price {
+    @apply w-[71.87px] h-[24.53px] flex items-center gap-0.5;
+} */
 
-.course__price img {
-  width: 11px;
-}
+/* .course__price img {
+    @apply w-[11px];
+} */

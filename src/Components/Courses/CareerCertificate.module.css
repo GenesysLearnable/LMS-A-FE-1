@@ -1,46 +1,25 @@
-.certificate {
-  width: 1029px;
-  margin-left: 101px;
-  margin-bottom: 56px;
-  position: relative;
+/* .certificate {
+    @apply w-[1029px] relative flex items-center ml-[101px] mb-14;
+} */
 
-  display: flex;
-  align-items: center;
-}
+/* .certificate__info {
+    @apply w-[1029px] border my-3.5 rounded-xl border-solid border-[#bbbcbd];
+} */
 
-.certificate__info {
-  width: 1029px;
-  border: 1px solid #bbbcbd;
-  border-radius: 12px;
-  margin-top: 14px;
-  margin-bottom: 14px;
-}
-
-.certificate__info h2,
+/* .certificate__info h2,
 .certificate__info h3 {
+  @apply ml-[17px];
   font-family: Poppins;
-  margin-left: 17px;
-}
+} */
 
-.certificate__info h2 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  margin-top: 14px;
-  margin-bottom: 10px;
-}
+/* .certificate__info h2 {
+    @apply font-bold text-2xl leading-9 mt-3.5 mb-2.5;
+} */
 
-.certificate__info h3 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  width: 459px;
-  margin-bottom: 43px;
-}
+/* .certificate__info h3 {
+  @apply font-medium text-base leading-6 w-[459px] mb-[43px];
+} */
 
-.certificate img {
-  width: 263px;
-  position: absolute;
-  top: 0px;
-  left: 714px;
-}
+/* .certificate img {
+    @apply w-[263px] absolute left-[714px] top-0;
+} */
