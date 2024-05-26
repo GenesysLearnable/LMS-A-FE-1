@@ -6,10 +6,10 @@ const useCourseStore = create(
     (set) => ({
       course: [],
       setCourse: (course) => set({ course }),
-      fetchCourse: async () => {
+      fetchCourse: async (email) => {
         try {
           const res = await fetch(
-            `http://localhost:8080/api/v1/courses`,
+            `http://localhost:9500/api/v1/courses/${email}`,
             {
               method: "GET",
               headers: {

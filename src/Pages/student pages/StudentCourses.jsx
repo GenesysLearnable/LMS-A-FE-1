@@ -1,13 +1,18 @@
+import { useEffect } from "react"
 import Course from "../../Components/Landingpage/Course"
+import { UserEmail } from "../../LoginContext"
 import useCourseStore from "../../utlis/loader"
 
-
 const StudentCourses = () => {
-  const { course } = useCourseStore()
-  
+  const { course, fetchCourse } = useCourseStore()
+  const { email } = UserEmail()
+
+  useEffect(() => {
+    fetchCourse(email)
+  }, [fetchCourse, email])
+
   return (
     <section className="w-full overflow-auto ml-16 mt-6">
-      
       {!course ? (
         <div>No enrolled courses</div>
       ) : (

@@ -6,18 +6,18 @@ import { UserEmail } from "../../LoginContext"
 const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
   const { email } = UserEmail()
 
-  const enrollCourse = async (id, userEmail) => {
+  const enrollCourse = async (id, email) => {
     try {
-      console.log("Enrolling user with email:", userEmail) // Log the email being sent
+      console.log("Enrolling user with email:", email) // Log the email being sent
 
       const res = await fetch(
-        `http://localhost:8080/api/v1/courses/${id}/enroll`,
+        `http://localhost:9500/api/v1/courses/${id}/enroll`,
         {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
-          body: { userEmail },
+          body: JSON.stringify({ email }),
         }
       )
 
