@@ -56,3 +56,9 @@
   line-height: 2px;
   color: #9b9c9d;
 }
+@media only screen and (max-width: 600px) {
+  .activityGraph{
+    border: 1px solid #fff;
+    width: 450px;
+  }
+}

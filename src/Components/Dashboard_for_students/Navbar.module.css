@@ -1,7 +1,6 @@
 .navbarDashboard {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   background-color: #fff;
   padding: 20px;
   font-family: poppins;
@@ -24,16 +23,17 @@
 .connectWallet {
   background-color: #ff9053;
   color: white;
-  border: none;
   border-radius: 8px;
-  width: 143px;
-  height: 29px;
-  font-size: 10px;
+  width: 135px;
+  height: 25px;
   cursor: pointer;
-  margin-left: 15px;
   font-family: Poppins;
   font-size: 13px;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: center;
+  font-weight: 500;
+
+}
+@media only screen and (max-width: 600px) {
+.connectWallet{
+  display: none;
+}
 }

@@ -9,6 +9,10 @@ body {
 
 .dashboard {
   padding: 0px 24px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
 }
 
 .dashboard-header {
@@ -59,4 +63,15 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
+}
+@media only screen and (max-width: 600px) {
+  .students-dashboard{
+   background-color: #fff;
+   display: flex;
+   
+  }
+
+  .dashboard-header{
+    padding: 20px 20px 30px;
+  }
 }

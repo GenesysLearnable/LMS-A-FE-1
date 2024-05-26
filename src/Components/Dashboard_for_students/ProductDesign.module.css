@@ -27,7 +27,7 @@
   line-height: 24px;
 }
 
-.continueModule {
+.startModule {
   background-color: #ff9053;
   color: #fff;
   padding: 10px 20px;
@@ -45,4 +45,30 @@
   display: flex;
   flex-direction: column;
   margin-left: 15px;
+}
+@media only screen and (max-width: 600px) {
+  .courseCard h2{
+    display: none;
+  }
+
+  .courseCard{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 600px;
+  }
+
+  .courseCard img{
+    width: 250px;
+    height: 150px;
+    padding-top: 30px;
+  }
+
+  .courseInfo{
+    padding: 40px;
+  }
+
+  .startModule{
+    width: 200px;
+  }
 }
