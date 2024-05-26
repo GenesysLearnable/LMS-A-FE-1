@@ -9,7 +9,7 @@ function ProductDesign() {
       />
       <div className={styles.courseInfo}>
         <h2>Getting Started in Product Design</h2>
-        <button className={styles.continueModule}>Continue Module</button>
+        <button className={styles.startModule}>Start Module</button>
       </div>
     </div>
   );

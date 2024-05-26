@@ -37,3 +37,9 @@
   line-height: 18px;
   color: #00a991;
 }
+@media only screen and (max-width: 600px) {
+  .ModuleP{
+    display: none;
+  }
+}
+
