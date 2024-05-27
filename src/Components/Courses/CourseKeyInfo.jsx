@@ -7,19 +7,17 @@ const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
   const { email } = UserEmail()
 
   const enrollCourse = async (id, email) => {
+    
     try {
       console.log("Enrolling user with email:", email) // Log the email being sent
 
-      const res = await fetch(
-        `http://localhost:9500/api/v1/courses/${id}/enroll`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ email }),
-        }
-      )
+      const res = await fetch(`https://server-boy.onrender.com/api/v1/courses/${id}/enroll`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      })
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`)
@@ -67,7 +65,7 @@ const CourseKeyPoints = function ({ id, img, title, text, students, price }) {
             <Button
               title={"Enroll"}
               bg={"bg-[#ff9053]"}
-              path={"/students/courses"}
+              path={"/students/dashboard"}
               onClick={() => enrollCourse(id, email)}
             />
             <h2>&#8358;{price}</h2>

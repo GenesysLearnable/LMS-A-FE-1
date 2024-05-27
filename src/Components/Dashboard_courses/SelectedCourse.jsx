@@ -7,8 +7,9 @@ const SelectedCourse = () => {
   const { course } = useCourseStore()
 
   const { id } = useParams()
+  console.log(course)
 
-  const courseContent = course.find((course) => course.id === id)
+  const courseContent = course.find((course) => course.id == id)
 
   const navigate = useNavigate()
 

@@ -8,9 +8,9 @@ const CourseContent = () => {
 
   const { id, moduleId } = useParams()
 
-  const courseContent = course.find((course) => course.id === id)
+  const courseContent = course.find((course) => course.id == id)
   const module = courseContent.modules.find(
-    (mod) => mod.moduleId === parseInt(moduleId)
+    (mod) => mod.moduleId == parseInt(moduleId)
   )
 
   const listStyles = ({ isActive }) =>
@@ -31,7 +31,23 @@ const CourseContent = () => {
 
       <section className={"flex gap-[52px] overflow-auto "}>
         <section className={`flex flex-col gap-6`}>
-          <video className="h-[335px] w-[616px]" src={module.videos} controls />
+          <div className="h-[335px] w-[616px]">
+            <iframe
+              width="616"
+              height="335"
+              src={module.videos}
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          {/* <video
+            className="h-[335px] w-[616px]"
+            src="https://youtu.be/pTB0EiLXUC8?si=r0cSXez_tuaavodG"
+            controls
+          /> */}
 
           <div>
             <p className="text-zinc-800 text-xl py-2 font-semibold">
