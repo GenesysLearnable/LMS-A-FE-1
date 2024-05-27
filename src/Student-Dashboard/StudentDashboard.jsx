@@ -1,12 +1,19 @@
-import "./StudentDashBoard.css";
-import EnrolledCourseCard from "../Components/Dashboard_for_students/EnrolledCourseCard";
-import ProductDesign from "../Components/Dashboard_for_students/ProductDesign";
-import ModuleProgress from "../Components/Dashboard_for_students/ModuleProgress";
-import CoursesDashboard from "../Components/Dashboard_for_students/CoursesDashboard";
-import Navbar from "../Components/Dashboard_for_students/Navbar";
-import Activity from "../Components/Dashboard_for_students/Activity";
+import "./StudentDashBoard.css"
+import EnrolledCourseCard from "../Components/Dashboard_for_students/EnrolledCourseCard"
+import ProductDesign from "../Components/Dashboard_for_students/ProductDesign"
+import ModuleProgress from "../Components/Dashboard_for_students/ModuleProgress"
+import CoursesDashboard from "../Components/Dashboard_for_students/CoursesDashboard"
+import Navbar from "../Components/Dashboard_for_students/Navbar"
+import Activity from "../Components/Dashboard_for_students/Activity"
+import { UserEmail } from "../LoginContext"
+import useCourseStore from "../utlis/loader"
 
 function StudentDashboard() {
+  const { email } = UserEmail()
+  const {course} = useCourseStore()
+  let user = email.split("@")[0]
+  user = user.slice(0,1).toUpperCase()+user.slice(1,user.length)
+
   return (
     <div className="students-dashboard ">
       <Navbar />
@@ -14,7 +21,7 @@ function StudentDashboard() {
       <div className="dashboard">
         <header className="dashboard-header">
           <h1>
-            Hello Oghenemarho
+            Hello {user}
             <span role="img" aria-label="wave">
               👋,
             </span>
@@ -26,7 +33,7 @@ function StudentDashboard() {
             <div className="enrolled-completed">
               <EnrolledCourseCard
                 cardTitle="Enrolled Course"
-                number="1"
+                number={course.length}
                 enrolled
               />
               <EnrolledCourseCard cardTitle="Completed Course" number="0" />
@@ -68,7 +75,7 @@ function StudentDashboard() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default StudentDashboard;
+export default StudentDashboard

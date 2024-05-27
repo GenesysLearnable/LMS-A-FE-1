@@ -14,7 +14,7 @@ const About = () => {
       />
       <LP_TwinCard>
         <img
-          className="w-[599px] h-[620px]"
+          className="w-[599px] h-[620px] "
           src={"/Images/LandingPage/businessman-working-laptop 1.png"}
           alt=""
         />
@@ -39,7 +39,7 @@ const details = {
   text: "SkillHub is an innovative online platform designed to empower individuals with essential skills precisely when they need them. Our mission at SkillHub is to provide a comprehensive and engaging learning experience that helps users unlock their full potential and achieve success in their personal and professional endeavors.",
   size: "40",
   btn: "Learn more",
-  title: "text-[28px] pb-4 text-black",
+  title: "text-[22px] pb-3 xl:text-[28px] xl:pb-4 text-black",
   textStyle: "text-black",
 }
 

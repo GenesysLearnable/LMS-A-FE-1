@@ -1,30 +1,15 @@
+import { useEffect } from "react"
 import Course from "../../Components/Landingpage/Course"
-import { useEffect, useState } from "react"
+import { UserEmail } from "../../LoginContext"
+import useCourseStore from "../../utlis/loader"
 
 const StudentCourses = () => {
-  const [course, setCourse] = useState(null)
+  const { course, fetchCourse } = useCourseStore()
+  const { email } = UserEmail()
 
   useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await fetch(`http://localhost:8080/api/v1/courses`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        })
-        console.log(res)
-        const data = await res.json()
-        setCourse(data)
-      } catch (error) {
-        console.log("Error fetching data", error)
-      }
-    }
-
-    getData()
-  }, [])
-
-  console.log(course)
+    fetchCourse(email)
+  }, [fetchCourse, email])
 
   return (
     <section className="w-full overflow-auto ml-16 mt-6">

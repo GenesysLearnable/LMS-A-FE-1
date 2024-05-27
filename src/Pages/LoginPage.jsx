@@ -6,7 +6,7 @@ import ButtonFeature from "../Components/Signup and Login/ButtonFeature"
 import useFetch from "../utlis/useFetch"
 import { toast } from "react-toastify"
 import { useLocation, useNavigate } from "react-router-dom"
-import { UpdateLoginStatus } from "../LoginContext"
+import { UpdateLoginStatus, UserEmail } from "../LoginContext"
 
 const LoginPage = () => {
   const [loading, setLoading] = useState(false)
@@ -17,6 +17,7 @@ const LoginPage = () => {
 
   const fetchData = useFetch()
   const { logIn } = UpdateLoginStatus()
+  const { usersEmail } = UserEmail()
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -29,8 +30,9 @@ const LoginPage = () => {
     try {
       let res = await fetchData.post("login", formValues)
       setLoading(false)
-      if (res.success == true) {
+      if (res.success === true) {
         logIn({ token: res.data.token })
+        usersEmail({ email: res.data.email })
         toast.success(`${res.message}`)
         const from = location.state?.from?.pathname || "/"
         navigate(from)
@@ -65,8 +67,13 @@ const LoginPage = () => {
             onChange={handleChange}
           />
 
-          <p onClick={() => navigate("/forgot-password")} className="text-left text-[#ff9053] hover:text-[#ff8f53d0] duration-200 cursor-pointer text-base font-medium">Forgot Password?</p>
-          
+          <p
+            onClick={() => navigate("/forgot-password")}
+            className="text-left text-[#ff9053] hover:text-[#ff8f53d0] duration-200 cursor-pointer text-base font-medium"
+          >
+            Forgot Password?
+          </p>
+
           <ButtonFeature
             text={"Don't have an account?"}
             buttonText={"Login"}

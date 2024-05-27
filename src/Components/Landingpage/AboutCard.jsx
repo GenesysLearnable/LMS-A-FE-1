@@ -2,17 +2,17 @@ import AboutCards from "./AboutCards"
 
 const AboutCard = () => {
   return (
-    <section className=" bg-gradient-to-b from-[#e9eaea40] font-['Roboto'] to-[#e9eaea] flex justify-center items-center py-[150px] ">
+    <section className=" bg-gradient-to-b from-[#e9eaea40] font-['Roboto'] to-[#e9eaea] flex justify-center items-center py=[100px] xl:py-[150px] ">
       <section className="w-[88%] z-10 flex flex-col pt-12 mb-[57.8px]">
         <article>
           <p className="text-sm font-semibold text-[#ac4832]">
-            WHY USE Skillhub ?
+            WHY USE SKILLHUB?
           </p>
-          <p className="text-black text-[28.8px] font-semibold w-[540px]">
+          <p className="text-black text-[22.8px] xl:text-[28.8px] font-semibold w-[400px] xl:w-[540px]">
             A seamless experience for both you and your development journey
           </p>
         </article>
-        <section className="pt-6 flex justify-between">
+        <section className="pt-6 flex flex-wrap justify-between">
           {details.map((detail, index) => (
             <AboutCards
               key={index}

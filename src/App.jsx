@@ -25,11 +25,13 @@ import ErrorPage from "./Pages/ErrorPage"
 import LoginProvider from "./LoginContext"
 import ProtectedRoute from "./ProtectedRoute"
 import ForgotPassword from "./Components/Signup and Login/ForgotPassword"
+import App2 from "./web3/App2"
 
 const App = () => {
   return (
     <LoginProvider>
       <ToastContainer autoClose={2500} />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPageLayout />}>
@@ -62,6 +64,7 @@ const App = () => {
             <Route path="quiz" element={<Quiz />} />
             <Route path="forum" element={<Forum />} />
             <Route path="certificate" element={<Certification />} />
+            <Route path="web3" element={<App2 />} />
           </Route>
 
           <Route path="*" element={<ErrorPage />} />

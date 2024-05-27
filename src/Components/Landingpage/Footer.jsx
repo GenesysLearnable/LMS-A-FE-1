@@ -10,24 +10,24 @@ const Footer = () => {
   const subStyles =
     "h-7 text-gray-400 text-base hover:text-gray-300 duration-200 cursor-pointer font-normal font-['Open Sans'] leading-snug"
   return (
-    <footer className="pt-[86px] relative px-[72px] bg-gradient-to-b from-[#041d31] to-[#172b3a]">
-      <div className="flex justify-between">
-        <div className="grid grid-cols-3 ">
-          <div className="flex flex-col w-[250.67px]">
+    <footer className="pt-[86px] relative px-[50px] xl:px-[72px] bg-gradient-to-b from-[#041d31] to-[#172b3a]">
+      <div className="flex flex-col justify-between">
+        <div className="flex flex-wrap gap-3 grid-cols-3 ">
+          <div className="flex flex-col w-[150px] xl:w-[250.67px]">
             <p className={titleStyles}>DISCOVER</p>
 
-            <p className={subStyles}>Courses</p>
-            <p className={subStyles}>Courses</p>
-            <p className={subStyles}>Courses</p>
-            <p className={subStyles}>Courses</p>
+            <p className={subStyles}>Product Design</p>
+            <p className={subStyles}>Frontend</p>
+            <p className={subStyles}>Backend</p>
+            <p className={subStyles}>Web3</p>
           </div>
-          <div className="flex flex-col w-[250.67px]">
+          <div className="flex flex-col w-[150px] xl:w-[250.67px]">
             <p className={titleStyles}>HELP</p>
 
             <p className={subStyles}>Report a problem</p>
             <p className={subStyles}>Help center</p>
           </div>
-          <div className="flex flex-col w-[250.67px]">
+          <div className="flex flex-col w-[150px] xl:w-[250.67px]">
             <p className={titleStyles}>INFO</p>
 
             <p className={subStyles}>About Us</p>
@@ -37,9 +37,9 @@ const Footer = () => {
         </div>
 
         <div>
-          <div className="flex justify-end pb-16 border-b-[#ffffff40] border-b-[1px]">
+          <div className="flex justify-end pb-12 xl:pb-16 border-b-[#ffffff40] border-b-[1px]">
             <img
-              className="flex items-end w-11 "
+              className="flex items-end w-9 xl:w-11 "
               src="/Logos/Logo.png"
               alt="logo"
             />
@@ -52,8 +52,8 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex justify-between  items-center pt-[60px] pb-7">
-        <p className="text-[#ffffffb7]">
+      <div className="flex justify-between gap-2 items-center pt-[40px] xl:pt-[60px] pb-7">
+        <p className="text-[#ffffffb7] ">
           @2024 -Copyright Group 1: Learnable Build Season
         </p>
         <i

@@ -14,7 +14,8 @@ const Courses = () => {
             beginners and seasoned professionals alike.
           </p>
         </article>
-        <div className="grid grid-cols-4 gap-6 justify-around">
+        
+        <div className="flex gap-6 overflow-auto justify-around">
           {details.map((detail, index) => (
             <Course
               key={index}
