@@ -9,7 +9,7 @@ const useCourseStore = create(
       fetchCourse: async (email) => {
         try {
           const res = await fetch(
-            `http://localhost:9500/api/v1/courses/${email}`,
+            `https://server-boy.onrender.com/api/v1/courses/user/${email}`,
             {
               method: "GET",
               headers: {
