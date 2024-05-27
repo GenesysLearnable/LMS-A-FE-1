@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full h-20 pl-[102px] py-[16] bg-[#041d31] ">
-      <section className="h-full w-full flex justify-between">
+      <section className="h-full w-full hidden xl:flex justify-between">
         <div className="h-full flex items-center">
           <NavLink to={"/"}>
             <img
