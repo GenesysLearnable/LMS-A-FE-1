@@ -16,7 +16,7 @@ import LandingPageLayout from "./Layout/LandingPage/LandingPageLayout"
 import Landingpage from "./Pages/Landingpage"
 import About from "./Components/Landingpage/About"
 import Courses from "./Components/Landingpage/Courses"
-import ProductDesign from "./Components/Dashboard_for_students/ProductDesign"
+import ProductDesign from "./Components/Courses/Course/ProductDesign"
 import Web3 from "./Components/Courses/Course/Web3"
 import Backend from "./Components/Courses/Course/Backend"
 import Frontend from "./Components/Courses/Course/Frontend"
@@ -24,11 +24,14 @@ import Testimonials from "./Components/Landingpage/Testimonials"
 import ErrorPage from "./Pages/ErrorPage"
 import LoginProvider from "./LoginContext"
 import ProtectedRoute from "./ProtectedRoute"
+import ForgotPassword from "./Components/Signup and Login/ForgotPassword"
+import App2 from "./web3/App2"
 
 const App = () => {
   return (
     <LoginProvider>
       <ToastContainer autoClose={2500} />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<LandingPageLayout />}>
@@ -43,6 +46,7 @@ const App = () => {
           </Route>
           <Route path="signup" element={<CreateAccountStudent />} />
           <Route path="login" element={<LoginPage />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
 
           <Route
             path="/students"
@@ -60,6 +64,7 @@ const App = () => {
             <Route path="quiz" element={<Quiz />} />
             <Route path="forum" element={<Forum />} />
             <Route path="certificate" element={<Certification />} />
+            <Route path="web3" element={<App2 />} />
           </Route>
 
           <Route path="*" element={<ErrorPage />} />

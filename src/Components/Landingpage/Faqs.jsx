@@ -11,25 +11,25 @@ const Faqs = () => {
   }
 
   return (
-    <section className="bg-[#f5f6fa] relative pt-[88px] pb-[165px] flex items-center justify-center">
+    <section className="bg-[#f5f6fa] relative pt-[40px] pb-[80px] xl:pt-[88px] xl:pb-[165px] flex items-center justify-center">
       <img
         className="absolute top-[148px] h-[694px]"
         src="/Images/LandingPage/Vector 12.png"
         alt="vector"
       />
       <article className="z-10">
-        <p className="text-black text-[28.88px] font-semibold font-['Poppins'] leading-[49.10px] text-center">
+        <p className="text-black text-[22px] xl:text-[28.88px] font-semibold font-['Poppins'] leading-[49.10px] text-center">
           Frequently asked questions
         </p>
         {questions.map((faq, index) => (
           <article key={index}>
             <div
               onClick={() => toggle(index)}
-              className="mt-12 pb-4 border-b border-neutral-400  w-[749px] cursor-pointer "
+              className="mt-12 pb-4 border-b border-neutral-400 w-[400px] xl:w-[749px] cursor-pointer "
             >
-              <div className="flex justify-between items-center w-[749px]">
+              <div className="flex justify-between items-center w-[400px] xl:w-[749px]">
                 <div>
-                  <p className="text-black  text-xl font-semibold font-['Poppins'] leading-[34px]">
+                  <p className="text-black pr-2 text-base xl:text-xl font-semibold font-['Poppins'] leading-6 xl:leading-[34px]">
                     {faq.question}
                   </p>
                 </div>
@@ -38,8 +38,8 @@ const Faqs = () => {
                   <img
                     className={
                       selected == index
-                        ? "h-7 w-7 duration-300 rotate-180"
-                        : "h-7 w-7 duration-300"
+                        ? "xl:h-7 xl:w-7 h-5 w-5 duration-300 rotate-180"
+                        : "xl:h-7 xl:w-7 h-5 w-5 duration-300"
                     }
                     src={"/Icons/Landingpage/arrow-down.png"}
                     alt="arrow-down icon"

@@ -1,19 +1,34 @@
-import { course } from "../../Components/Dashboard_courses/courseDetails"
+import { useEffect } from "react"
 import Course from "../../Components/Landingpage/Course"
+import { UserEmail } from "../../LoginContext"
+import useCourseStore from "../../utlis/loader"
 
 const StudentCourses = () => {
+  const { course, fetchCourse } = useCourseStore()
+  const { email } = UserEmail()
+
+  useEffect(() => {
+    fetchCourse(email)
+  }, [fetchCourse, email])
+
   return (
-    <section className="w-full grid grid-cols-3 gap-6 justify-around overflow-auto flex-wrap ml-16 mt-6">
-      {course.map((item, index) => (
-        <div className="w-[300px]" key={index}>
-          <Course
-            img={item.displayImage}
-            title={item.title}
-            text={`${item.modules[0].content.slice(0, 150)}...`}
-            path={`/students/courses/${item.id}`}
-          />
+    <section className="w-full overflow-auto ml-16 mt-6">
+      {!course ? (
+        <div>No enrolled courses</div>
+      ) : (
+        <div className=" grid grid-cols-3 gap-6  justify-around flex-wrap">
+          {course.map((item, index) => (
+            <div className="w-[300px]" key={index}>
+              <Course
+                img={item.displayImage}
+                title={item.title}
+                text={`${item.modules[0].content.slice(0, 150)}...`}
+                path={`/students/courses/${item.id}`}
+              />
+            </div>
+          ))}
         </div>
-      ))}
+      )}
     </section>
   )
 }

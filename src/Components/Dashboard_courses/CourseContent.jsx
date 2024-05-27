@@ -1,13 +1,14 @@
 import { NavLink, useNavigate, useParams } from "react-router-dom"
 import Button from "../Landingpage/Button"
 import { FaArrowLeftLong } from "react-icons/fa6"
-
-import { course } from "./courseDetails"
+import useCourseStore from "../../utlis/loader"
 
 const CourseContent = () => {
+  const { course } = useCourseStore()
+
   const { id, moduleId } = useParams()
 
-  const courseContent = course.find((course) => course.id === parseInt(id))
+  const courseContent = course.find((course) => course.id === id)
   const module = courseContent.modules.find(
     (mod) => mod.moduleId === parseInt(moduleId)
   )

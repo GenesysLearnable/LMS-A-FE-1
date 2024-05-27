@@ -1,11 +1,14 @@
 import { useNavigate, useParams } from "react-router-dom"
 import CourseLessons from "./CourseLessons"
-import { course } from "./courseDetails"
 import { FaArrowLeftLong } from "react-icons/fa6"
+import useCourseStore from "../../utlis/loader"
 
 const SelectedCourse = () => {
+  const { course } = useCourseStore()
+
   const { id } = useParams()
-  const courseContent = course.find((course) => course.id === parseInt(id))
+
+  const courseContent = course.find((course) => course.id === id)
 
   const navigate = useNavigate()
 

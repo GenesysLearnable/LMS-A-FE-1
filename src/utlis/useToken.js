@@ -1,33 +1,52 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export default function useToken() {
-  const getToken = () => {
+  const [token, setToken] = useState(() => {
     const tokenString = sessionStorage.getItem("token")
-    if (!tokenString) return null
-    try {
-      const userToken = JSON.parse(tokenString)
-      return userToken?.token
-    } catch (e) {
-      console.error("Failed to parse token from sessionStorage:", e)
-      return null
-    }
-  }
+    return tokenString ? JSON.parse(tokenString).token : null
+  })
 
-  const [token, setTokenState] = useState(getToken())
+  const [email, setEmail] = useState(() => {
+    const emailString = sessionStorage.getItem("email")
+    return emailString ? JSON.parse(emailString).email : null
+  })
+
+  useEffect(() => {
+    const tokenString = sessionStorage.getItem("token")
+    const emailString = sessionStorage.getItem("email")
+
+    if (tokenString) {
+      try {
+        const userToken = JSON.parse(tokenString)
+        const userEmail = JSON.parse(emailString)
+        setToken(userToken?.token)
+        setEmail(userEmail?.email)
+      } catch (e) {
+        console.error("Failed to parse token from sessionStorage:", e)
+      }
+    }
+  }, [setToken])
 
   const saveToken = (userToken) => {
     sessionStorage.setItem("token", JSON.stringify(userToken))
-    setTokenState(userToken.token)
+    setToken(userToken.token)
+  }
+
+  const saveEmail = (userEmail) => {
+    sessionStorage.setItem("email", JSON.stringify(userEmail))
+    setEmail(userEmail.email)
   }
 
   const clearToken = () => {
     sessionStorage.removeItem("token")
-    setTokenState(null)
+    sessionStorage.removeItem("email")
   }
 
   return {
     setToken: saveToken,
+    setEmail: saveEmail,
     clearToken,
     token,
+    email,
   }
 }

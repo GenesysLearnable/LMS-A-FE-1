@@ -17,13 +17,13 @@ const Testimonials = () => {
         className="absolute top-[365px] left-0 h-[596px]"
         src="/Images/LandingPage/Vector 14.png"
       />
-      <section className="pb-[190px] relative pt-[120px]">
+      <section className="xl:pb-[190px] pb-[80px] relative pt-[50px] xl:pt-[120px]">
         <article>
           <p className="text-sm text-[#cc7342] font-semibold font-['Poppins'] leading-normal">
             Our users
           </p>
 
-          <p className="text-[28.88px] text-white font-bold font-['Inter'] leading-[49.10px]">
+          <p className="xl:text-[28.88px] text-[22px] text-white font-bold font-['Inter'] leading-[49.10px]">
             What our users have to say
           </p>
         </article>
